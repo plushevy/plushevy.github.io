@@ -1,0 +1,132 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  position: relative;
+  z-index: 1;
+  transition: .3s ease-out;
+  font-family: $font-family-base;
+  border-width: 0;
+  overflow: hidden;
+
+  > span { transition: inherit; }
+
+  &:focus,
+  &:active,
+  &:active:focus { outline: none; }
+
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {  }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {  }
+
+  &:active,
+  &.active {  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+html body .page {
+  .btn-default { @include button-variant-custom($white, $gray, $gray, $white, $brand-primary, $brand-primary); }
+  .btn-primary { @include button-variant-custom($white, $brand-primary, $brand-primary, $white, $gray, $gray); }
+  .btn-white { @include button-variant-custom($white, transparent, $white, $gray, $white, $white); }
+  .btn-primary-1 {
+    @include button-variant-custom($white, $brand-primary, $brand-primary, $white, $brand-primary, $brand-primary);
+    cursor: default;
+  }
+}
+
+// Success appears as green
+.btn-success {  }
+
+// Info appears as blue-green
+.btn-info {  }
+
+// Warning appears as orange
+.btn-warning {  }
+
+// Danger and error appear as red
+.btn-danger {  }
+
+
+// Button Sizes
+// --------------------------------------------------
+
+$buttons-size-ratios-default: (0: .75, $screen-md-min: 1,);
+
+.btn-xs {
+  @include make-button-layout(60px, 16px, 2px, 44px, 30px, $buttons-size-ratios-default);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.btn-sm {
+  @include make-button-layout(70px, 16px, 0, 45px, 14px, $buttons-size-ratios-default);
+  font-weight: 300;
+  letter-spacing: .06em;
+}
+
+.btn-sm-1 {
+  @include make-button-layout(52px, 16px, 0, 20px, 14px);
+}
+
+.btn-md {
+  @include make-button-layout(96px, 31px, 0, 36px, 26px, $buttons-size-ratios-default);
+}
+
+.btn-lg {
+  @include make-button-layout(142px, 98px, 0, 72px, 26px, (0: .24, $screen-sm-min: .6, $screen-xl-min: 1));
+  letter-spacing: -0.02em;
+}
+
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-rect-small { border-radius: $btn-border-radius-small; }
+.btn-rect-base { border-radius: $btn-border-radius-base; }
+.btn-rect-large { border-radius: $btn-border-radius-large; }
+
+
+// Button Icon styles
+// --------------------------------------------------
+
+.btn {
+  &.btn-icon, &.btn-icon-left, &.btn-icon-right {
+    .icon {
+      height: auto;
+      line-height: inherit;
+      vertical-align: middle;
+      transition: 0s;
+
+      &:before { vertical-align: top; }
+    }
+  }
+
+  &.btn-icon-left .icon {
+    float: left;
+    padding-right: 17px;
+  }
+
+  &.btn-icon-right .icon {
+    float: right;
+    padding-left: 17px;
+  }
+}

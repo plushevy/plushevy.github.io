@@ -1,0 +1,119 @@
+/*
+* Navbar components
+*/
+
+// RD Navbar
+.rd-navbar {
+  display: none;
+  background: $rd-navbar-background;
+  font-size: $rd-navbar-min-font-size;
+  line-height: 1;
+}
+
+.rd-navbar-wrap {
+  position: relative;
+  z-index: 1000;
+  background: $rd-navbar-background;
+}
+
+// RD Navbar Toggle
+.rd-navbar-toggle {
+  @include make-toggle($rd-navbar-toggle-preset, 50px, 30px, $rd-navbar-color);
+  display: none;
+}
+
+// Search Toggle
+.search-toggle {
+  @include make-toggle($rd-navbar-search-toggle-preset, 50px, 20px, $rd-navbar-color);
+  display: none;
+}
+
+// Info Toggle
+.info-toggle {
+  @include make-toggle($rd-navbar-collapse-toggle-preset, 50px, 26px, $rd-navbar-color);
+  display: none;
+}
+
+// RD Navbar Brand
+.rd-navbar-brand {
+  display: inline-block;
+
+  .brand-name { fill: $gray; }
+  .brand-logo { fill: $brand-primary; }
+
+  .ie-edge & { transition: none; }
+}
+
+// RD Navbar Nav
+.rd-navbar-nav {
+  font-family: $font-family-base;
+  font-size: $rd-navbar-min-font-size;
+  line-height: $rd-navbar-min-line-height;
+
+  > li {
+    > a { @extend %rd-navbar-transition; }
+    > a:hover { color: $gray-base; }
+
+    &.active, &.focus {
+      > a {color: $rd-navbar-color;}
+    }
+  }
+}
+
+// RD Navbar Dropdown
+.rd-navbar-dropdown {
+  display: none;
+}
+
+// RD Navbar Info
+.rd-navbar-info {
+  display: none;
+  color: $rd-navbar-color;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+// RD Navbar Search
+.rd-navbar-search {
+  position: relative;
+  display: none;
+  vertical-align: middle;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  label, input {
+    height: 20px;
+    padding: 0 15px;
+    margin: 0;
+    border: 0;
+    line-height: 20px;
+    font-weight: 300;
+  }
+
+  input {
+    padding-right: 30px;
+    border-radius: 10px;
+  }
+
+  label {
+    top: 50%;
+    left: 0;
+  }
+
+  .rd-navbar-search-form-submit {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 10px;
+    line-height: 17px;
+    background: transparent;
+    border: none;
+    transition: .3s;
+    color: $gray-lighter;
+
+    &:before { vertical-align: middle; }
+    &:hover { color: $gray; }
+  }
+}

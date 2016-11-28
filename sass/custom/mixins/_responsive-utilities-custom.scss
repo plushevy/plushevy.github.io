@@ -1,0 +1,49 @@
+// Responsive utilities custom
+
+@mixin make-responsive($name, $rules, $medias, $values) {
+  @each $resolution, $alias in $medias {
+
+    @if ($resolution == 0) {
+      @each $value in $values {
+        .#{$name} {
+          @each $rule in $rules { #{$rule}: $value; }
+        }
+      }
+    }
+
+    @else {
+      @media (min-width: $resolution) {
+        @each $value in $values {
+          .#{$name}-#{$alias} {
+            @each $rule in $rules { #{$rule}: $value; }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@mixin make-responsive-with-postfix($name, $rules, $medias, $values) {
+  @each $resolution, $alias in $medias {
+
+    @if ($resolution == 0) {
+      @each $value in $values {
+        .#{$name}-#{str-replace(quote(strip-unit($value)), '.', '-')} {
+          @each $rule in $rules { #{$rule}: $value; }
+        }
+      }
+    }
+
+    @else {
+      @media (min-width: $resolution) {
+        @each $value in $values {
+          .#{$name}-#{$alias}-#{str-replace(quote(strip-unit($value)), '.', '-')} {
+            @each $rule in $rules { #{$rule}: $value; }
+          }
+        }
+      }
+    }
+
+  }
+}

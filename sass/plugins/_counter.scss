@@ -1,0 +1,8 @@
+.counter {
+  margin-bottom: 0;
+}
+
+.countdown {
+  .countdown-section:not(:first-child) .countdown-amount:before { content: ":"; }
+  .countdown-period { display: none; }
+}

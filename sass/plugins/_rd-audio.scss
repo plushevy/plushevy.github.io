@@ -1,0 +1,364 @@
+/*
+* @subsection   RD Audio
+* @description  Describes style declarations for RD Audio extension
+* @author       Rafael Shayvolodyan
+* @link         https://ua.linkedin.com/in/rafael-shayvolodyan-3a297b96
+* @version      1.0.0
+*/
+
+.rd-audio {
+  z-index: 1001;
+  padding: 8px 20px;
+  width: auto;
+  height: auto;
+  transition: .3s;
+  background: $brand-primary;
+  color: $white;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 4px 20px 8px 15px;
+  }
+}
+
+.rd-audio-volume,
+.rd-audio-volume-bar,
+.rd-audio-controls-left,
+.rd-audio-icon,
+.rd-audio-progress-bar-wrap,
+.rd-audio-time,
+.rd-audio-title-wrap,
+.rd-audio-controls-right {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: top;
+}
+
+.rd-audio-controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rd-audio-controls-left,
+.rd-audio-volume,
+.rd-audio-volume-bar {
+  order: 1;
+}
+
+.rd-audio-volume {
+  margin-left: calc(100% - 210px);
+}
+
+.rd-audio-controls-left {
+  width: 100px;
+}
+
+.rd-audio-volume-bar-horizontal {
+  margin-top: 13px;
+  width: 80px;
+}
+
+.rd-audio-controls-right {
+  width: auto;
+}
+
+.rd-audio-time {
+  width: 76px;
+}
+
+.rd-audio-title-wrap, .rd-audio-time, .rd-audio-current-time, .rd-audio-duration {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+}
+
+.rd-audio-progress-bar-wrap {
+  flex-basis: 100%;
+  max-width: 100%;
+  font-size: 12px;
+}
+
+.rd-audio-current-time, .rd-audio-duration {
+  vertical-align: top;
+}
+
+.rd-audio-title-wrap {
+  max-width: calc(100% - 102px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rd-audio-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:before {
+    content: "\f00d";
+    font-family: $fa;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.player-hidden {
+  @include transform(translate(0, 100%));
+  opacity: 0;
+}
+
+.rd-audio.state-loading .rd-audio-progress-bar {
+  background: $white;
+}
+
+.rd-audio-progress-bar {
+  position: relative;
+  width: 100%;
+  background: $gray;
+  height: 4px;
+  cursor: pointer;
+}
+
+.rd-audio-progress-bar .current {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: $white;
+  z-index: 0;
+}
+
+.rd-audio-progress-bar-slider {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -3px;
+  margin-left: -5px;
+  background: $white;
+  z-index: 1;
+}
+
+.rd-audio.state-playing .rd-audio-play-pause:before {
+  content: '\f04c';
+  font-family: $fa;
+}
+
+.rd-audio.muted .rd-audio-volume:before {
+  content: '\f026';
+  font-family: $fa;
+}
+
+.rd-audio-current-time {  }
+
+.rd-audio-time-divider {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.rd-audio-volume-bar {
+  position: relative;
+  background: $gray;
+  cursor: pointer;
+}
+
+.rd-audio-volume-bar .current {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  background: $white;
+  z-index: 0;
+}
+
+.rd-audio-volume-bar-slider {
+  position: absolute;
+  background: $white;
+  z-index: 1;
+}
+
+.rd-audio-volume-bar-vertical {
+  width: 10px;
+  height: 100px;
+}
+
+.rd-audio-volume-bar-vertical .rd-audio-volume-bar-slider {
+  left: -5px;
+  right: -5px;
+  height: 4px;
+  bottom: 0;
+  margin-top: 2px;
+}
+
+.rd-audio-volume-bar-horizontal {
+  height: 4px;
+}
+
+.rd-audio-volume-bar-horizontal .rd-audio-volume-bar-slider {
+  width: 10px;
+  height: 10px;
+  top: -3px;
+  margin-left: -5px;
+}
+
+.rd-audio-title {  }
+
+.rd-audio-icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+
+  &:focus { color: $white; }
+  &:hover { color: $gray; }
+}
+
+.control-icon {
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  color: $white;
+}
+
+@media (min-width: $screen-sm-min) {
+  .rd-audio {
+    left: 50%;
+    right: 0;
+    // max-width: 768px;
+  }
+
+  .rd-audio-controls-left,
+  .rd-audio-controls-right,
+  .rd-audio-volume {
+    margin-top: 8px;
+  }
+
+  .rd-audio-controls-left,
+  .rd-audio-volume,
+  .rd-audio-volume-bar {
+    order: 0;
+  }
+
+  .rd-audio-progress-bar-wrap {
+    margin-top: 2px;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+
+  .rd-audio-volume {
+    margin-left: 9px;
+  }
+
+  .rd-audio-volume-bar-horizontal {
+    margin-top: 22px;
+  }
+
+  .player-hidden {
+    @include transform(translate(-50%, 100%));
+  }
+}
+
+
+.rd-audio-playlist {
+  .audio-track {
+    position: relative;
+
+    .author, .title, .length {
+      position: relative;
+      line-height: 1.2;
+      transition: .3s;
+    }
+
+    .author, .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .author {
+      position: relative;
+      padding-left: 50px;
+      font-weight: 300;
+
+      &:before {
+        content: "\e038";
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-family: $mi;
+        color: $brand-primary;
+      }
+    }
+
+    .title {
+      font-weight: 400;
+    }
+
+    .length {
+      font-size: 13px;
+      font-weight: 300;
+      color: $gray-light;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .author, .title, .length {
+        color: $brand-primary;
+        &:after { border-bottom: 1px solid $brand-primary; }
+      }
+    }
+
+    &.playing {
+      .author:before { content: "\e035"; }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    * + .audio-track { margin-top: 10px; }
+    
+    .audio-track {
+      .author {
+        padding-left: 55px;
+      }
+
+      .title {
+        padding-left: 55px;
+      }
+
+      .length {
+        position: absolute;
+        top: 22px;
+        left: 15px;
+        padding: 0;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    * + .audio-track { margin-top: 0; }
+
+    .audio-track {
+      .author, .title, .length {
+        line-height: 50px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          right: 15px;
+          height: 1px;
+          transition: .3s;
+          border-bottom: 1px solid $white;
+        }
+      }
+
+      .author {
+        padding-left: 61px;
+      }
+    }
+  }
+}

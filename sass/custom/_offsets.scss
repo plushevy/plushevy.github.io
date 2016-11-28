@@ -1,0 +1,78 @@
+//
+// Offsets
+// --------------------------------------------------
+
+
+* + p                 { margin-top: 10px; }
+* + h5                { margin-top: 10px; }
+* + .btn              { margin-top: 10px; }
+* + .countdown        { margin-top: 5px; }
+* + .range            { margin-top: 20px; }
+* + .rd-mailform      { margin-top: 20px; }
+* + .thumbnail        { margin-top: 20px; }
+* + .blog-post-meta   { margin-top: 30px; }
+* + .twitter          { margin-top: 20px; }
+* + .twitter-item     { margin-top: 10px; }
+p + p                 { margin-top: 15px; }
+
+@media (min-width: $screen-sm-min) {
+  * + h5                { margin-top: 20px; }
+  * + .btn              { margin-top: 20px; }
+  * + .countdown        { margin-top: 10px; }
+  * + .range            { margin-top: 40px; }
+  * + .rd-mailform      { margin-top: 40px; }
+  * + .thumbnail        { margin-top: 40px; }
+  * + .blog-post-meta   { margin-top: 40px; }
+  * + .twitter          { margin-top: 30px; }
+  * + .twitter-item     { margin-top: 15px; }
+  p + p                 { margin-top: 20px; }
+}
+
+@media (min-width: $screen-md-min) {
+  * + p                 { margin-top: 47px; }
+  * + h5                { margin-top: 40px; }
+  * + .btn              { margin-top: 43px; }
+  * + .countdown        { margin-top: -7px; }
+  * + .twitter-item     { margin-top: 20px; }
+  * + .twitter          { margin-top: 40px; }
+  p + p                 { margin-top: 24px; }
+  .countdown + *        { margin-top: -23px; }
+}
+
+@media (min-width: $screen-lg-min) and (min-height: $screen-height-1) {
+  * + .range            { margin-top: 73px; }
+  * + .rd-mailform      { margin-top: 68px; }
+  * + .thumbnail-variant-4 { margin-top: 89px; }
+  * + .blog-post-meta   { margin-top: 94px; }
+  h4 + .range           { margin-top: 89px; }
+}
+
+// Insets
+// -------------------------
+
+$insets: (0, 10px, 300px);
+
+@include indent-responsive(inset, left, padding-left, $medias, $insets);
+@include indent-responsive(inset, right, padding-right, $medias, $insets);
+
+
+// Elements
+// -------------------------
+
+
+// Grid
+// -------------------------
+
+
+// Sections
+// -------------------------
+
+
+// Responsive
+// -------------------------
+
+$offsets: (0, 4px, 8px, 10px, 12px, 20px, 30px, 40px, 45px, 50px, 62px, 81px,90px, 99px);
+
+html .page{
+  @include indent-responsive(offset, top, margin-top, $medias, $offsets);
+}

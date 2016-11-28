@@ -1,0 +1,55 @@
+//
+// Contact Info
+// --------------------------------------------------
+
+.contact-info {
+  &-variant-1 {
+    dl { display: inline-block; }
+    dt { display: inline-block; }
+    dd { display: inline-block; }
+    dt .icon { width: auto; }
+    dt + dd { margin-left: 5px; }
+    dl + dl { margin-left: 25px; }
+
+    .rd-navbar-fixed & {
+      dl { display: flex; }
+      dt .icon { width: 15px; }
+      dl + dl {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &-variant-2 {
+    dl {
+      * + dd { margin-top: 0; }
+      @media (min-width: $screen-sm-min) { * + dd { margin-top: 15px; }}
+      @media (min-width: $screen-md-min) { * + dd { margin-top: 24px; }}
+    }
+
+    .unit-body { max-width: 100%; }
+  }
+
+  &-variant-3 {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+
+    .icon { @include make-icon-layout(20px, 18px, (0: .9, $screen-sm-min: .75, $screen-md: 1));}
+
+    dt, dd {
+      display: inline-block;
+      font-weight: inherit;
+      vertical-align: top;
+    }
+
+    dt + dd { margin-left: 5px; }
+    dl + dl { margin-top: 6px; }
+
+    @media (min-width: $screen-sm-min) { font-size: 16px; }
+    @media (min-width: $screen-md-min) { font-size: 18px; }
+
+  }
+
+}

@@ -1,0 +1,66 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Body reset
+
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: $font-weight-base;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: $font-size-base;
+    line-height: ($base-lh-size / $base-text-size);
+  }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+
+// Page styles
+// --------------------------------------------------
+
+.page {
+  overflow: hidden;
+  background-color: $content-bg;
+}
+
+// Links
+
+a {
+  transition: .3s;
+  color: inherit;
+
+  &:hover,
+  &:focus { outline: none; }
+
+  &:hover { color: $brand-primary; }
+}
+
+// Horizontal rules
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid $hr-border;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-rounded {
+  border-radius: 50%;
+}
+
