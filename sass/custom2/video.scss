@@ -1,0 +1,57 @@
+.videobg {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.videobg__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.videobg__demo {
+    background-image: url("../images/video_bg/birds-low-qual-small.jpg");
+}
+
+.videobg__src {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: contain;
+}
+
+.videobg__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-repeat: repeat;
+    background-image: url("../images/video_bg/black-medium-checks.png");
+}
+
+.videobg__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    margin-top: 190px;
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
