@@ -1,0 +1,115 @@
+.tarif {
+    padding: 100px 20px;
+    background: #eee;
+}
+
+.filter {
+    position: relative;
+    border: 20px solid grey;
+    border-radius: 20px;
+    width: 1000px;
+    height: 17px;
+    margin: 0 auto;
+}
+
+.filter input {
+    display: none;
+}
+
+.filter__bar {
+    position: absolute;
+    height: 17px;
+    background: blue;
+    left: 0;
+    top: 0;
+}
+
+.fiter__bar--growing {}
+
+.filter__nav {
+    position: relative;
+    width: 1000px;
+    height: 17px;
+    left: 0;
+    top: 0;
+    outline: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: yellow;
+    cursor: pointer;
+    transition: all 0.3s;
+    //всплывающий тултип
+
+    &::before {
+        content: attr(data-description);
+        position: absolute;
+        background: #ffffff;
+        border: 2px solid #cccccc;
+        text-align: center;
+        width: 176px;
+        border-radius: 6px;
+        padding: 10px 5px;
+        line-height: 20px;
+        color: #202020;
+        left: 50%;
+        margin-left: -90px;
+        bottom: 60px;
+        pointer-events: none;
+        display: none;
+    }
+//хвостик тултипа
+    &::after {
+        content: " ";
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: -45px;
+        left: 50%;
+        border: solid transparent;
+        pointer-events: none;
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #ffffff;
+        border-width: 8px;
+        margin-left: -8px;
+        display: none;
+    }
+}
+
+.filter__bar {
+    position: absolute;
+    height: 17px;
+    background: blue;
+    left: 0;
+    top: 0;
+    
+    background: #0796bf;  // голубенький
+    border-radius: 9px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.65);
+    // z-index: -5;
+    transition: all 0.3s;
+}
+//checked
+@for $i from 0 to 8 {
+    #pos-#{$i}:checked ~ .filter__nav .filter__label--#{$i} {
+        background: green;
+
+        &::before {
+            display: block;
+        }
+
+        &::after {
+            display: block;
+        }
+    }
+
+    #pos-#{$i}:checked ~ .filter__nav .filter__bar {
+        width: calc(#{$i} * 141px);
+    }
+}

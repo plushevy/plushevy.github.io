@@ -49,3 +49,179 @@
   margin-top: 190px;
   color: #FFF;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+
+.tarif {
+  padding: 100px 20px;
+  background: #eee; }
+
+.filter {
+  position: relative;
+  border: 20px solid grey;
+  border-radius: 20px;
+  width: 1000px;
+  height: 17px;
+  margin: 0 auto; }
+
+.filter input {
+  display: none; }
+
+.filter__bar {
+  position: absolute;
+  height: 17px;
+  background: blue;
+  left: 0;
+  top: 0; }
+
+.filter__nav {
+  position: relative;
+  width: 1000px;
+  height: 17px;
+  left: 0;
+  top: 0;
+  outline: 1px solid red;
+  display: flex;
+  justify-content: space-between; }
+
+label {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: yellow;
+  cursor: pointer;
+  transition: all 0.3s; }
+  label::before {
+    content: attr(data-description);
+    position: absolute;
+    background: #ffffff;
+    border: 2px solid #cccccc;
+    text-align: center;
+    width: 176px;
+    border-radius: 6px;
+    padding: 10px 5px;
+    line-height: 20px;
+    color: #202020;
+    left: 50%;
+    margin-left: -90px;
+    bottom: 60px;
+    pointer-events: none;
+    display: none; }
+  label::after {
+    content: " ";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: 50%;
+    border: solid transparent;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #ffffff;
+    border-width: 8px;
+    margin-left: -8px;
+    display: none; }
+
+.filter__bar {
+  position: absolute;
+  height: 17px;
+  background: blue;
+  left: 0;
+  top: 0;
+  background: #0796bf;
+  border-radius: 9px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.65);
+  transition: all 0.3s; }
+
+#pos-0:checked ~ .filter__nav .filter__label--0 {
+  background: green; }
+  #pos-0:checked ~ .filter__nav .filter__label--0::before {
+    display: block; }
+  #pos-0:checked ~ .filter__nav .filter__label--0::after {
+    display: block; }
+
+#pos-0:checked ~ .filter__nav .filter__bar {
+  width: calc(0 * 141px); }
+
+#pos-1:checked ~ .filter__nav .filter__label--1 {
+  background: green; }
+  #pos-1:checked ~ .filter__nav .filter__label--1::before {
+    display: block; }
+  #pos-1:checked ~ .filter__nav .filter__label--1::after {
+    display: block; }
+
+#pos-1:checked ~ .filter__nav .filter__bar {
+  width: calc(1 * 141px); }
+
+#pos-2:checked ~ .filter__nav .filter__label--2 {
+  background: green; }
+  #pos-2:checked ~ .filter__nav .filter__label--2::before {
+    display: block; }
+  #pos-2:checked ~ .filter__nav .filter__label--2::after {
+    display: block; }
+
+#pos-2:checked ~ .filter__nav .filter__bar {
+  width: calc(2 * 141px); }
+
+#pos-3:checked ~ .filter__nav .filter__label--3 {
+  background: green; }
+  #pos-3:checked ~ .filter__nav .filter__label--3::before {
+    display: block; }
+  #pos-3:checked ~ .filter__nav .filter__label--3::after {
+    display: block; }
+
+#pos-3:checked ~ .filter__nav .filter__bar {
+  width: calc(3 * 141px); }
+
+#pos-4:checked ~ .filter__nav .filter__label--4 {
+  background: green; }
+  #pos-4:checked ~ .filter__nav .filter__label--4::before {
+    display: block; }
+  #pos-4:checked ~ .filter__nav .filter__label--4::after {
+    display: block; }
+
+#pos-4:checked ~ .filter__nav .filter__bar {
+  width: calc(4 * 141px); }
+
+#pos-5:checked ~ .filter__nav .filter__label--5 {
+  background: green; }
+  #pos-5:checked ~ .filter__nav .filter__label--5::before {
+    display: block; }
+  #pos-5:checked ~ .filter__nav .filter__label--5::after {
+    display: block; }
+
+#pos-5:checked ~ .filter__nav .filter__bar {
+  width: calc(5 * 141px); }
+
+#pos-6:checked ~ .filter__nav .filter__label--6 {
+  background: green; }
+  #pos-6:checked ~ .filter__nav .filter__label--6::before {
+    display: block; }
+  #pos-6:checked ~ .filter__nav .filter__label--6::after {
+    display: block; }
+
+#pos-6:checked ~ .filter__nav .filter__bar {
+  width: calc(6 * 141px); }
+
+#pos-7:checked ~ .filter__nav .filter__label--7 {
+  background: green; }
+  #pos-7:checked ~ .filter__nav .filter__label--7::before {
+    display: block; }
+  #pos-7:checked ~ .filter__nav .filter__label--7::after {
+    display: block; }
+
+#pos-7:checked ~ .filter__nav .filter__bar {
+  width: calc(7 * 141px); }
+
+.tarify-text {
+  text-align: center; }
+
+.tab-wrapper {
+  width: 100%;
+  margin: 0 auto; }
+  .tab-wrapper tr {
+    vertical-align: middle;
+    border-bottom: 1px solid #eeeeee; }
+  .tab-wrapper td {
+    width: 20%;
+    padding-top: 35px;
+    padding-bottom: 35px; }
