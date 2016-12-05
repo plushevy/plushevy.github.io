@@ -225,3 +225,22 @@ label {
     width: 20%;
     padding-top: 35px;
     padding-bottom: 35px; }
+
+@media (max-width: 480px) {
+  .tab-wrapper tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 20px 0;
+    justify-content: center; }
+  .tab-wrapper td {
+    display: block;
+    margin: 0;
+    padding: 5px 0;
+    width: 30%; }
+  .tab-wrapper .two {
+    display: none; }
+  .tab-wrapper .four {
+    width: 30%; }
+  .tab-wrapper .five a {
+    margin: 0 auto; } }
