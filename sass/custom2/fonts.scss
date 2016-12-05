@@ -1,0 +1,45 @@
+
+@font-face {
+  font-family: "Foco Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/focobold.ttf") format("truetype");
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Foco Bold"
+}
+
+
+//
+//
+// @media (min-width: 1800px) {
+//   h1, .h1 {}
+//   h2, .h2 {}
+//   h3, .h3 {
+//     font-size: 70px;
+//   }
+//   h4, .h4 {}
+// }
+//
+// @media (min-width: 1600px) {
+//   h1, .h1 {}
+//   h2, .h2 {}
+//   h3, .h3 {
+//     font-size: 60px;
+//   }
+//   h4, .h4 {}
+// }
+//
+// @media (min-width: 1200px) {
+//   h1, .h1 {}
+//   h2, .h2 {}
+//   h3, .h3 {
+//     font-size: 50px;
+//   }
+//   h4, .h4 {}
+// }
+// @media (max-width: 992px) {}
+// @media (max-width: 768px) {}
+// @media (max-width: 480px) {}
