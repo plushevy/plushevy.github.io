@@ -1,0 +1,374 @@
+.modal-content {
+    display: none;
+    position: fixed;
+    width: 50%;
+    max-width: 660px;
+    min-width: 320px;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    border: 1px solid #c7c7c7;
+    background-color: #ffffff;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 5px 9px 0 #cdcdcd;
+
+    &--show {
+        display: block;
+        animation: bounce 0.6s;
+    }
+}
+
+.form1 {
+  position: relative;
+    &__top {
+        background-color: #fa5254;
+        color: white;
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        color: white;
+        padding: 20px 0 10px;
+        margin: 0;
+    }
+
+    &__part-time {
+        margin: 0;
+    }
+
+    &__text-top {
+        display: block;
+        margin-top: 20px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        padding: 20px 30px;
+        margin: 0 auto;
+        width: 70%;
+        min-height: 240px;
+        color: black;
+    }
+
+    &__timer {
+        display: block;
+        width: 50%;
+        background: none;
+        align-self: center;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    &__timer-block {
+        width: 50%;
+    }
+
+    &__select {
+        width: 100%;
+        height: 60px;
+        padding: 0 20px;
+        background: #eaeaea;
+        border: none;
+        color: black;
+    }
+
+    input {
+        width: 100%;
+        height: 60px;
+        padding: 0 20px;
+        background: #eaeaea;
+        border: none;
+        color: black;
+
+        &.form1__btn {
+            width: 50%;
+            max-width: 250px;
+            margin: 30px auto;
+        }
+    }
+
+    &__small-text {
+        margin: 0 0 20px;
+        font-size: $font-size-small;
+    }
+}
+
+
+
+// Крестик
+
+.form1__close {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 10;
+
+    width: 27px;
+    height: 2px;
+
+    background-color: white;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+@media (max-width: 1800px) {}
+@media (max-width: 1600px) {}
+@media (max-width: 1200px) {
+  .form1 {
+
+      &__inner {
+        width: 80%;
+      }
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-content {
+      width: 70%;
+  }
+
+  .form1 {
+
+      &__inner {
+        width: 90%;
+      }
+
+      &__small-text {
+          padding: 0 20px;
+          margin: 0 auto;
+      }
+  }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &--show {}
+    }
+
+    .form1 {
+        &__top {}
+
+        &__title {}
+
+        &__part-time {}
+
+        &__text-top {}
+
+        &__inner {
+          width: 100%;
+          min-height: 240px;
+        }
+
+        &__timer {}
+
+        &__timer-block {}
+
+        &__select {}
+
+        input {
+            &.form1__btn {}
+        }
+
+        &__small-text {}
+
+
+    }
+}
+@media (max-width: 480px) {
+    .modal-content {
+      position: absolute;
+        width: 100%;
+        min-height: 100%;
+        top: 0;;
+        transform: translateY(0);
+        padding-bottom: 20px;
+
+
+    }
+
+    .form1 {
+        &__top {
+          padding-top: 20px;
+        }
+
+        &__title {}
+
+        &__part-time {}
+
+        &__text-top {}
+
+        &__inner {}
+
+        &__timer {}
+
+        &__timer-block {}
+
+        &__select {}
+
+        input {
+            &.form1__btn {
+              max-width: 100%;
+              width: 80%;
+              margin: 20px auto;
+
+            }
+        }
+
+        &__small-text {}
+    }
+
+    .form1__close {
+      top: 20px;
+      right: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 360px) {
+    .modal-content {}
+
+    .form1 {
+        &__top {}
+
+        &__title {
+          font-size: 18px;
+        }
+
+        &__part-time {}
+
+        &__text-top {
+          font-size: 14px;
+        }
+
+        &__inner {}
+
+        &__timer {
+          font-size: 14px;
+        }
+
+        &__timer-block {}
+
+        &__select {}
+
+        input {
+            &.form1__btn {
+              font-size: 18px;
+            }
+        }
+
+        &__small-text {
+          font-size: 12px;
+        }
+    }
+
+    .form1__close {
+      top: 10px;
+      right: 10px;
+
+    }
+}
+
+
+
+//
+// .modal-content {
+//   display: none;
+//   position: fixed;
+//   width: 320px;
+//   top: 100px;
+//   left: 0;
+//   right: 0;
+//   margin: 0 auto;
+//   // transform: translate(-160px);
+//
+//
+//   padding: 30px 30px 46px 30px;
+//   border: 1px solid #c7c7c7;
+//   box-sizing: border-box;
+//   background-color: #ffffff;
+//   z-index: 100;
+//
+//   text-align: center;
+//   box-shadow: 0px 5px 9px 0px #cdcdcd;
+//
+//   &--show {
+//     display: block;
+//     animation: bounce 0.6s;
+//   }
+// }
+// .modal-content__title{
+//   text-transform: uppercase;
+//   padding: 0 55px 10px 55px;
+//   margin: 0;
+// }
+// .modal-content__text {
+//   font-size: 15px;
+//   line-height: 30px;
+// }
+//
+// @media (max-width: 1800px) {}
+// @media (max-width: 1600px) {}
+// @media (max-width: 1200px) {}
+// @media (max-width: 992px) {}
+// @media (max-width: 768px) {}
+// @media (max-width: 480px) {}
+// @media #{$tablet-widths} {
+//   .modal-content {
+//     width: 568px;
+//     padding: 40px 105px 46px 105px;
+//     margin: 0 auto;
+//     // transform: translateX(-284px);
+//   }
+//
+//   .modal-content__title{
+//     padding: 0 0 10px 0;
+//     font-size: 30px;
+//     line-height: 57px;
+//   }
+//   .modal-content__text {
+//     font-size: 17px;
+//   }
+// }
+// @media #{$desktop-widths} {
+//   .modal-content {}
+//   .modal-content__title{}
+//   .modal-content__text {}
+// }
