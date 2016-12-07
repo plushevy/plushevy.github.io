@@ -77,71 +77,25 @@
                 </nav>
             </div>
 
-            <!-- video-bg -->
-            <div class="videobg">
-                <div class="videobg__bg video-bg__demo">
-                    <video class="videobg__src" autoplay muted loop>
-                      <source src="images/video_bg/truba.mp4" type="video/mp4">
-                        <!-- <source src="images/video_bg/birds-low-qual.webm" type="video/webm">
-                          <source src="images/video_bg/birds-low-qual.ogv" type="video/ogg"> -->
-                      </video>
-                </div>
-                <div class="videobg__overlay">
-
-                </div>
-                <div class="videobg__content">
-                    <p class="videobg__text">Полёты в аэротрубе в SITE.RU — для новичков и профессиональных парашютистов</p>
-                </div>
-            </div>
 
         </header>
         <!-- Page Content-->
         <main class="page-content">
             <!-- Responsive tabs-->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
             <button class="btn modal-btn" type="button" name="button">Модальное окно</button>
 
-
-
-
-
-
-
-
-
-
-            <!-- <div class="fancybox-overlay fancybox-overlay-fixed">
-                <div class="fancybox-wrap fancybox-desktop fancybox-type-inline mark2 fancybox-opened" tabindex="-1">
-                    <div class="fancybox-skin">
-                        <div class="fancybox-outer">
-                            <div class="fancybox-inner">
-                                <div class="the_popup booking_popup" id="book_popup">
-                                    <form method="post" class="frm1" id="frm11" novalidate="novalidate">
-                                        <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
-                                        <div class="b_form_top">
-                                            <p class="title" style="background:none;">ПРЕДВАРИТЕЛЬНАЯ ЗАЯВКА</p>
-                                            <p id="part-time">четверг, 8 дек 2016 15:00</p>
-                                        </div>
-                                        <p class="top">ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ<br> С ВАМИ СВЯЖЕТСЯ АДМИНИСТРАТОР</p>
-                                        <label class="timer">Выберите тариф</label>
-                                        <div class="timer_div">
-                                            <input readonly="readonly" type="text" name="time" value="2 мин">
-                                            <span class="more"></span>
-                                            <span class="less"></span>
-                                        </div>
-                                        <input type="text" name="tel" class="tel" placeholder="+7 (___) ___-__-__">
-                                        <input type="text" name="name" placeholder="ФИО *">
-                                        <p class="small">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
-                                        <input type="submit" id="submit_order" name="submit1" value="Заявка">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <a title="Закрыть" class="fancybox-item fancybox-close" href="javascript:;"></a>
-                    </div>
-                </div>
-            </div> -->
-
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
 
             <div class="modal-content">
@@ -150,128 +104,98 @@
                         <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
                         <div class="form1__top">
                             <h4 class="form1__title">ПРЕДВАРИТЕЛЬНАЯ ЗАЯВКА</h4>
-                            <p class="form1__part-time" id="part-time">четверг, 8 дек 2016 15:00</p>
+                            <p class="form1__part-time" id="part-time">четверг,15:00 8 дек 2016</p>
                         </div>
                         <b class="form1__text-top">ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ<br>С ВАМИ СВЯЖЕТСЯ АДМИНИСТРАТОР</b>
 
-                        <div class="form1__inner">
-                            <label class="form1__timer" for="form1__select">Выберите тариф</label>
-                            <div class="form1__timer-block">
 
-                                <select class="form1__select" id="form1__select">
-                                  <option value="1" selected>2 мин</option>
-                                  <option value="2">4 мин</option>
-                                  <option value="3">6 мин</option>
-                                  <option value="4">10 мин</option>
-                                  <option value="5">15 мин</option>
-                                  <option value="6">20 мин</option>
-                                  <option value="7">30 мин</option>
-                                  <option value="8">60 мин</option>
-                                </select>
-                                <!-- <input readonly="readonly" type="text" name="time" value="2 мин">
-                              <span class="more"></span>
-                              <span class="less"></span> -->
-                            </div>
-                            <input type="text" name="tel" class="tel" placeholder="+7 (___) ___-__-__">
-                            <input type="text" name="name" placeholder="ФИО *">
+                        <fieldset class="form1__inner">
+
+                            <label class="form1__timer" for="form1__select">Выберите тариф
+
+
+                                      <select class="form1__select" id="form1__select">
+                                        <option value="1" selected>2 минуты</option>
+                                        <option value="2">4 минуты</option>
+                                        <option value="3">6 минут</option>
+                                        <option value="4">10 минут</option>
+                                        <option value="5">15 минут</option>
+                                        <option value="6">20 минут</option>
+                                        <option value="7">30 минут</option>
+                                        <option value="8">60 минут</option>
+                                      </select>
+                            </label>
+
+                            <label class="form1__phone-label">
+                                  <span>Ваше имя</span>
+                                  <input id="form1__name" type="text" name="name" placeholder="" required>
+                                </label>
+
+                            <label class="form1__name-label">
+                                  <span>Ваш телефон</span>
+                                  <div class="form1__phone-container">
+                                    <input id="form1__phone" class="form1__phone" type="text" name="tel" placeholder="__________" required>
+                                  </div>
+                                  <!-- <p class="hint error">Номер телефона должен быть из 10 цифр</p> -->
+                                </label>
+
+                        </fieldset>
+
+                </div>
+                <!-- конец inner -->
+
+
+                <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
+
+                <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
+
+                <a title="Закрыть" class="form1__close" href="javascript:;"></a>
+
+                </form>
+
+
+            </div>
+    </div>
+
+
+
+    <div class="modal-overlay"></div>
+
+    </main>
+    <!-- Page Footer-->
+    <footer class="page-foot">
+        <section class="bg-primary section-30 section-lg-31 section-lg-bottom-30">
+
+
+            <div class="shell">
+                <div class="range small">
+                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <ul class="list">
+                            <li><a href="#">Публичное соглашение</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Правила полетов</a></li>
+                        </ul>
+                    </div>
+                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <ul class="list">
+                            <li><a href="#">Ссылка1</a></li>
+                            <li><a href="#">Ссылка1</a></li>
+                            <li><a href="#">Ссылка1</a></li>
+                        </ul>
+                    </div>
+                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+
+                    </div>
+                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <div class="shell text-left">
+                            <p>Полетомания <span id="copyright-year"></span>
+                            </p>
                         </div>
-
-
-                        <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
-
-                        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
-
-                        <a title="Закрыть" class="form1__close" href="javascript:;"></a>
-
-                    </form>
-
-
-
+                    </div>
                 </div>
             </div>
-
-
-
-            <!-- <div class="modal-content">
-                <h2 class="modal-content__title">Добавить в корзину</h2>
-                <div class="modal-content__text">Выберите размер:</div>
-                <form class="size-form" action="#" method="post">
-                    <div class="size-form__items">
-                        <input class="size-form__checkbox" type="checkbox" name="checkbox1" id="s" checked>
-                        <label class="size-form__label" for="s">s</label>
-                        <input class="size-form__checkbox" type="checkbox" name="checkbox2" id="m">
-                        <label class="size-form__label" for="m">m</label>
-                        <input class="size-form__checkbox" type="checkbox" name="checkbox3" id="l">
-                        <label class="size-form__label" for="l">l</label>
-                    </div>
-                    <button class="btn size-form__btn" type="submit">Добавить</button>
-                </form>
-            </div> -->
-
-            <div class="modal-overlay"></div>
-
-
-
-
-
-
-
-
-        </main>
-        <!-- Page Footer-->
-        <footer class="page-foot">
-            <section class="bg-primary section-30 section-lg-31 section-lg-bottom-30">
-
-
-                <div class="shell">
-                    <div class="range small">
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                            <ul class="list">
-                                <li><a href="#">Публичное соглашение</a></li>
-                                <li><a href="#">О нас</a></li>
-                                <li><a href="#">Правила полетов</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                            <ul class="list">
-                                <li><a href="#">Ссылка1</a></li>
-                                <li><a href="#">Ссылка1</a></li>
-                                <li><a href="#">Ссылка1</a></li>
-                            </ul>
-                        </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-
-                        </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                            <div class="shell text-left">
-                                <p>Полетомания <span id="copyright-year"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </footer>
-
-
-        <!-- <div class="modal-content">
-            <h2 class="modal-content__title">Добавить в корзину</h2>
-            <div class="modal-content__text">Выберите размер:</div>
-            <form class="size-form" action="#" method="post">
-                <div class="size-form__items">
-                    <input class="size-form__checkbox" type="checkbox" name="checkbox1" id="s" checked>
-                    <label class="size-form__label" for="s">s</label>
-                    <input class="size-form__checkbox" type="checkbox" name="checkbox2" id="m">
-                    <label class="size-form__label" for="m">m</label>
-                    <input class="size-form__checkbox" type="checkbox" name="checkbox3" id="l">
-                    <label class="size-form__label" for="l">l</label>
-                </div>
-                <button class="btn size-form__btn" type="submit">Добавить</button>
-            </form>
-        </div>
-
-        <div class="modal-overlay"></div> -->
+        </section>
+    </footer>
 
 
     </div>
@@ -315,6 +239,15 @@
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+
+    <script type="text/javascript">
+        jQuery(function($) {
+            $("#form1__phone").mask("9999999999", {
+                placeholder: " "
+            });
+        });
+    </script>
 
     <script>
         var modalButton = document.querySelector(".modal-btn");
