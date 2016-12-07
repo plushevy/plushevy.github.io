@@ -263,14 +263,16 @@ small, h6
 
 .videobg__content {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
   text-align: center;
   margin-top: 190px;
   color: #FFF;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+
+.videobg__text {
+  color: white; }
 
 .tarif {
   padding: 100px 20px;
