@@ -3,8 +3,11 @@
 @import "custom2/font-custom";
 
 @import "custom2/video";
-// @import "custom2/bar-filter";
-@import "custom2/filter";
+
+//фильр тарифов
+@import "custom2/tarif-filter/filter-main";
+
+
 @import "custom2/tarify-table";
 @import "custom2/modal-content";
 @import "custom2/modal-overlay";

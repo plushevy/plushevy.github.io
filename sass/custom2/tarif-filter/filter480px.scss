@@ -1,0 +1,140 @@
+
+.filter {
+    position: relative;
+    // width: 1000px;
+    //width: 456px;
+    width: 95%;
+    height: 52px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter input {
+    display: none;
+}
+
+.filter__nav {
+    position: relative;
+    //456px
+    width: 95%;
+    height: 52px;
+    left: 0;
+    top: 0;
+    background: #cacaca;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    align-items: baseline;
+
+
+    margin: 38px auto;
+}
+
+.filter__lable {
+    position: relative;
+    // width: 20%;
+    height: 52px;
+    line-height: 52px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #86939e;
+
+    span {
+      display: none;
+    }
+
+
+    // &:first-of-type {
+    //   padding-left: 20px;
+    // }
+    //
+    // &:last-of-type {
+    //   padding-right: 20px;
+    // }
+
+
+//цифра
+    &::before {
+        // content: attr(data-description);
+        // position: absolute;
+        // color: white;
+        // width: 100px;
+        // height: 52px;
+        // background-color: yellow;
+        // display: none;
+
+        content: attr(data-title);
+        position: absolute;
+        display: none;
+        color: white;
+
+        width: 76px;
+        height: 76px;
+
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10px;
+
+        padding-top: 25px;
+        text-align: center;
+        line-height: 16px;
+        font-size: 16px;
+        font-weight: bold;
+
+
+
+        z-index: 101;
+      }
+//красный кружок с текстом
+    &::after {
+      content: attr(data-description);
+      position: absolute;
+      display: none;
+      color: white;
+      box-sizing: border-box;
+      border: 3px solid white;
+      border-radius: 50%;
+      background: #fb5255;
+
+      width: 76px;
+      height: 76px;
+
+      left: 50%;
+      transform: translateX(-50%);
+      top: -10px;
+
+      padding-top: 35px;
+      text-align: center;
+      line-height: 16px;
+      font-size: 12px;
+
+      z-index: 100;
+
+      transition: all 0.3s;
+
+    }
+}
+
+.filter__bar {
+    position: absolute;
+    height: 52px;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+
+    background: #68b240;
+    // зеленый
+
+    // z-index: -5;
+
+    // transition: all 0.1s;
+}
+
+@media (min-width: 320px) {}
+@media (min-width: 480px) {}
+@media (min-width: 768px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1600px) {}

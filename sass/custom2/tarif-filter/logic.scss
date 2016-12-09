@@ -1,0 +1,78 @@
+
+//checked
+@for $i from 0 to 8 {
+    #pos-#{$i}:checked ~ .filter__nav .filter__label--#{$i} {
+        background: transparent;
+
+        &::before {
+            display: block;
+            //кол во минут в кружочке
+        }
+
+        &::after {
+            display: block;
+            //сам кружок и слово минут
+
+        }
+    }
+
+// от 1000px навбара брал 141px
+    #pos-#{$i}:checked ~ .filter__nav .filter__bar {
+        width: calc(#{$i} * 14.1%);
+    }
+
+    #pos-#{$i}:checked ~ .tarif__price .tarif__value--#{$i} {
+       display: block;
+    }
+}
+
+// белый текст на зеленом баре
+
+#pos-1:checked ~ .filter__nav .filter__label--0 {
+    color: white;
+}
+
+#pos-2:checked ~ .filter__nav .filter__label--0,
+#pos-2:checked ~ .filter__nav .filter__label--1 {
+    color: white;
+}
+
+#pos-3:checked ~ .filter__nav .filter__label--0,
+#pos-3:checked ~ .filter__nav .filter__label--1,
+#pos-3:checked ~ .filter__nav .filter__label--2 {
+    color: white;
+}
+
+#pos-4:checked ~ .filter__nav .filter__label--0,
+#pos-4:checked ~ .filter__nav .filter__label--1,
+#pos-4:checked ~ .filter__nav .filter__label--2,
+#pos-4:checked ~ .filter__nav .filter__label--3 {
+    color: white;
+}
+
+#pos-5:checked ~ .filter__nav .filter__label--0,
+#pos-5:checked ~ .filter__nav .filter__label--1,
+#pos-5:checked ~ .filter__nav .filter__label--2,
+#pos-5:checked ~ .filter__nav .filter__label--3,
+#pos-5:checked ~ .filter__nav .filter__label--4 {
+    color: white;
+}
+
+#pos-6:checked ~ .filter__nav .filter__label--0,
+#pos-6:checked ~ .filter__nav .filter__label--1,
+#pos-6:checked ~ .filter__nav .filter__label--2,
+#pos-6:checked ~ .filter__nav .filter__label--3,
+#pos-6:checked ~ .filter__nav .filter__label--4,
+#pos-6:checked ~ .filter__nav .filter__label--5 {
+    color: white;
+}
+
+#pos-7:checked ~ .filter__nav .filter__label--0,
+#pos-7:checked ~ .filter__nav .filter__label--1,
+#pos-7:checked ~ .filter__nav .filter__label--2,
+#pos-7:checked ~ .filter__nav .filter__label--3,
+#pos-7:checked ~ .filter__nav .filter__label--4,
+#pos-7:checked ~ .filter__nav .filter__label--5,
+#pos-7:checked ~ .filter__nav .filter__label--6 {
+    color: white;
+}
