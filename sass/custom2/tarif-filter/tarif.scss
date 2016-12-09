@@ -3,6 +3,10 @@
     background: #fafafa;
     border-radius: 10px;
 
+    input {
+      display: none;
+    }
+
     &__wrapper {
       width: 95%;
       margin: 0 auto;
@@ -28,9 +32,12 @@
 
     &__price {
       width: 50%;
-      display: block;
+      // display: block;
+      display: none;
       text-align: center;
     }
+
+
     &__value {
       display: none;
       font-weight: bold;
@@ -106,12 +113,10 @@
       }
 
       &__price {
-        width: 50%;
-        display: block;
-        text-align: center;
+
       }
       &__value {
-        font-size: 55px;
+        font-size: 50px;
         line-height: 42px;
       }
       &__bottom {
@@ -164,8 +169,6 @@
       }
 
       &__price {
-        width: 50%;
-        display: block;
         text-align: right;
       }
       &__value {
@@ -266,7 +269,7 @@
       }
 
       &__price {
-        width: 200px;
+        width: 230px;
         margin-left: auto;
       }
       &__value {}
@@ -327,10 +330,7 @@
         display: inline-block;
       }
 
-      &__price {
-        width: 200px;
-        margin-left: auto;
-      }
+      &__price {}
       &__value {}
 
       &__bottom {

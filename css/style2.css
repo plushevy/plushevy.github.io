@@ -285,27 +285,22 @@ small, h6
 .tarif-block__nav {
   font-size: 18px;
   line-height: 25px;
-  padding: 23px 0; }
+  padding: 23px 0;
+  margin: 0 auto; }
 
 .tarif-block__tab {
-  display: block;
-  width: 100%;
-  text-align: center;
   cursor: pointer;
-  margin-bottom: 20px; }
-  .tarif-block__tab:last-child {
-    margin-bottom: 0; }
-
-.tarif-block__tab-link {
+  display: block;
   padding: 10px;
+  margin: 0;
+  text-align: center;
   font-weight: bold;
-  opacity: 0.7; }
-  .tarif-block__tab-link:hover {
+  opacity: 0.7;
+  border: 2px solid transparent;
+  border-radius: 26px; }
+  .tarif-block__tab:hover {
     border: 2px solid #cacaca;
-    border-radius: 26px;
     opacity: 1; }
-  .tarif-block__tab-link:active {
-    opacity: 0.7; }
 
 @media (min-width: 480px) {
   .tarif-block {
@@ -320,8 +315,7 @@ small, h6
     padding: 23px 0; }
   .tarif-block__tab {
     width: auto;
-    margin-bottom: 0; }
-  .tarif-block__tab-link {
+    margin-bottom: 0;
     padding: 10px;
     font-weight: bold;
     opacity: 0.7; } }
@@ -334,9 +328,7 @@ small, h6
     font-size: 18px;
     padding: 45px 0 23px 0; }
   .tarif-block__tab {
-    width: auto; }
-  .tarif-block__tab-link {
-    padding: 13px 20px;
+    padding: 13px 10px;
     font-weight: bold;
     opacity: 0.7; } }
 
@@ -358,6 +350,8 @@ small, h6
   padding: 0;
   background: #fafafa;
   border-radius: 10px; }
+  .tarif input {
+    display: none; }
   .tarif__wrapper {
     width: 95%;
     margin: 0 auto; }
@@ -376,7 +370,7 @@ small, h6
       opacity: 0.6; }
   .tarif__price {
     width: 50%;
-    display: block;
+    display: none;
     text-align: center; }
   .tarif__value {
     display: none;
@@ -420,12 +414,8 @@ small, h6
     display: block;
     font-size: 18px;
     line-height: 25px; }
-  .tarif__price {
-    width: 50%;
-    display: block;
-    text-align: center; }
   .tarif__value {
-    font-size: 55px;
+    font-size: 50px;
     line-height: 42px; }
   .tarif__btn-block {
     justify-content: space-between; }
@@ -449,8 +439,6 @@ small, h6
     font-size: 18px;
     line-height: 25px; }
   .tarif__price {
-    width: 50%;
-    display: block;
     text-align: right; }
   .tarif__value {
     font-size: 55px;
@@ -488,7 +476,7 @@ small, h6
   .tarif__link {
     display: inline-block; }
   .tarif__price {
-    width: 200px;
+    width: 230px;
     margin-left: auto; }
   .tarif__bottom {
     width: 700px;
@@ -519,9 +507,6 @@ small, h6
     justify-content: space-around; }
   .tarif__link {
     display: inline-block; }
-  .tarif__price {
-    width: 200px;
-    margin-left: auto; }
   .tarif__bottom {
     width: 700px;
     order: 4;
@@ -570,8 +555,8 @@ small, h6
     position: absolute;
     display: none;
     color: white;
-    width: 70px;
-    height: 70px;
+    width: 62px;
+    height: 62px;
     left: 50%;
     transform: translateX(-50%);
     top: -10px;
@@ -590,12 +575,12 @@ small, h6
     border: 3px solid white;
     border-radius: 50%;
     background: #fb5255;
-    width: 70px;
-    height: 70px;
+    width: 62px;
+    height: 62px;
     left: 50%;
     transform: translateX(-50%);
-    top: -10px;
-    padding-top: 35px;
+    top: -5px;
+    padding-top: 30px;
     text-align: center;
     line-height: 16px;
     font-size: 12px;
@@ -700,6 +685,17 @@ small, h6
     .filter__lable:last-of-type {
       padding-right: 15px; } }
 
+#zdata-0:checked ~ .tarif-block__nav .tarif-block__tab--0,
+#zdata-1:checked ~ .tarif-block__nav .tarif-block__tab--1,
+#zdata-2:checked ~ .tarif-block__nav .tarif-block__tab--2 {
+  color: #fb5255;
+  border: 2px solid #cacaca; }
+
+#zdata-0:checked ~ .filter .tarif__price--0,
+#zdata-1:checked ~ .filter .tarif__price--1,
+#zdata-2:checked ~ .filter .tarif__price--2 {
+  display: block; }
+
 #pos-0:checked ~ .filter__nav .filter__label--0 {
   background: transparent; }
   #pos-0:checked ~ .filter__nav .filter__label--0::before {
@@ -708,7 +704,7 @@ small, h6
     display: block; }
 
 #pos-0:checked ~ .filter__nav .filter__bar {
-  width: calc(0 * 14.1%); }
+  width: calc(0 * 12.5%); }
 
 #pos-0:checked ~ .tarif__price .tarif__value--0 {
   display: block; }
@@ -721,7 +717,7 @@ small, h6
     display: block; }
 
 #pos-1:checked ~ .filter__nav .filter__bar {
-  width: calc(1 * 14.1%); }
+  width: calc(1 * 12.5%); }
 
 #pos-1:checked ~ .tarif__price .tarif__value--1 {
   display: block; }
@@ -734,7 +730,7 @@ small, h6
     display: block; }
 
 #pos-2:checked ~ .filter__nav .filter__bar {
-  width: calc(2 * 14.1%); }
+  width: calc(2 * 12.5%); }
 
 #pos-2:checked ~ .tarif__price .tarif__value--2 {
   display: block; }
@@ -747,7 +743,7 @@ small, h6
     display: block; }
 
 #pos-3:checked ~ .filter__nav .filter__bar {
-  width: calc(3 * 14.1%); }
+  width: calc(3 * 12.5%); }
 
 #pos-3:checked ~ .tarif__price .tarif__value--3 {
   display: block; }
@@ -760,7 +756,7 @@ small, h6
     display: block; }
 
 #pos-4:checked ~ .filter__nav .filter__bar {
-  width: calc(4 * 14.1%); }
+  width: calc(4 * 12.5%); }
 
 #pos-4:checked ~ .tarif__price .tarif__value--4 {
   display: block; }
@@ -773,7 +769,7 @@ small, h6
     display: block; }
 
 #pos-5:checked ~ .filter__nav .filter__bar {
-  width: calc(5 * 14.1%); }
+  width: calc(5 * 12.5%); }
 
 #pos-5:checked ~ .tarif__price .tarif__value--5 {
   display: block; }
@@ -786,7 +782,7 @@ small, h6
     display: block; }
 
 #pos-6:checked ~ .filter__nav .filter__bar {
-  width: calc(6 * 14.1%); }
+  width: calc(6 * 12.5%); }
 
 #pos-6:checked ~ .tarif__price .tarif__value--6 {
   display: block; }
@@ -799,9 +795,22 @@ small, h6
     display: block; }
 
 #pos-7:checked ~ .filter__nav .filter__bar {
-  width: calc(7 * 14.1%); }
+  width: calc(7 * 12.5%); }
 
 #pos-7:checked ~ .tarif__price .tarif__value--7 {
+  display: block; }
+
+#pos-8:checked ~ .filter__nav .filter__label--8 {
+  background: transparent; }
+  #pos-8:checked ~ .filter__nav .filter__label--8::before {
+    display: block; }
+  #pos-8:checked ~ .filter__nav .filter__label--8::after {
+    display: block; }
+
+#pos-8:checked ~ .filter__nav .filter__bar {
+  width: calc(8 * 12.5%); }
+
+#pos-8:checked ~ .tarif__price .tarif__value--8 {
   display: block; }
 
 #pos-1:checked ~ .filter__nav .filter__label--0 {
@@ -844,6 +853,16 @@ small, h6
 #pos-7:checked ~ .filter__nav .filter__label--4,
 #pos-7:checked ~ .filter__nav .filter__label--5,
 #pos-7:checked ~ .filter__nav .filter__label--6 {
+  color: white; }
+
+#pos-8:checked ~ .filter__nav .filter__label--0,
+#pos-8:checked ~ .filter__nav .filter__label--1,
+#pos-8:checked ~ .filter__nav .filter__label--2,
+#pos-8:checked ~ .filter__nav .filter__label--3,
+#pos-8:checked ~ .filter__nav .filter__label--4,
+#pos-8:checked ~ .filter__nav .filter__label--5,
+#pos-8:checked ~ .filter__nav .filter__label--6,
+#pos-8:checked ~ .filter__nav .filter__label--7 {
   color: white; }
 
 .tarify-text {

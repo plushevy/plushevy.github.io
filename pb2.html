@@ -93,7 +93,7 @@
 
             <section class="tarif-block">
 
-              <ul class="tarif-block__nav">
+              <!-- <ul class="tarif-block__nav">
                 <li class="tarif-block__tab tarif-block__tab--active">
                   <a href="#" class="tarif-block__tab-link">Летать будут дети</a>
                 </li>
@@ -103,11 +103,25 @@
                 <li class="tarif-block__tab">
                   <a href="#" class="tarif-block__tab-link">Летать в будни днем</a>
                 </li>
-              </ul>
+              </ul> -->
+
+
 
 
                 <form class="tarif" action="index.html" method="post">
                     <div class="tarif__wrapper">
+                      <input type="radio" name="data-switch" id="zdata-0">
+                      <input type="radio" name="data-switch" id="zdata-1" checked>
+                      <input type="radio" name="data-switch" id="zdata-2">
+
+                      <div class="tarif-block__nav">
+                        <label class="tarif-block__tab tarif-block__tab--0" for="zdata-0">Летать будут дети</label>
+
+                        <label class="tarif-block__tab tarif-block__tab--1" for="zdata-1">У нас день рождения</label>
+
+                        <label class="tarif-block__tab tarif-block__tab--2" for="zdata-2">Летать в будни днем</label>
+                      </div>
+
 
                         <div class="filter">
                             <input type="radio" name="switch-pos" id="pos-0">
@@ -118,24 +132,27 @@
                             <input type="radio" name="switch-pos" id="pos-5">
                             <input type="radio" name="switch-pos" id="pos-6">
                             <input type="radio" name="switch-pos" id="pos-7" checked>
+                            <input type="radio" name="switch-pos" id="pos-8">
+
 
                             <div class="filter__nav">
                                 <div class="filter__bar"></div>
                                 <label class="filter__lable filter__label--0" for="pos-0" data-description="минуты" data-title="2">2 <span>минуты</span></label>
                                 <label class="filter__lable filter__label--1" for="pos-1" data-description="минуты" data-title="4">4 <span>минуты</span></label>
                                 <label class="filter__lable filter__label--2" for="pos-2" data-description="минут" data-title="6">6 <span>минут</span></label>
-                                <label class="filter__lable filter__label--3" for="pos-3" data-description="минут" data-title="10">10 <span>минут</span></label>
-                                <label class="filter__lable filter__label--4" for="pos-4" data-description="минут" data-title="15">15 <span>минут</span></label>
-                                <label class="filter__lable filter__label--5" for="pos-5" data-description="минут" data-title="20">20 <span>минут</span></label>
+                                <label class="filter__lable filter__label--3" for="pos-3" data-description="минут" data-title="8">8 <span>минут</span></label>
+                                <label class="filter__lable filter__label--4" for="pos-4" data-description="минут" data-title="10">10 <span>минут</span></label>
+                                <label class="filter__lable filter__label--5" for="pos-5" data-description="минут" data-title="15">15 <span>минут</span></label>
                                 <label class="filter__lable filter__label--6" for="pos-6" data-description="минут" data-title="30">30 <span>минут</span></label>
-                                <label class="filter__lable filter__label--7" for="pos-7" data-description="минут" data-title="60">60 <span>минут</span></label>
+                                <label class="filter__lable filter__label--7" for="pos-7" data-description="минут" data-title="40">40 <span>минут</span></label>
+                                <label class="filter__lable filter__label--8" for="pos-8" data-description="минут" data-title="60">60 <span>минут</span></label>
                             </div>
 
                             <div class="tarif__links">
                                 <a href="#" class="tarif__link">Все тарифы</a>
                                 <a href="#" class="tarif__link">Парашютистам</a>
                             </div>
-                            <div class="tarif__price">
+                            <div class="tarif__price tarif__price--0">
                                 <b class="tarif__value tarif__value--0">2 200 ₽</b>
                                 <b class="tarif__value tarif__value--1">3 200 ₽</b>
                                 <b class="tarif__value tarif__value--2">4 200 ₽</b>
@@ -144,6 +161,31 @@
                                 <b class="tarif__value tarif__value--5">7 200 ₽</b>
                                 <b class="tarif__value tarif__value--6">8 200 ₽</b>
                                 <b class="tarif__value tarif__value--7">9 200 ₽</b>
+                                <b class="tarif__value tarif__value--8">9 222 ₽</b>
+                            </div>
+
+                            <div class="tarif__price tarif__price--1">
+                                <b class="tarif__value tarif__value--0">12 200 ₽</b>
+                                <b class="tarif__value tarif__value--1">13 200 ₽</b>
+                                <b class="tarif__value tarif__value--2">14 200 ₽</b>
+                                <b class="tarif__value tarif__value--3">15 200 ₽</b>
+                                <b class="tarif__value tarif__value--4">16 200 ₽</b>
+                                <b class="tarif__value tarif__value--5">17 200 ₽</b>
+                                <b class="tarif__value tarif__value--6">18 200 ₽</b>
+                                <b class="tarif__value tarif__value--7">19 200 ₽</b>
+                                <b class="tarif__value tarif__value--8">19 222 ₽</b>
+                            </div>
+
+                            <div class="tarif__price tarif__price--2">
+                                <b class="tarif__value tarif__value--0">22 200 ₽</b>
+                                <b class="tarif__value tarif__value--1">23 200 ₽</b>
+                                <b class="tarif__value tarif__value--2">24 200 ₽</b>
+                                <b class="tarif__value tarif__value--3">25 200 ₽</b>
+                                <b class="tarif__value tarif__value--4">26 200 ₽</b>
+                                <b class="tarif__value tarif__value--5">27 200 ₽</b>
+                                <b class="tarif__value tarif__value--6">28 200 ₽</b>
+                                <b class="tarif__value tarif__value--7">29 200 ₽</b>
+                                <b class="tarif__value tarif__value--8">29 222 ₽</b>
                             </div>
 
                             <div class="tarif__bottom">

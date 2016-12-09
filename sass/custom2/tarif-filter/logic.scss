@@ -1,6 +1,22 @@
 
+
+#zdata-0:checked ~ .tarif-block__nav .tarif-block__tab--0,
+#zdata-1:checked ~ .tarif-block__nav .tarif-block__tab--1,
+#zdata-2:checked ~ .tarif-block__nav .tarif-block__tab--2 {
+  color: #fb5255;
+  border: 2px solid #cacaca;
+}
+
+#zdata-0:checked ~ .filter .tarif__price--0,
+#zdata-1:checked ~ .filter .tarif__price--1,
+#zdata-2:checked ~ .filter .tarif__price--2 {
+  display: block;
+}
+
 //checked
-@for $i from 0 to 8 {
+@for $i from 0 to 9 {
+
+
     #pos-#{$i}:checked ~ .filter__nav .filter__label--#{$i} {
         background: transparent;
 
@@ -18,7 +34,8 @@
 
 // от 1000px навбара брал 141px
     #pos-#{$i}:checked ~ .filter__nav .filter__bar {
-        width: calc(#{$i} * 14.1%);
+        width: calc(#{$i} * 12.5%);
+        //14.1
     }
 
     #pos-#{$i}:checked ~ .tarif__price .tarif__value--#{$i} {
@@ -74,5 +91,16 @@
 #pos-7:checked ~ .filter__nav .filter__label--4,
 #pos-7:checked ~ .filter__nav .filter__label--5,
 #pos-7:checked ~ .filter__nav .filter__label--6 {
+    color: white;
+}
+
+#pos-8:checked ~ .filter__nav .filter__label--0,
+#pos-8:checked ~ .filter__nav .filter__label--1,
+#pos-8:checked ~ .filter__nav .filter__label--2,
+#pos-8:checked ~ .filter__nav .filter__label--3,
+#pos-8:checked ~ .filter__nav .filter__label--4,
+#pos-8:checked ~ .filter__nav .filter__label--5,
+#pos-8:checked ~ .filter__nav .filter__label--6,
+#pos-8:checked ~ .filter__nav .filter__label--7 {
     color: white;
 }
