@@ -279,7 +279,7 @@ small, h6
   min-width: 320px;
   border: 2px solid #cacaca;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 70px auto 0;
   min-height: 415px; }
 
 .tarif-block__nav {
@@ -689,7 +689,8 @@ small, h6
 #zdata-1:checked ~ .tarif-block__nav .tarif-block__tab--1,
 #zdata-2:checked ~ .tarif-block__nav .tarif-block__tab--2 {
   color: #fb5255;
-  border: 2px solid #cacaca; }
+  border: 2px solid #cacaca;
+  opacity: 1; }
 
 #zdata-0:checked ~ .filter .tarif__price--0,
 #zdata-1:checked ~ .filter .tarif__price--1,
