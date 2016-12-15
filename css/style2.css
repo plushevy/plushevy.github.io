@@ -878,15 +878,16 @@ small, h6
 .table-tab {
   cursor: pointer;
   display: block;
-  padding: 10px;
+  padding: 10px 30px;
   margin: 0;
   text-align: center;
   font-weight: bold;
   font-size: 24px;
-  opacity: 0.6;
-  border-bottom: 2px solid transparent; }
+  opacity: 0.7;
+  border: 2px solid transparent;
+  border-radius: 26px; }
   .table-tab:hover {
-    border-bottom: 2px solid #FFBF00;
+    border: 2px solid #cacaca;
     opacity: 1; }
 
 .table-attention {
@@ -901,7 +902,7 @@ small, h6
 #tdata-2:checked ~ .table-nav .table-tab--2 {
   color: #fb5255;
   opacity: 1;
-  border-bottom: 2px solid #FFBF00; }
+  border: 2px solid #cacaca; }
 
 #tdata-1:checked ~ .table-attention {
   visibility: visible; }
