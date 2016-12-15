@@ -10,9 +10,10 @@
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,500">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
+
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -84,59 +85,69 @@
                 <li class="active">Тарифы</li>
             </ol>
             <section class="section-50 section-mac-103 section-mac-bottom-117 tarify">
-                <div class="shell">
+                <div class="shell shell--table">
+
+
+
                     <h4 class="text-center text-uppercase">Тарифы на полет в аэротрубе</h4>
 
-                    <p class="tarify-text">Летайте и тренируйтесь вместе с нами, если у Вас нет
-                        <a href="#" target="_blank" title="Полет не рекомендуется беременным, а также имеющим , травмы позвоночника, заболевания нервной системы,привычный вывих плеча, травма головного мозга, острые кардиологические заболевания, и  в течение последних 24 часов принимали алкогольные и наркотические веществ.">противопоказаний</a>!</p>
 
-                    <!-- <div class="tabs">
-                        <ul>
-                            <li class="active">
-                                <a data-id="adult" class="last" href="#adult">ДЛЯ ВЗРОСЛЫХ </a>
-                            </li>
-                            <li class="">
-                                <a data-id="child" class="last" href="#child">ДЛЯ ДЕТЕЙ</a>
-                            </li>
-                            <li class="">
-                                <a data-id="celebration" class="last" href="#celebration">ДЛЯ ПРАЗДНИКОВ</a>
-                            </li>
-                            <li class="">
-                                <a data-id="skydiver" class="last" href="#skydiver">ДЛЯ ПАРАШЮТИСТОВ </a>
-                            </li>
-                        </ul>
-                    </div> -->
+                      <input class="table-input" type="radio" name="tarif-switch" id="tdata-0" checked>
+                      <input class="table-input" type="radio" name="tarif-switch" id="tdata-1" >
+                      <input class="table-input" type="radio" name="tarif-switch" id="tdata-2">
 
-                    <table class="tab-wrapper">
+                      <div class="table-nav">
+                        <label class="table-tab table-tab--0" for="tdata-0">Для взрослых</label>
+
+                        <label class="table-tab table-tab--1" for="tdata-1">Для детей</label>
+
+                        <label class="table-tab table-tab--2" for="tdata-2">Для парашютистов</label>
+                      </div>
+
+                      <p class="table-attention">Внимание! данные тарифы действуют только для детей от 4-х до 14-ти лет. При бронировании полета сообщите нам о скидке</p>
+
+
+                      <!-- тарифы для взрослых -->
+
+                    <table class="table-price table-price--1">
                         <tbody>
-                            <tr>
-                                <td class="one" data-name="2 минуты" data-id="16" data-time="2 мин"><span class="fw900">2 мин</span></td>
+                            <tr class="table-price__line" data-time="2 минуты" data-price="2200">
+                                <td class="one">
+                                  <span>2 мин</span>
+                                </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
                                 </td>
                                 <td class="three">
                                     <p>Действует для<br>1-го человека</p>
                                 </td>
-                                <td class="four" data-price="2200">
-                                    <span class="fw900">2 200 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four"><span>2 200 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td class="one" data-name="4 минуты" data-id="17" data-time="4 мин"><span class="fw900">4 мин</span></td>
+                            <tr class="table-price__line" data-time="4 минуты" data-price="3600">
+                                <td class="one">
+                                  <span>4 мин</span>
+                                </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
                                 </td>
                                 <td class="three">
                                     <p>Действует для <br>1-го человека</p>
                                 </td>
-                                <td class="four" data-price="3600">
-                                    <span class="fw900">3 600 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four">
+                                    <span>3 600 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td class="one" data-name="6 минут" data-id="18" data-time="6 мин"><span class="fw900">6 мин</span></td>
+                            <tr class="table-price__line" data-time="6 минут" data-price="4800">
+                                <td class="one">
+                                  <span>6 мин</span>
+                                </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
                                     <img src="/images/man.png" alt="">
@@ -144,13 +155,35 @@
                                 <td class="three">
                                     <p>До 2-х человек<br>по 3 мин каждый</p>
                                 </td>
-                                <td class="four" data-price="4800">
-                                    <span class="fw900">4 800 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four">
+                                    <span>4 800 ₽</span>
+                                  </td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td class="one" data-name="10 минут" data-id="19" data-time="10 мин"><span class="fw900">10 мин</span></td>
+                            <tr class="table-price__line" data-time="8 минут" data-price="6000">
+                                <td class="one"><span >8 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 2-х человек<br>по 4 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>6 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="10 минут" data-price="7000">
+                                <td class="one">
+                                  <span >10 мин</span>
+                                </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
                                     <img src="/images/man.png" alt="">
@@ -158,13 +191,17 @@
                                 <td class="three">
                                     <p>До 2-х человек<br>по 5 мин каждый</p>
                                 </td>
-                                <td class="four" data-price="7000">
-                                    <span class="fw900">7 000 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four">
+                                    <span>7 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td class="one" data-name="15 минут" data-id="20" data-time="15 мин"><span class="fw900">15 мин</span></td>
+                            <tr class="table-price__line" data-time="15 минут" data-price="9000">
+                                <td class="one">
+                                  <span >15 мин</span>
+                                </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
                                     <img src="/images/man.png" alt="">
@@ -173,51 +210,399 @@
                                 <td class="three">
                                     <p>До 3-х человек<br>по 5 мин каждый</p>
                                 </td>
-                                <td class="four" data-price="9000">
-                                    <span class="fw900">9 000 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four">
+                                    <span>9 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td class="one" data-name="20 минут" data-id="21" data-time="20 мин"><span class="fw900">20 мин</span></td>
+                            <tr class="table-price__line" data-time="20 минут" data-price="12000">
+                                <td class="one">
+                                  <span >20 мин</span>
+                                </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
-                                    <span class="fw900">x 4</span>
+                                    <span>x 4</span>
                                 </td>
                                 <td class="three">
                                     <p>До 4-х человек<br>по 5 мин каждый</p>
                                 </td>
-                                <td class="four" data-price="12000">
-                                    <span class="fw900">12 000 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four">
+                                    <span>12 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td class="one" data-name="30 минут" data-id="22" data-time="30 мин"><span class="fw900">30 мин</span></td>
+                            <tr class="table-price__line" data-time="30 минут" data-price="15000">
+                                <td class="one">
+                                <span >30 мин</span>
+                              </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
-                                    <span class="fw900">x 10</span>
+                                    <span>x 10</span>
                                 </td>
                                 <td class="three">
                                     <p>До 10-ти человек<br>по 3 мин каждый</p>
                                 </td>
-                                <td class="four" data-price="15000">
-                                    <span class="fw900">15 000 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four">
+                                    <span>15 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td class="one" data-name="60 минут" data-id="53" data-time="60 мин"><span class="fw900">60 мин</span></td>
+                          <tr class="table-price__line" data-time="60 минут" data-price="24000">
+                                <td class="one">
+                                  <span >60 мин</span>
+                                </td>
                                 <td class="two">
                                     <img src="/images/man.png" alt="">
-                                    <span class="fw900">x 20</span>
+                                    <span>x 20</span>
                                 </td>
                                 <td class="three">
                                     <p>До 20-ти человек<br>по 3 мин каждый</p>
                                 </td>
-                                <td class="four" data-price="24000">
-                                    <span class="fw900">24 000 ₽</span></td>
-                                <td class="five"><a href="blog.html" class="btn btn-xs btn-primary">Записаться</a></td>
+                                <td class="four">
+                                    <span>24 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <!-- тарифы для детей  -->
+
+                    <table class="table-price table-price--2">
+                        <tbody>
+                            <tr class="table-price__line" data-time="2 минуты" data-price="2200">
+                                <td class="one">
+                                  <span>2 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>Действует для<br>1-го человека</p>
+                                </td>
+                                <td class="four"><span>2 200 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="4 минуты" data-price="3600">
+                                <td class="one">
+                                  <span>4 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>Действует для <br>1-го человека</p>
+                                </td>
+                                <td class="four">
+                                    <span>3 600 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="6 минут" data-price="4800">
+                                <td class="one">
+                                  <span>6 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 2-х человек<br>по 3 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>4 800 ₽</span>
+                                  </td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="8 минут" data-price="6000">
+                                <td class="one"><span >8 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 2-х человек<br>по 4 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>6 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="10 минут" data-price="7000">
+                                <td class="one">
+                                  <span >10 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 2-х человек<br>по 5 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>7 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="15 минут" data-price="9000">
+                                <td class="one">
+                                  <span>15 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 3-х человек<br>по 5 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>9 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="20 минут" data-price="12000">
+                                <td class="one">
+                                  <span >20 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <span>x 4</span>
+                                </td>
+                                <td class="three">
+                                    <p>До 4-х человек<br>по 5 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>12 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="30 минут" data-price="15000">
+                                <td class="one">
+                                <span >30 мин</span>
+                              </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <span>x 10</span>
+                                </td>
+                                <td class="three">
+                                    <p>До 10-ти человек<br>по 3 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>15 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                          <tr class="table-price__line" data-time="60 минут" data-price="24000">
+                                <td class="one">
+                                  <span >60 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <span>x 20</span>
+                                </td>
+                                <td class="three">
+                                    <p>До 20-ти человек<br>по 3 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>24 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- тарифы для парашютистов -->
+
+
+                    <table class="table-price table-price--3">
+                        <tbody>
+                            <tr class="table-price__line" data-time="2 минуты" data-price="2200">
+                                <td class="one">
+                                  <span>2 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>Действует для<br>1-го человека</p>
+                                </td>
+                                <td class="four"><span>2 200 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="4 минуты" data-price="3600">
+                                <td class="one">
+                                  <span>4 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>Действует для <br>1-го человека</p>
+                                </td>
+                                <td class="four">
+                                    <span>3 600 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="6 минут" data-price="4800">
+                                <td class="one">
+                                  <span>6 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 2-х человек<br>по 3 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>4 800 ₽</span>
+                                  </td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="8 минут" data-price="6000">
+                                <td class="one"><span >8 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 2-х человек<br>по 4 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>6 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="10 минут" data-price="7000">
+                                <td class="one">
+                                  <span >10 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 2-х человек<br>по 5 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>7 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="15 минут" data-price="9000">
+                                <td class="one">
+                                  <span >15 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                    <img src="/images/man.png" alt="">
+                                </td>
+                                <td class="three">
+                                    <p>До 3-х человек<br>по 5 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>9 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="20 минут" data-price="12000">
+                                <td class="one">
+                                  <span >20 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <span>x 4</span>
+                                </td>
+                                <td class="three">
+                                    <p>До 4-х человек<br>по 5 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>12 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                            <tr class="table-price__line" data-time="30 минут" data-price="15000">
+                                <td class="one">
+                                <span >30 мин</span>
+                              </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <span>x 10</span>
+                                </td>
+                                <td class="three">
+                                    <p>До 10-ти человек<br>по 3 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>15 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
+                            </tr>
+
+                          <tr class="table-price__line" data-time="60 минут" data-price="24000">
+                                <td class="one">
+                                  <span >60 мин</span>
+                                </td>
+                                <td class="two">
+                                    <img src="/images/man.png" alt="">
+                                    <span>x 20</span>
+                                </td>
+                                <td class="three">
+                                    <p>До 20-ти человек<br>по 3 мин каждый</p>
+                                </td>
+                                <td class="four">
+                                    <span>24 000 ₽</span></td>
+                                <td class="five">
+                                  <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
+                                </td>
                             </tr>
 
                         </tbody>
@@ -237,27 +622,27 @@
                             <div class="range">
                                 <div class="cell-md-3">
                                     <div class="i one"></div>
-                                    <span class="fw900">ОЗНАКОМЬТЕСЬ</span>
+                                    <span>ОЗНАКОМЬТЕСЬ</span>
                                     <p>
                                         Ознакомьтесь с ближайшими датами бронирования в <a href="/raspisanie/" class="fw700">календаре</a> Предварительно прочитайте <br><a href="/media/catalog/pravila_poletov.pdf" target="_blank" class="fw700">Правила полетов</a>.
                                     </p>
                                 </div>
                                 <div class="cell-md-3">
                                     <div class="i two"></div>
-                                    <span class="fw900">ПОКУПАЙТЕ</span>
+                                    <span>ПОКУПАЙТЕ</span>
                                     <p>
                                         <a href="#" class="fw700">Покупайте</a> и записывайтесь на полет <strong>8 499 501 77 37</strong>, купленное время нужно отлетать в течение 1 дня
                                     </p>
                                 </div>
                                 <div class="cell-md-3">
                                     <div class="i three"></div>
-                                    <span class="fw900">ПРИЕЗЖАЙТЕ</span>
+                                    <span>ПРИЕЗЖАЙТЕ</span>
 
                                     <p>Мы находимся рядом с тремя станциями метро. Схему проезда можно посмотреть <a href="/kontak/" class="fw700">здесь</a></p>
                                 </div>
                                 <div class="cell-md-3">
                                     <div class="i four"></div>
-                                    <span class="fw900">ЛЕТАЙТЕ</span>
+                                    <span>ЛЕТАЙТЕ</span>
                                     <p>В день полета в комплекс необходимо прибыть за 40 минут до полета, для экипировки и теоретической подготовки.</p>
                                 </div>
                             </div>
@@ -361,10 +746,10 @@
 
                         </div>
                         <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                              <div class="shell text-left">
-                                  <p>Полетомания <span id="copyright-year"></span>
-                                  </p>
-                              </div>
+                            <div class="shell text-left">
+                                <p>Полетомания <span id="copyright-year"></span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -408,9 +793,105 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="modal-content">
+        <div class="modal-content__wrapper">
+            <form method="post" class="form1 form1--tariff" id="order2" novalidate="novalidate">
+                <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
+                <div class="form1__top">
+                    <h4 class="form1__title">Покупка полета</h4>
+
+                </div>
+
+                    <div class="form1__data">
+                        <div class="form1__line1"><span class="form1__time">2 минуты</span> полета в Открытой Аэротрубе</div>
+
+                        <div class="form1__number">
+                            <span class="form1__minus">-</span>
+                            <input class="form1__input-maxmin" type="text" value="1" />
+                            <span class="form1__plus">+</span>
+                        </div>
+
+                        <div class="form1__line2">Стоимость: <span class="form1__price"> </span>₽</div>
+
+                    </div>
+
+        </div>
+        <!-- конец inner -->
+
+        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Далее">
+
+        <p class="form1__small-text">* Сертификат действует 1 год со дня покупки</p>
+
+        <a title="Закрыть" class="form1__close" href="javascript:;"></a>
+
+        </form>
+
+    </div>
+
+
+    <div class="modal-overlay"></div>
+
+
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+
+
+
+    $(document).ready(function() {
+        function openTarifModal(){
+            var price = 0;
+            var $input = $('.form1__input-maxmin');
+            var modalContent = $('.modal-content');
+            var modalOverlay = $('.modal-overlay');
+
+            $('.form1__minus').click(function() {
+                var count = parseInt($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+                $(".form1__price").html(price * count);
+            });
+            $('.form1__plus').click(function() {
+
+                var count = parseInt($input.val()) + 1;
+                console.log(count);
+                console.log($input.val());
+                $input.val(count);
+                $(".form1__price").html(price * count);
+            });
+
+            $(".form1__close").click(function(){
+              event.preventDefault();
+              modalContent.removeClass('modal-content--show');
+              modalOverlay.removeClass('modal-overlay--show');
+
+            });
+
+            $(".table-price__line .btn").click(function(){
+                var parent = $(this).parents(".table-price__line");
+                var time = parent.data("time");
+                price = parent.data("price");
+
+
+
+
+                $(".form1__time").html(time);
+                $(".form1__price").html(price);
+                $input.val(1);
+              modalOverlay.addClass('modal-overlay--show');
+              modalContent.addClass('modal-content--show');
+            });
+        }
+        openTarifModal();
+    });
+
+    </script>
+
 </body>
 
 </html>

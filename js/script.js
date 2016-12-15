@@ -627,17 +627,21 @@ $document.ready(function () {
   }
 
   /**
-   * Stepper
+   * Stepper  Илья вырубитл
    * @description Enables Stepper Plugin
    */
-  if (plugins.stepper.length) {
-    plugins.stepper.stepper({
-      labels: {
-        up: "",
-        down: ""
-      }
-    });
-  }
+
+
+  // if (plugins.stepper.length) {
+  //   plugins.stepper.stepper({
+  //     labels: {
+  //       up: "",
+  //       down: ""
+  //     }
+  //   });
+  // }
+
+
 
   /**
    * Radio
@@ -1705,4 +1709,3 @@ $document.ready(function () {
 
   })(jQuery);
 });
-

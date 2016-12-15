@@ -866,38 +866,172 @@ small, h6
 #pos-8:checked ~ .filter__nav .filter__label--7 {
   color: white; }
 
-.tarify-text {
-  text-align: center; }
+.table-input {
+  display: none; }
 
-.tab-wrapper {
+.table-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto 35px; }
+
+.table-tab {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  opacity: 0.6;
+  border-bottom: 2px solid transparent; }
+  .table-tab:hover {
+    border-bottom: 2px solid #FFBF00;
+    opacity: 1; }
+
+.table-attention {
+  margin: 25px auto;
+  text-align: center;
+  font-size: 16px;
+  color: #fa5254;
+  visibility: hidden; }
+
+#tdata-0:checked ~ .table-nav .table-tab--0,
+#tdata-1:checked ~ .table-nav .table-tab--1,
+#tdata-2:checked ~ .table-nav .table-tab--2 {
+  color: #fb5255;
+  opacity: 1;
+  border-bottom: 2px solid #FFBF00; }
+
+#tdata-1:checked ~ .table-attention {
+  visibility: visible; }
+
+#tdata-0:checked ~ .table-price--1,
+#tdata-1:checked ~ .table-price--2,
+#tdata-2:checked ~ .table-price--3 {
+  display: block; }
+
+.table-price {
+  display: none;
+  margin: 0 auto;
+  max-width: 1200px;
   width: 100%;
-  margin: 0 auto; }
-  .tab-wrapper tr {
-    vertical-align: middle;
-    border-bottom: 1px solid #eeeeee; }
-  .tab-wrapper td {
+  vertical-align: middle; }
+  .table-price tbody {
+    min-width: 100%;
+    display: block; }
+  .table-price tr {
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; }
+  .table-price td {
     width: 20%;
     padding-top: 35px;
     padding-bottom: 35px; }
+  .table-price .one {
+    color: #86939e; }
+  .table-price .two {
+    color: #fb5255;
+    font-weight: bold;
+    font-size: 25px; }
+    .table-price .two img {
+      display: inline-block;
+      padding: 0;
+      margin: 0; }
+  .table-price .three {
+    font-size: 16px;
+    color: black; }
+  .table-price .four {
+    font-weight: bold;
+    font-size: 25px; }
+
+@media (max-width: 768px) {
+  .shell--table {
+    max-width: 95%;
+    padding: 0; }
+  .table-nav {
+    justify-content: space-between;
+    margin: 30px auto 20px; }
+  .table-tab {
+    font-size: 20px; }
+  .table-attention {
+    margin: 5px auto 15px;
+    font-size: 12px; } }
 
 @media (max-width: 480px) {
-  .tab-wrapper tr {
+  .table-nav {
+    flex-direction: column;
+    margin: 30px auto 20px;
+    -ms-grid-row-align: center;
+        align-items: center; }
+  .table-tab {
+    font-size: 20px; }
+  .table-attention {
+    margin: 5px auto 15px;
+    font-size: 12px; }
+  .table-price tr {
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px 0;
-    justify-content: center; }
-  .tab-wrapper td {
-    display: block;
+    position: relative; }
+  .table-price td {
+    display: inline-block;
     margin: 0;
     padding: 5px 0;
-    width: 30%; }
-  .tab-wrapper .two {
+    width: auto; }
+  .table-price .one {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 14px; }
+  .table-price .two {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    line-height: 24px;
+    margin: 0 5px; }
+    .table-price .two img {
+      width: 22px;
+      height: 24px; }
+  .table-price .three {
+    font-size: 12px;
+    flex-grow: 1; }
+  .table-price .four {
+    order: -1;
+    flex-grow: 1;
+    align-self: flex-start;
+    text-align: left;
+    font-size: 18px; }
+  .table-price .five button {
+    width: 120px;
+    padding: 15px 0;
+    font-size: 12px; } }
+
+@media (max-width: 380px) {
+  .table-nav {
+    flex-direction: column;
+    margin: 15px auto 10px;
+    -ms-grid-row-align: center;
+        align-items: center; }
+  .table-tab {
+    font-size: 18px; }
+  .table-attention {
+    margin: 0px auto 10px;
+    font-size: 10px; }
+  .table-price .one {
+    font-size: 16px; }
+  .table-price .two {
     display: none; }
-  .tab-wrapper .four {
-    width: 30%; }
-  .tab-wrapper .five a {
-    margin: 0 auto; } }
+  .table-price .three {
+    font-size: 14px; }
+  .table-price .four {
+    font-size: 18px; }
+  .table-price .five {
+    width: 100px; }
+    .table-price .five button {
+      width: 100px; } }
 
 .modal-content {
   display: none;
@@ -1006,8 +1140,7 @@ small, h6
 .form1 label {
   display: block;
   position: static;
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0 0;
   padding: 0;
   border-radius: 0;
   background: none;
@@ -1035,6 +1168,76 @@ small, h6
   font-size: 20px;
   color: black;
   letter-spacing: 2px; }
+
+.form1--tariff .form1__data {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center; }
+
+.form1--tariff .form1__line1 {
+  padding: 20px 0; }
+
+.form1--tariff .form1__line2 {
+  align-self: center;
+  text-align: center;
+  padding: 10px 0; }
+
+.form1--tariff .form1__time {
+  font-weight: bold; }
+
+.form1--tariff .form1__price {
+  font-weight: bold;
+  font-size: 30px; }
+
+.form1--tariff .form1__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px; }
+
+.form1--tariff .form1__minus {
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: green;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center; }
+  .form1--tariff .form1__minus:hover {
+    opacity: 0.9; }
+
+.form1--tariff .form1__input-maxmin {
+  width: 70px;
+  max-width: 100px;
+  height: 50px;
+  max-height: 52px;
+  text-align: center;
+  border-radius: 0; }
+
+.form1--tariff .form1__plus {
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: green;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center; }
+  .form1--tariff .form1__plus:hover {
+    opacity: 0.9; }
 
 @media (max-width: 1200px) {
   .form1__inner {
