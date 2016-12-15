@@ -4,6 +4,7 @@
 }
 
 .table-nav {
+  max-width: 1200px;
   display: flex;
   justify-content: space-around;
   margin: 50px auto 35px;
@@ -52,7 +53,7 @@
 #tdata-0:checked ~ .table-price--1,
 #tdata-1:checked ~ .table-price--2,
 #tdata-2:checked ~ .table-price--3 {
-  display: block;
+  display: table;
 }
 
 
@@ -64,11 +65,7 @@
   width: 100%;
   vertical-align: middle;
 
-  tbody {
-    min-width: 100%;
-    display: block;
 
-  }
 
   tr {
     border-bottom: 1px solid #eeeeee;
@@ -160,7 +157,7 @@
       position: relative;
     }
      td {
-      display: inline-block;
+      display: block;
       margin: 0 ;
       padding: 5px 0;
       width: auto;
@@ -186,11 +183,9 @@
     }
     .three {
       font-size: 12px;
-      flex-grow: 1;
     }
     .four {
       order: -1;
-      flex-grow: 1;
       align-self: flex-start;
       text-align: left;
       font-size: 18px;
@@ -258,23 +253,7 @@
 
 
 
-@media (min-width: 768px) {
-  .table-price {
-
-    tr {}
-
-    td {}
-
-    .one {}
-    .two {
-      img {}
-    }
-    .three {}
-    .four {}
-    .five {}
-  }
-
-}
+@media (min-width: 768px) {}
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
 @media (min-width: 1600px) {}

@@ -870,6 +870,7 @@ small, h6
   display: none; }
 
 .table-nav {
+  max-width: 1200px;
   display: flex;
   justify-content: space-around;
   margin: 50px auto 35px; }
@@ -908,7 +909,7 @@ small, h6
 #tdata-0:checked ~ .table-price--1,
 #tdata-1:checked ~ .table-price--2,
 #tdata-2:checked ~ .table-price--3 {
-  display: block; }
+  display: table; }
 
 .table-price {
   display: none;
@@ -916,9 +917,6 @@ small, h6
   max-width: 1200px;
   width: 100%;
   vertical-align: middle; }
-  .table-price tbody {
-    min-width: 100%;
-    display: block; }
   .table-price tr {
     border-bottom: 1px solid #eeeeee;
     text-align: center;
@@ -976,7 +974,7 @@ small, h6
     padding: 20px 0;
     position: relative; }
   .table-price td {
-    display: inline-block;
+    display: block;
     margin: 0;
     padding: 5px 0;
     width: auto; }
@@ -996,11 +994,9 @@ small, h6
       width: 22px;
       height: 24px; }
   .table-price .three {
-    font-size: 12px;
-    flex-grow: 1; }
+    font-size: 12px; }
   .table-price .four {
     order: -1;
-    flex-grow: 1;
     align-self: flex-start;
     text-align: left;
     font-size: 18px; }
