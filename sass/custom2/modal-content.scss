@@ -1,8 +1,6 @@
 .modal-content {
     display: none;
     position: fixed;
-    width: 50%;
-    max-width: 660px;
     min-width: 320px;
     top: 60px;
     left: 0;
@@ -13,6 +11,11 @@
     z-index: 1000;
     text-align: center;
     box-shadow: 0 5px 9px 0 #cdcdcd;
+
+    &--order {
+      width: 50%;
+      max-width: 660px;
+    }
 
     &--show {
         display: block;

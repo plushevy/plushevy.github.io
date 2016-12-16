@@ -89,7 +89,9 @@
             <br>
             <br>
 
-            <button class="btn modal-btn" type="button" name="button">Модальное окно</button>
+            <button class="btn modal-btn modal-btn--1" type="button" name="button">Модальное окно1</button>
+
+            <button class="btn modal-btn modal-btn--2" type="button" name="button">Модальное окно2</button>
 
             <br>
             <br>
@@ -98,7 +100,8 @@
             <br>
 
 
-            <div class="modal-content">
+
+            <div class="modal-content modal-content--order">
                 <div class="modal-content__wrapper">
                     <form method="post" class="form1" id="order1" novalidate="novalidate">
                         <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
@@ -108,12 +111,8 @@
                         </div>
                         <b class="form1__text-top">ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ<br>С ВАМИ СВЯЖЕТСЯ АДМИНИСТРАТОР</b>
 
-
                         <fieldset class="form1__inner">
-
                             <label class="form1__timer" for="form1__select">Выберите тариф
-
-
                                       <select class="form1__select" id="form1__select">
                                         <option value="1" selected>2 минуты</option>
                                         <option value="2">4 минуты</option>
@@ -125,12 +124,10 @@
                                         <option value="8">60 минут</option>
                                       </select>
                             </label>
-
                             <label class="form1__phone-label">
                                   <span>Ваше имя</span>
                                   <input id="form1__name" type="text" name="name" placeholder="" required>
                                 </label>
-
                             <label class="form1__name-label">
                                   <span>Ваш телефон</span>
                                   <div class="form1__phone-container">
@@ -138,62 +135,67 @@
                                   </div>
                                   <!-- <p class="hint error">Номер телефона должен быть из 10 цифр</p> -->
                                 </label>
-
                         </fieldset>
-
+                        <!-- конец inner -->
                 </div>
-                <!-- конец inner -->
-
-
                 <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
-
                 <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
-
                 <a title="Закрыть" class="form1__close" href="javascript:;"></a>
-
                 </form>
+            </div>
 
-    </div>
+            <div class="popup popup--small">
+                <div class="popup__wrapper">
+                    <h6>Ваше сообщение принято.</h6>
+                    <p>В ближайшее время с вами свяжется администратор.</p>
+                </div>
+
+                <a title="Закрыть" class="popup__close" href="javascript:;"></a>
+            </div>
 
 
 
-    <div class="modal-overlay"></div>
-
-    </main>
-    <!-- Page Footer-->
-    <footer class="page-foot">
-        <section class="bg-primary section-30 section-lg-31 section-lg-bottom-30">
+            <div class="modal-overlay"></div>
 
 
-            <div class="shell">
-                <div class="range small">
-                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                        <ul class="list">
-                            <li><a href="#">Публичное соглашение</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Правила полетов</a></li>
-                        </ul>
-                    </div>
-                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                        <ul class="list">
-                            <li><a href="#">Ссылка1</a></li>
-                            <li><a href="#">Ссылка1</a></li>
-                            <li><a href="#">Ссылка1</a></li>
-                        </ul>
-                    </div>
-                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
 
-                    </div>
-                    <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                        <div class="shell text-left">
-                            <p>Полетомания <span id="copyright-year"></span>
-                            </p>
+
+
+        </main>
+        <!-- Page Footer-->
+        <footer class="page-foot">
+            <section class="bg-primary section-30 section-lg-31 section-lg-bottom-30">
+
+
+                <div class="shell">
+                    <div class="range small">
+                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                            <ul class="list">
+                                <li><a href="#">Публичное соглашение</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Правила полетов</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                            <ul class="list">
+                                <li><a href="#">Ссылка1</a></li>
+                                <li><a href="#">Ссылка1</a></li>
+                                <li><a href="#">Ссылка1</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+
+                        </div>
+                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                            <div class="shell text-left">
+                                <p>Полетомания <span id="copyright-year"></span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </footer>
+            </section>
+        </footer>
 
 
     </div>
@@ -247,7 +249,45 @@
         });
     </script>
 
-    <script>
+    <script type="text/javascript">
+
+
+
+    $(document).ready(function() {
+        function openModal(){
+            var modalContentSmall = $('.popup--small');
+            var modalContentOrder = $('.modal-content--order');
+            var modalOverlay = $('.modal-overlay');
+
+
+            $(".popup__close").click(function(){
+              event.preventDefault();
+            modalContentSmall.removeClass('popup--show');
+              modalOverlay.removeClass('modal-overlay--show');
+            });
+
+            $(".form1__close").click(function(){
+              event.preventDefault();
+              modalContentOrder.removeClass('modal-content--show');
+              modalOverlay.removeClass('modal-overlay--show');
+            });
+
+            $(".modal-btn--2").click(function(){
+              modalOverlay.addClass('modal-overlay--show');
+              modalContentSmall.addClass('popup--show');
+            });
+
+            $(".modal-btn--1").click(function(){
+              modalOverlay.addClass('modal-overlay--show');
+              modalContentOrder.addClass('modal-content--show');
+            });
+        }
+        openModal();
+    });
+
+    </script>
+
+    <!-- <script>
         var modalButton = document.querySelector(".modal-btn");
         var modalPopup = document.querySelector(".modal-content");
         var modalOverlay = document.querySelector(".modal-overlay");
@@ -276,7 +316,7 @@
                 }
             }
         });
-    </script>
+    </script> -->
 
 </body>
 
