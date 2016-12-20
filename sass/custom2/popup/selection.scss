@@ -1,0 +1,101 @@
+.selection {
+
+  input {
+    display: none;
+  }
+
+  &__title {
+    margin-top: 80px;
+    margin-bottom: 45px;
+  }
+
+  &__tabs {
+    display: flex;
+  }
+
+  &__tab {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+
+    width: 50%;
+    min-height: 120px;
+    margin: 0;
+
+
+    border: 1px solid #cacaca;
+
+    &--1 {
+      padding: 20px 30px 20px 90px;
+      text-align: left;
+      background: url("../images/popup/dot.png") no-repeat 20px 35px;
+    }
+    &--2 {
+      padding: 20px 30px 20px 90px;
+      text-align: left;
+      background: url("../images/popup/letter.png") no-repeat 20px 35px;
+    }
+    &--3 {
+      padding: 20px 30px 20px 90px;
+      text-align: left;
+      background: url("../images/popup/who.png") no-repeat 20px 35px;
+    }
+    &--4 {
+      padding: 20px 30px 20px 90px;
+      text-align: left;
+      background: url("../images/popup/gift.png") no-repeat 20px 35px;
+    }
+
+    &--pay1 {
+      padding: 55px 0 90px 0;
+      text-align: center;
+      align-items: center;
+      background: url("../images/popup/cash.png") no-repeat 50% 120px;
+    }
+
+    &--pay2 {
+      padding: 55px 0 90px 0;
+      text-align: center;
+      align-items: center;
+      background: url("../images/popup/visa.png") no-repeat 25% 125px,
+                  url("../images/popup/maestro.png") no-repeat 50% 120px,
+                  url("../images/popup/mastercard.png") no-repeat 70% 120px;
+    }
+
+    &--pay3 {
+      padding: 55px 0 90px 0;
+      text-align: center;
+      align-items: center;
+      background: url("../images/popup/webmoney.png") no-repeat 30% 125px,
+                  url("../images/popup/yandex.png") no-repeat 50% 122px,
+                  url("../images/popup/qiwi.png") no-repeat 70% 125px;
+    }
+
+
+    &:hover {
+      border-color: white;
+      box-shadow: inset 0 0 0 5px grey;
+    }
+  }
+
+  &__name {}
+  &__text {
+    margin-top: 5px;
+  }
+
+}
+
+#select1-1:checked ~ .selection__tabs .selection__tab--1,
+#select1-2:checked ~ .selection__tabs .selection__tab--2,
+#select2-1:checked ~ .selection__tabs .selection__tab--3,
+#select2-2:checked ~ .selection__tabs .selection__tab--4,
+#select3-1:checked ~ .selection__tabs .selection__tab--pay1,
+#select3-2:checked ~ .selection__tabs .selection__tab--pay2,
+#select3-3:checked ~ .selection__tabs .selection__tab--pay3 {
+  border-color: white;
+  box-shadow: inset 0 0 0 5px #68b240;
+}

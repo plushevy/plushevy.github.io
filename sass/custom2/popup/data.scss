@@ -1,0 +1,29 @@
+.data {
+  padding: 15px 0;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: space-around;;
+  align-items: center;
+
+  text-align: center;
+  border: 2px solid #cacaca;
+  border-radius: 10px;
+
+  &__line1 {
+    font-weight: bold;
+  }
+
+  &__line2 {
+    // width: 100%;
+    align-self: center;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  &__time {}
+  &__price {}
+
+}

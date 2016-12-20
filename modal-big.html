@@ -1,0 +1,170 @@
+<div class="popup popup_large" id="paymentWin" style="">
+		<a href="#" class="close"></a>
+		<h2>Оформление заказа</h2>
+		<div class="title order-item" id="order-item" order-item-price="2400">
+			<img class="order-item-thumb" src="/upload/resize_cache/uf/32f/128_128_2/mini.jpg">
+			<div class="order-item-name">6 минут полета в Открытой Аэротрубе</div>
+			<div class="order-item-quantity" id="quantity-widget">
+							<div class="select-plusminus" data-widget="select-plusminus">
+					<button type="button" class="button_minus" data-role="substract">–</button><span class="count"><span data-role="quantity">1</span> шт.</span><button type="button" class="button_plus" data-role="add">+</button>
+				</div>
+				<span class="order-item-quantity__price"><span data-role="total-price">2400</span> р.</span>
+			</div>
+		</div>
+
+		<form action="" method="post" id="payment-form" name="payment-form">
+			<input type="hidden" name="itemID" id="itemID" value="46063" data-role="order-data">
+			<input type="hidden" name="clientID" id="clientID" value="" data-role="order-data">
+			<input type="hidden" name="itemQuantity" id="itemQuantity" value="1" data-role="order-data">
+
+			<div class="order-section certificate-type" data-block="certificate-type">
+				<div class="subtitle">Что вы хотите купить?</div>
+								<div class="switcher type x2">
+					<div class="switcher__item email" data-target="{&quot;certificate-type&quot;: &quot;email&quot;, &quot;delivery-type&quot;: &quot;mail&quot;}" data-block="email" data-group="certificate-type">
+						<div class="mini-subtitle">Электронный сертификат</div>
+						<div class="switcher__descr">Дойдет за&nbsp;5 минут по&nbsp;электронной почте</div>
+					</div>
+					<div class="switcher__item envelope selected" data-target="{&quot;certificate-type&quot;: &quot;envelope&quot;}" data-block="envelope" data-group="certificate-type">
+						<div class="mini-subtitle">Сертификат в&nbsp;конверте</div>
+						<div class="switcher__descr">Конверт из&nbsp;дизайнерской бумаги</div>
+					</div>
+										<input type="hidden" name="certificate-type" value="envelope" data-role="order-data">
+				</div>
+			</div>
+
+			<div class="order-section recipient" data-block="recipient">
+				<div class="subtitle">Для себя или в подарок?</div>
+				<div class="switcher recipient x2">
+					<div class="switcher__item myself selected" data-target="{&quot;recipient&quot;: &quot;myself&quot;}" data-block="myself" data-group="recipient">
+						<div class="mini-subtitle">Для себя</div>
+						<div class="switcher__descr">Доставим заказ лично вам</div>
+					</div>
+					<div class="switcher__item gift" data-target="{&quot;recipient&quot;: &quot;gift&quot;}" data-block="gift" data-group="recipient">
+						<div class="mini-subtitle">Подарок</div>
+						<div class="switcher__descr">Доставим получателю с поздравлением от вашего имени</div>
+					</div>
+					<input type="hidden" value="myself" name="recipient" data-role="order-data">
+				</div>
+			</div>
+
+			<div class="order-section gift-info invisible" data-block="gift-info">
+				<div class="subtitle is-gift">Получатель и поздравление</div>
+				<fieldset class="is-gift">
+					<label class="required">
+						<span class="label__desc">Получатель</span>
+						<input type="text" name="gift-name" data-role="order-data">
+					</label>
+					<label class="required contact email">
+						<span class="label__desc">Эл. почта получателя</span>
+						<input type="text" name="gift-email" data-role="order-data">
+					</label>
+					<label class="required">
+						<span class="label__desc">Поздравительный текст</span>
+						<textarea maxlength="200" name="gift-msg" placeholder="ваше поздравление или личное послание" data-role="order-data"></textarea>
+						<div class="note" id="textareaFeedback"></div>
+					</label>
+					<label class="required">
+						<span class="label__desc">От кого подарок</span>
+						<input type="text" name="gift-from" data-role="order-data">
+						<div class="note">Например: твой друг Вася</div>
+					</label>
+				</fieldset>
+			</div>
+
+			<div class="order-section delivery-type" data-block="delivery-type">
+				<div class="subtitle">Доставка</div>
+				<div class="switcher delivery-type x2">
+					<div class="switcher__item courier" data-target="{&quot;delivery-type&quot;: &quot;courier&quot;}" data-block="courier" data-group="delivery-type">
+					<div class="mini-subtitle">Курьером</div>
+					<div class="switcher__descr">Доставим завтра бесплатно или сегодня за 200 рублей<br>(при наличии свободных курьеров)</div>
+				</div>
+					<div class="switcher__item pickup" data-target="{&quot;delivery-type&quot;: &quot;pickup&quot;}" data-block="pickup" data-group="delivery-type">
+					<div class="mini-subtitle">Самовывоз</div>
+					<div class="switcher__descr">Заберите бесплатно по адресу: м. Курская, Нижний Сусальный переулок, 5, строение 10 (территория завода «Арма»)</div>
+				</div>
+					<input type="hidden" value="mail" name="delivery-type" data-role="order-data">
+				</div>
+			</div>
+
+			<div class="order-section contacts-delivery" data-block="contacts-delivery">
+				<div class="subtitle">Адрес доставки и ваши контакты</div>
+				<fieldset>
+					<div class="subsection delivery-address" data-block="delivery-address">
+						<label>
+							<span class="label__desc">Город</span>
+							<select name="customer-city" id="selectCity" class="invisible overflow" data-role="order-data" style="display: none;">
+								<option>Москва</option>
+								<option>Московская область</option>
+								<option>Балашиха</option>
+								<option>Железнодорожный</option>
+								<option>Серпухов</option>
+							</select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="selectCity-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="selectCity-menu" aria-haspopup="true" style="width: 200px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Москва</span></span>
+							<div class="note">Доставляем по Москве и городам Подмосковья</div>
+						</label>
+						<label class="required">
+							<span class="label__desc">Адрес доставки</span>
+							<textarea name="customer-address" placeholder="город, улица, дом, корпус, квартира" data-role="order-data"></textarea>
+						</label>
+					</div>
+					<div class="subsection client-info" data-block="client-info">
+						<label class="required">
+							<span class="label__desc">Ваше имя</span>
+							<input type="text" name="customer-name" data-role="order-data">
+						</label>
+						<label class="required contact email">
+							<span class="label__desc">Электронная почта</span>
+							<input type="text" name="customer-email" data-role="order-data">
+							<p class="hint error">Введите правильный email</p>
+						</label>
+						<label class="required contact phone">
+							<span class="label__desc">Контактный телефон</span>
+							<div class="input_container">
+								<input class="mask-phone" type="text" name="customer-phone" data-role="order-data">
+							</div>
+							<p class="hint error">Номер телефона должен быть из 10 цифр</p>
+						</label>
+					</div>
+				</fieldset>
+			</div>
+
+			<div class="order-section payment-type" data-block="payment-type">
+				<div class="subtitle">Способ оплаты</div>
+				<div class="switcher payment switcher_x3">
+					<!-- если 3 пункта, то класс x2 меняем на x3 -->
+					<div class="switcher__item cash" data-target="{&quot;payment-type&quot;: &quot;cash&quot;}" data-block="cash" data-group="payment-type">
+					<div class="mini-subtitle">Наличными курьеру</div>
+					<div class="switcher__descr">при получении заказа</div>
+
+					<!-- If self-delivery, then show alternate text -->
+					<div class="mini-subtitle pickup invisible">Оплата при&nbsp;получении</div> <div class="switcher__descr pickup invisible">в пункте самовывоза</div>
+
+					</div>
+					<div class="switcher__item card selected" data-target="{&quot;payment-type&quot;: &quot;card&quot;}" data-block="card" data-group="payment-type">
+										<div class="mini-subtitle">Банковской картой</div>
+								</div>
+					<div class="switcher__item emoney" data-target="{&quot;payment-type&quot;: &quot;emoney&quot;}" data-block="emoney" data-group="payment-type">
+										<div class="mini-subtitle">Электронными деньгами</div>
+								</div>
+					<input type="hidden" name="payment-type" value="card" data-role="order-data">
+				</div>
+			</div>
+			<p class="send-text">
+				Ваш заказ принят, осуществляется отправка данных
+			</p>
+			<div class="order-button">
+				<button type="submit" class="primary big button_wide" name="orderButton">Завершить заказ</button>
+			</div>
+		</form>
+		<div class="ui-selectmenu-menu ui-front">
+			<ul aria-hidden="true" aria-labelledby="selectCity-button" id="selectCity-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0"></ul>
+		</div>
+		<form id="yandex-money-form" action="" method="post" class="invisible">
+			<input name="ShopID" value="" type="hidden">
+			<input name="scid" value="" type="hidden">
+			<input name="customerNumber" value="" type="hidden">
+			<input name="orderNumber" value="" type="hidden">
+			<input name="Sum" value="" type="hidden">
+			<input name="paymentType" value="" type="hidden">
+			<input name="cms_name" value="" type="hidden">
+		</form>
+	<div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="selectCity-button" id="selectCity-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0"></ul></div></div>

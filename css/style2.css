@@ -1196,6 +1196,249 @@ small, h6
   .popup--small {
     width: 100%; } }
 
+.popup {
+  position: absolute;
+  min-width: 320px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 1px solid #c7c7c7;
+  background-color: #ffffff;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 5px 9px 0 #cdcdcd;
+  display: none; }
+  .popup--big {
+    width: 360px;
+    width: 1030px;
+    min-height: 300px;
+    text-align: center; }
+  .popup--show {
+    display: block;
+    animation: bounce 0.6s; }
+  .popup__top {
+    background-color: #fa5254;
+    padding: 60px 0; }
+  .popup__title {
+    color: white; }
+  .popup__wrapper {
+    padding: 50px; }
+
+.popup__close {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer; }
+  .popup__close::after, .popup__close::before {
+    content: " ";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 10;
+    width: 27px;
+    height: 2px;
+    background-color: black; }
+  .popup__close::before {
+    transform: rotate(45deg);
+    box-shadow: none; }
+  .popup__close::after {
+    transform: rotate(-45deg); }
+  .popup__close--white::before, .popup__close--white::after {
+    background-color: white; }
+
+@media (max-width: 360px) {
+  .popup--big {
+    width: 100%; } }
+
+.form-order__btn {
+  width: 100%;
+  border-radius: 10px; }
+
+.data {
+  padding: 15px 0;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #cacaca;
+  border-radius: 10px; }
+  .data__line1 {
+    font-weight: bold; }
+  .data__line2 {
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px; }
+
+.count-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 35px;
+  border-left: 2px solid #cacaca;
+  border-right: 2px solid #cacaca; }
+  .count-block__minus {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: green;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center; }
+    .count-block__minus:hover {
+      opacity: 0.9; }
+  .count-block__input {
+    width: 70px;
+    max-width: 100px;
+    height: 50px;
+    max-height: 52px;
+    text-align: center;
+    border-radius: 0; }
+  .count-block__plus {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: green;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center; }
+    .count-block__plus:hover {
+      opacity: 0.9; }
+
+.selection input {
+  display: none; }
+
+.selection__title {
+  margin-top: 80px;
+  margin-bottom: 45px; }
+
+.selection__tabs {
+  display: flex; }
+
+.selection__tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  width: 50%;
+  min-height: 120px;
+  margin: 0;
+  border: 1px solid #cacaca; }
+  .selection__tab--1 {
+    padding: 20px 30px 20px 90px;
+    text-align: left;
+    background: url("../images/popup/dot.png") no-repeat 20px 35px; }
+  .selection__tab--2 {
+    padding: 20px 30px 20px 90px;
+    text-align: left;
+    background: url("../images/popup/letter.png") no-repeat 20px 35px; }
+  .selection__tab--3 {
+    padding: 20px 30px 20px 90px;
+    text-align: left;
+    background: url("../images/popup/who.png") no-repeat 20px 35px; }
+  .selection__tab--4 {
+    padding: 20px 30px 20px 90px;
+    text-align: left;
+    background: url("../images/popup/gift.png") no-repeat 20px 35px; }
+  .selection__tab--pay1 {
+    padding: 55px 0 90px 0;
+    text-align: center;
+    -ms-grid-row-align: center;
+        align-items: center;
+    background: url("../images/popup/cash.png") no-repeat 50% 120px; }
+  .selection__tab--pay2 {
+    padding: 55px 0 90px 0;
+    text-align: center;
+    -ms-grid-row-align: center;
+        align-items: center;
+    background: url("../images/popup/visa.png") no-repeat 25% 125px, url("../images/popup/maestro.png") no-repeat 50% 120px, url("../images/popup/mastercard.png") no-repeat 70% 120px; }
+  .selection__tab--pay3 {
+    padding: 55px 0 90px 0;
+    text-align: center;
+    -ms-grid-row-align: center;
+        align-items: center;
+    background: url("../images/popup/webmoney.png") no-repeat 30% 125px, url("../images/popup/yandex.png") no-repeat 50% 122px, url("../images/popup/qiwi.png") no-repeat 70% 125px; }
+  .selection__tab:hover {
+    border-color: white;
+    box-shadow: inset 0 0 0 5px grey; }
+
+.selection__text {
+  margin-top: 5px; }
+
+#select1-1:checked ~ .selection__tabs .selection__tab--1,
+#select1-2:checked ~ .selection__tabs .selection__tab--2,
+#select2-1:checked ~ .selection__tabs .selection__tab--3,
+#select2-2:checked ~ .selection__tabs .selection__tab--4,
+#select3-1:checked ~ .selection__tabs .selection__tab--pay1,
+#select3-2:checked ~ .selection__tabs .selection__tab--pay2,
+#select3-3:checked ~ .selection__tabs .selection__tab--pay3 {
+  border-color: white;
+  box-shadow: inset 0 0 0 5px #68b240; }
+
+.form-group {
+  padding: 50px 160px;
+  border: 2px solid #cacaca;
+  margin-top: 40px; }
+  .form-group__title {
+    margin-bottom: 45px; }
+  .form-group__label {
+    display: block;
+    width: 100%;
+    margin-top: 15px; }
+  .form-group__name {
+    color: #86939e;
+    text-align: left; }
+  .form-group input {
+    width: 100%;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 20px; }
+    .form-group input:focus {
+      border: 1px solid grey; }
+  .form-group__textarea {
+    width: 100%;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 20px;
+    resize: none; }
+    .form-group__textarea:focus {
+      border: 1px solid grey; }
+  .form-group__phone {
+    padding-left: 70px !important; }
+  .form-group__phone-container {
+    position: relative; }
+    .form-group__phone-container::before {
+      content: '+7';
+      border: 1px solid #cacaca;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      position: absolute;
+      border-right: 1px solid rgba(83, 85, 87, 0.2);
+      left: 0;
+      top: 0;
+      min-width: 60px;
+      height: 65px;
+      line-height: 65px;
+      font-size: 18px;
+      background-color: #e1e8ee;
+      color: black; }
+
 .table-input {
   display: none; }
 

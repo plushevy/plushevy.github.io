@@ -1,0 +1,56 @@
+.count-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 35px;
+  border-left: 2px solid #cacaca;
+  border-right: 2px solid #cacaca;
+
+  &__minus {
+      display: block;
+      width: 50px;
+      height: 50px;
+      color: white;
+      background: green;
+      cursor: pointer;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      font-size: 40px;
+      line-height: 50px;
+      text-align: center;
+
+      &:hover {
+        opacity: 0.9;
+      }
+  }
+
+  &__input {
+      width: 70px;
+      max-width: 100px;
+      height: 50px;
+      max-height: 52px;
+      text-align: center;
+      border-radius: 0;
+  }
+
+  &__plus {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: green;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
