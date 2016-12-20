@@ -1,6 +1,10 @@
 .selection {
 
-  input {
+  &__input {
+    display: none;
+  }
+
+  &--shipping {
     display: none;
   }
 
@@ -29,6 +33,8 @@
 
     border: 1px solid #cacaca;
 
+
+
     &--1 {
       padding: 20px 30px 20px 90px;
       text-align: left;
@@ -48,6 +54,18 @@
       padding: 20px 30px 20px 90px;
       text-align: left;
       background: url("../images/popup/gift.png") no-repeat 20px 35px;
+    }
+
+    &--ship1 {
+      padding: 20px 30px;
+      text-align: center;
+      align-items: center;
+    }
+
+    &--ship2 {
+      padding: 20px 30px;
+      text-align: center;
+      align-items: center;
     }
 
     &--pay1 {
@@ -80,6 +98,16 @@
       border-color: white;
       box-shadow: inset 0 0 0 5px grey;
     }
+
+    &--disabled {
+      cursor: default;
+      opacity: 0.3;
+
+      &:hover {
+        box-shadow: none;
+        border: 1px solid #cacaca;
+      }
+    }
   }
 
   &__name {}
@@ -87,15 +115,4 @@
     margin-top: 5px;
   }
 
-}
-
-#select1-1:checked ~ .selection__tabs .selection__tab--1,
-#select1-2:checked ~ .selection__tabs .selection__tab--2,
-#select2-1:checked ~ .selection__tabs .selection__tab--3,
-#select2-2:checked ~ .selection__tabs .selection__tab--4,
-#select3-1:checked ~ .selection__tabs .selection__tab--pay1,
-#select3-2:checked ~ .selection__tabs .selection__tab--pay2,
-#select3-3:checked ~ .selection__tabs .selection__tab--pay3 {
-  border-color: white;
-  box-shadow: inset 0 0 0 5px #68b240;
 }

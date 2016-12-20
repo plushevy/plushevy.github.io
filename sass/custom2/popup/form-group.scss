@@ -2,6 +2,11 @@
   padding: 50px 160px;
   border: 2px solid #cacaca;
   margin-top: 40px;
+  display: none;
+
+  & + .form-group {
+    margin-top: 40px;
+  }
 
   &__title {
     margin-bottom: 45px;

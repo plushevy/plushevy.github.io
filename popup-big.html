@@ -126,13 +126,19 @@
                             <div class="data__line2"><span class="data__price">2200</span> ₽</div>
                         </div>
 
+                        <input class="selection__input" type="radio" name="select1" id="select1-1" checked>
+                        <input class="selection__input" type="radio" name="select1" id="select1-2">
+                        <input class="selection__input" type="radio" name="select2" id="select2-1" checked>
+                        <input class="selection__input" type="radio" name="select2" id="select2-2">
+                        <input class="selection__input" type="radio" name="select3" id="select3-1" checked>
+                        <input class="selection__input" type="radio" name="select3" id="select3-2">
+                        <input class="selection__input" type="radio" name="select4" id="select4-1">
+                        <input class="selection__input" type="radio" name="select4" id="select4-2" checked>
+                        <input class="selection__input" type="radio" name="select4" id="select4-3">
+
 
                         <div class="selection">
                             <h4 class="selection__title">Что вы хотите купить?</h4>
-
-                            <input type="radio" name="select1" id="select1-1" checked>
-                            <input type="radio" name="select1" id="select1-2">
-
                             <div class="selection__tabs">
                                 <label class="selection__tab selection__tab--1" for="select1-1">
                               <h6 class="selection__name">Электронный сертификат</h6>
@@ -143,15 +149,10 @@
                               <p class="selection__text">Конверт из дизайнерской бумаги</p>
                             </label>
                             </div>
-
                         </div>
 
                         <div class="selection">
                             <h4 class="selection__title">Для себя или в подарок?</h4>
-
-                            <input type="radio" name="select2" id="select2-1" checked>
-                            <input type="radio" name="select2" id="select2-2">
-
                             <div class="selection__tabs">
                                 <label class="selection__tab selection__tab--3" for="select2-1">
                               <h6 class="selection__name">Для себя или в подарок?</h6>
@@ -164,70 +165,112 @@
                             </div>
                         </div>
 
-                        <fieldset class="form-group">
-                          <h4 class="form-group__title">Получатель и поздравлениe</h4>
+                        <div class="selection selection--shipping">
+                            <h4 class="selection__title">Доставка</h4>
+                            <div class="selection__tabs">
+                                <label class="selection__tab selection__tab--ship1" for="select3-1">
+                              <h6 class="selection__name">Курьером</h6>
+                              <p class="selection__text">Доставим завтра бесплатно или сегодня за 200 рублей
+(при наличии свободных курьеров)</p>
+                            </label>
+                                <label class="selection__tab selection__tab--ship2" for="select3-2">
+                              <h6 class="selection__name">Самовывоз</h6>
+                              <p class="selection__text">Заберите бесплатно по адресу: м. Курская, Нижний Сусальный переулок, 5, строение 10 (территория завода «Арма»)</p>
+                            </label>
+                            </div>
+                        </div>
 
-                            <label class="form-group__label">
-                                  <p class="form-group__name">Получатель</p>
-                                  <input type="text" name="guest-name" placeholder="" required>
-                            </label>
-                            <label class="form-group__label">
-                                  <p class="form-group__name">Телефон</p>
-                                  <div class="form-group__phone-container">
-                                    <input class="form-group__phone" type="text" name="guest-tel" placeholder="__________" required>
-                                  </div>
-                            </label>
-                            <label class="form-group__label">
-                                  <p class="form-group__name">Эл.почта</p>
-                                  <input type="email" name="guest-email" placeholder="" required>
-                            </label>
-                            <label class="form-group__label">
-                                  <p class="form-group__name">Поздравительный текст</p>
-                                  <textarea class="form-group__textarea" name="gift-text" rows="8" cols="80"></textarea>
-                            </label>
-                            <label class="form-group__label">
-                                  <p class="form-group__name">От кого подарок</p>
-                                  <input type="text" name="signature" placeholder="" required>
-                            </label>
-                        </fieldset>
+                        <div class="form-order__inner">
+                          <fieldset class="form-group form-group--gift">
+                              <h4 class="form-group__title">Получатель и поздравлениe</h4>
+
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Получатель</p>
+                                    <input type="text" name="guest-name" placeholder="" required>
+                              </label>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Телефон</p>
+                                    <div class="form-group__phone-container">
+                                      <input class="form-group__phone" type="text" name="guest-tel" placeholder="__________" required>
+                                    </div>
+                              </label>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Эл.почта</p>
+                                    <input type="email" name="guest-email" placeholder="" required>
+                              </label>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Поздравительный текст</p>
+                                    <textarea class="form-group__textarea" name="gift-text" rows="8" cols="80"></textarea>
+                              </label>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">От кого подарок</p>
+                                    <input type="text" name="signature" placeholder="" required>
+                              </label>
+                          </fieldset>
+
+                          <fieldset class="form-group form-group--adress">
+                              <h4 class="form-group__title">Адрес доставки и контакты</h4>
+
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Адрес доставки</p>
+                                    <textarea class="form-group__textarea" name="customer-adress" rows="2" cols="80" placeholder="Город, улица, дом, корпус, квартира"></textarea>
+                              </label>
+
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Ваше имя</p>
+                                    <input type="text" name="customer-name" placeholder="" required>
+                              </label>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Эл.почта</p>
+                                    <input type="email" name="customer-email" placeholder="" required>
+                              </label>
+
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Телефон</p>
+                                    <div class="form-group__phone-container">
+                                      <input class="form-group__phone" type="text" name="customer-tel" placeholder="__________" required>
+                                    </div>
+                              </label>
+
+                          </fieldset>
 
 
-                        <fieldset class="form-group">
-                          <h4 class="form-group__title">Адрес доставки и ваши контакты</h4>
+                          <fieldset class="form-group form-group--noadress">
+                              <h4 class="form-group__title">Адрес доставки и ваши контакты</h4>
 
-                            <label class="form-group__label">
-                                  <p class="form-group__name">Ваше имя</p>
-                                  <input type="text" name="name" placeholder="" required>
-                            </label>
-                            <label class="form-group__label">
-                                  <p class="form-group__name">Эл.почта</p>
-                                  <input type="email" name="email" placeholder="" required>
-                            </label>
-                            <label class="form-group__label">
-                                  <p class="form-group__name">Телефон</p>
-                                  <div class="form-group__phone-container">
-                                    <input class="form-group__phone" type="text" name="tel" placeholder="__________" required>
-                                  </div>
-                            </label>
-                        </fieldset>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Ваше имя</p>
+                                    <input type="text" name="name" placeholder="" required>
+                              </label>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Эл.почта</p>
+                                    <input type="email" name="email" placeholder="" required>
+                              </label>
+                              <label class="form-group__label">
+                                    <p class="form-group__name">Телефон</p>
+                                    <div class="form-group__phone-container">
+                                      <input class="form-group__phone" type="text" name="tel" placeholder="__________" required>
+                                    </div>
+                              </label>
+                          </fieldset>
+
+                        </div>
+
+
 
                         <div class="selection">
                             <h4 class="selection__title">Способ оплаты</h4>
 
-                            <input type="radio" name="select3" id="select3-1">
-                            <input type="radio" name="select3" id="select3-2" checked>
-                            <input type="radio" name="select3" id="select3-3">
-
                             <div class="selection__tabs">
-                                <label class="selection__tab selection__tab--pay1" for="select3-1">
+                                <label class="selection__tab selection__tab--pay1" for="select4-1">
                               <h6 class="selection__name">Наличными курьеру</h6>
                               <p class="selection__text">При получении заказа</p>
                             </label>
-                                <label class="selection__tab selection__tab--pay2" for="select3-2">
+                                <label class="selection__tab selection__tab--pay2" for="select4-2">
                               <h6 class="selection__name">Оплата на сайте по карте</h6>
                               <p class="selection__text">Visa, Maestro, Mastercard</p>
                             </label>
-                            <label class="selection__tab selection__tab--pay3" for="select3-3">
+                                <label class="selection__tab selection__tab--pay3" for="select4-3">
                           <h6 class="selection__name">Электронными деньгами</h6>
                           <p class="selection__text">Webmoney, Yandex money, Qiwi</p>
                         </label>
@@ -358,6 +401,50 @@
                 });
             }
             openModal();
+
+
+            //чекаем перечекаем
+
+
+            function cashDisable() {
+
+              var electroSertificat = $('#select1-1');
+              var cash = $('#select4-1');
+              var cashLabel = $('.selection__tab--pay1');
+
+              if (electroSertificat.prop('checked')) {
+                cash.prop('disabled', true);
+                cashLabel.addClass('selection__tab--disabled');
+              } else {
+                cash.prop('disabled', false);
+                cashLabel.removeClass('selection__tab--disabled');
+              }
+            };
+
+            function shipDisable() {
+
+              var vPodarok = $('#select2-2');
+              var samovyvoz = $('#select3-2');
+              var samovyvozLabel = $('.selection__tab--ship2');
+
+              if (vPodarok.prop('checked')) {
+                samovyvoz.prop('disabled', true);
+                samovyvozLabel.addClass('selection__tab--disabled');
+              } else {
+                samovyvoz.prop('disabled', false);
+                samovyvozLabel.removeClass('selection__tab--disabled');
+              }
+            };
+
+            $('[name="select1"]').change(function(){
+              cashDisable();
+            });
+
+            $('[name="select2"]').change(function(){
+              shipDisable();
+            });
+
+
         });
     </script>
 

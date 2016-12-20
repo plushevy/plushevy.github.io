@@ -6,3 +6,41 @@
     border-radius: 10px;
   }
 }
+
+
+
+#select1-1:checked ~ .selection .selection__tabs .selection__tab--1,
+#select1-2:checked ~ .selection .selection__tabs .selection__tab--2,
+#select2-1:checked ~ .selection .selection__tabs .selection__tab--3,
+#select2-2:checked ~ .selection .selection__tabs .selection__tab--4,
+#select3-1:checked ~ .selection .selection__tabs .selection__tab--ship1,
+#select3-2:checked ~ .selection .selection__tabs .selection__tab--ship2,
+#select4-1:checked ~ .selection .selection__tabs .selection__tab--pay1,
+#select4-2:checked ~ .selection .selection__tabs .selection__tab--pay2,
+#select4-3:checked ~ .selection .selection__tabs .selection__tab--pay3 {
+  border-color: white;
+  box-shadow: inset 0 0 0 5px #68b240;
+}
+
+
+#select1-1:checked ~ .form-order__inner .form-group--noadress {
+   display: block;
+}
+
+#select1-2:checked ~ .form-order__inner .form-group--adress,
+#select1-2:checked ~ .selection.selection--shipping {
+   display: block;
+}
+
+
+#select2-2:checked ~ .form-order__inner .form-group--gift {
+   display: block;
+}
+
+
+#select3-2:checked ~ .form-order__inner .form-group--adress {
+   display: none;
+}
+#select3-2:checked ~ .form-order__inner .form-group--noadress {
+   display: block;
+}
