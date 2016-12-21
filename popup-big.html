@@ -155,7 +155,7 @@
                             <h4 class="selection__title">Для себя или в подарок?</h4>
                             <div class="selection__tabs">
                                 <label class="selection__tab selection__tab--3" for="select2-1">
-                              <h6 class="selection__name">Для себя или в подарок?</h6>
+                              <h6 class="selection__name">Для себя</h6>
                               <p class="selection__text">Доставим заказ лично вам</p>
                             </label>
                                 <label class="selection__tab selection__tab--4" for="select2-2">
@@ -186,25 +186,25 @@
 
                               <label class="form-group__label">
                                     <p class="form-group__name">Получатель</p>
-                                    <input type="text" name="guest-name" placeholder="" required>
+                                    <input type="text" name="guest-name" value="" required>
                               </label>
                               <label class="form-group__label">
                                     <p class="form-group__name">Телефон</p>
                                     <div class="form-group__phone-container">
-                                      <input class="form-group__phone" type="text" name="guest-tel" placeholder="__________" required>
+                                      <input class="form-group__phone" type="text" name="guest-tel" value="" placeholder="__________" required>
                                     </div>
                               </label>
                               <label class="form-group__label">
                                     <p class="form-group__name">Эл.почта</p>
-                                    <input type="email" name="guest-email" placeholder="" required>
+                                    <input type="email" name="guest-email" value="" required>
                               </label>
                               <label class="form-group__label">
                                     <p class="form-group__name">Поздравительный текст</p>
-                                    <textarea class="form-group__textarea" name="gift-text" rows="8" cols="80"></textarea>
+                                    <textarea class="form-group__textarea" name="gift-text" value="" rows="8" cols="80"></textarea>
                               </label>
                               <label class="form-group__label">
                                     <p class="form-group__name">От кого подарок</p>
-                                    <input type="text" name="signature" placeholder="" required>
+                                    <input type="text" name="signature" value="" required>
                               </label>
                           </fieldset>
 
@@ -218,17 +218,17 @@
 
                               <label class="form-group__label">
                                     <p class="form-group__name">Ваше имя</p>
-                                    <input type="text" name="customer-name" placeholder="" required>
+                                    <input type="text" name="customer-name" value="" required>
                               </label>
                               <label class="form-group__label">
                                     <p class="form-group__name">Эл.почта</p>
-                                    <input type="email" name="customer-email" placeholder="" required>
+                                    <input type="email" name="customer-email" value="" required>
                               </label>
 
                               <label class="form-group__label">
                                     <p class="form-group__name">Телефон</p>
                                     <div class="form-group__phone-container">
-                                      <input class="form-group__phone" type="text" name="customer-tel" placeholder="__________" required>
+                                      <input class="form-group__phone" type="text" name="customer-tel" value="" placeholder="__________" required>
                                     </div>
                               </label>
 
@@ -240,16 +240,16 @@
 
                               <label class="form-group__label">
                                     <p class="form-group__name">Ваше имя</p>
-                                    <input type="text" name="name" placeholder="" required>
+                                    <input type="text" name="name" value="" required>
                               </label>
                               <label class="form-group__label">
                                     <p class="form-group__name">Эл.почта</p>
-                                    <input type="email" name="email" placeholder="" required>
+                                    <input type="email" name="email" value="" required>
                               </label>
                               <label class="form-group__label">
                                     <p class="form-group__name">Телефон</p>
                                     <div class="form-group__phone-container">
-                                      <input class="form-group__phone" type="text" name="tel" placeholder="__________" required>
+                                      <input class="form-group__phone" type="text" name="tel" value="" placeholder="__________" required>
                                     </div>
                               </label>
                           </fieldset>
@@ -403,8 +403,9 @@
             openModal();
 
 
-            //чекаем перечекаем
 
+            //чекаем перечекаем
+            cashDisable();
 
             function cashDisable() {
 
@@ -443,7 +444,6 @@
             $('[name="select2"]').change(function(){
               shipDisable();
             });
-
 
         });
     </script>
