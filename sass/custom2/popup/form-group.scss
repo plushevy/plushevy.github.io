@@ -1,5 +1,5 @@
 .form-group {
-  padding: 50px 160px;
+  padding: 50px 140px;
   border: 2px solid #cacaca;
   margin-top: 40px;
   display: none;
@@ -69,8 +69,62 @@
           background-color: #e1e8ee;
           color: black;
       }
+  }
+}
+
+@media (max-width: 992px) {
+  .form-group {
+    padding: 40px 50px;
+
+    & + .form-group {
+      margin-top: 40px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    input {
+      padding: 10px 15px;
+    }
+
+    &__textarea {
+      padding: 10px 15px;
+    }
+
+    &__phone-container {
+        &::before {
+            height: 49px;
+            line-height: 49px;
+        }
+    }
 
   }
+}
+@media (max-width: 767px) {
+  .form-group {
+    padding: 30px 40px;
 
+    & + .form-group {}
+    &__title {}
+  }
+}
+@media (max-width: 480px) {
+  .form-group {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 360px) {
+  .form-group {
+    padding: 0px 0px;
+    border: none;
 
+    & + .form-group {
+      margin-top: 30px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
 }

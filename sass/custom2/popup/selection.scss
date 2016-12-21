@@ -72,25 +72,21 @@
       padding: 55px 0 90px 0;
       text-align: center;
       align-items: center;
-      background: url("../images/popup/cash.png") no-repeat 50% 120px;
+      background: url("../images/popup/cash.png") no-repeat center 80%;
     }
 
     &--pay2 {
       padding: 55px 0 90px 0;
       text-align: center;
       align-items: center;
-      background: url("../images/popup/visa.png") no-repeat 25% 125px,
-                  url("../images/popup/maestro.png") no-repeat 50% 120px,
-                  url("../images/popup/mastercard.png") no-repeat 70% 120px;
+      background: url("../images/popup/card.png") no-repeat center 80%;
     }
 
     &--pay3 {
       padding: 55px 0 90px 0;
       text-align: center;
       align-items: center;
-      background: url("../images/popup/webmoney.png") no-repeat 30% 125px,
-                  url("../images/popup/yandex.png") no-repeat 50% 122px,
-                  url("../images/popup/qiwi.png") no-repeat 70% 125px;
+      background: url("../images/popup/ewallet.png") no-repeat center 80%;
     }
 
 
@@ -115,4 +111,116 @@
     margin-top: 5px;
   }
 
+}
+
+@media (max-width: 992px) {
+  .selection {
+    &__name {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+}
+@media (max-width: 767px) {
+  .selection {
+
+    &__title {
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+
+    &__tabs {
+      flex-direction: column;
+    }
+
+    &__tab {
+      width: 100%;
+      min-height: 100px;
+
+      &--1 {
+        padding: 15px 30px 15px 90px;
+        background-position: 20px 50%;
+      }
+
+      &--2 {
+        padding: 15px 30px 15px 90px;
+        background-position: 20px 50%;
+      }
+
+      &--3 {
+        padding: 15px 30px 15px 90px;
+        background-position: 20px 50%;
+      }
+
+      &--4 {
+        padding: 15px 30px 15px 90px;
+        background-position: 20px 50%;
+      }
+
+      &--ship1 {
+        padding: 15px 20px;
+      }
+
+      &--ship2 {
+        padding: 15px 20px;
+      }
+
+      &--pay1 {
+        padding: 20px 0 50px 0;
+        background-position: center 85%;
+      }
+      &--pay2 {
+        padding: 20px 0 50px 0;
+        background-position: center 85%;
+      }
+      &--pay3 {
+        padding: 20px 0 50px 0;
+        background-position: center 85%;
+      }
+
+    }
+  }
+}
+@media (max-width: 480px) {}
+@media (max-width: 360px) {
+  .selection {
+
+    &__title {
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+
+    &__tabs {
+      flex-direction: column;
+    }
+
+    &__tab {
+      width: 100%;
+      min-height: 100px;
+
+      &--1 {
+        padding: 15px 30px;
+        background-image: none;
+      }
+
+      &--2 {
+        padding: 15px 30px;
+        background-image: none;
+      }
+
+      &--3 {
+        padding: 15px 30px;
+        background-image: none;
+      }
+
+      &--4 {
+        padding: 15px 30px;
+        background-image: none;
+      }
+
+    }
+  }
 }

@@ -54,3 +54,22 @@
     }
   }
 }
+
+
+@media (max-width: 992px) {
+  .count-block {
+
+    padding: 0 15px;
+    border-left: none;
+    border-right: none;
+
+    &__minus {}
+
+    &__input {}
+
+    &__plus {}
+  }
+}
+@media (max-width: 768px) {}
+@media (max-width: 480px) {}
+@media (max-width: 360px) {}

@@ -27,3 +27,25 @@
   &__price {}
 
 }
+
+
+@media (max-width: 992px) {
+  .data {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {}
+@media (max-width: 480px) {
+  .data {
+
+    &__line1 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    &__line2 {
+      font-size: 40px;
+    }
+  }
+}
+@media (max-width: 360px) {}

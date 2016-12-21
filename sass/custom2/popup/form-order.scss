@@ -8,6 +8,18 @@
 }
 
 
+@media (max-width: 992px) {
+  .form-order {
+    &__btn {
+      margin-top: 50px;
+    }
+  }
+}
+@media (max-width: 768px) {}
+@media (max-width: 480px) {}
+@media (max-width: 360px) {}
+
+
 
 #select1-1:checked ~ .selection .selection__tabs .selection__tab--1,
 #select1-2:checked ~ .selection .selection__tabs .selection__tab--2,
