@@ -1,18 +1,18 @@
+// переключение табов
 
-
-#zdata-0:checked ~ .tarif-block__nav .tarif-block__tab--0,
-#zdata-1:checked ~ .tarif-block__nav .tarif-block__tab--1,
-#zdata-2:checked ~ .tarif-block__nav .tarif-block__tab--2 {
-  color: #fb5255;
-  border: 2px solid #cacaca;
-  opacity: 1;
-}
-
-#zdata-0:checked ~ .filter .tarif__price--0,
-#zdata-1:checked ~ .filter .tarif__price--1,
-#zdata-2:checked ~ .filter .tarif__price--2 {
-  display: block;
-}
+// #zdata-0:checked ~ .tarif-block__nav .tarif-block__tab--0,
+// #zdata-1:checked ~ .tarif-block__nav .tarif-block__tab--1,
+// #zdata-2:checked ~ .tarif-block__nav .tarif-block__tab--2 {
+//   color: #fb5255;
+//   border: 2px solid #cacaca;
+//   opacity: 1;
+// }
+//
+// #zdata-0:checked ~ .filter .tarif__price--0,
+// #zdata-1:checked ~ .filter .tarif__price--1,
+// #zdata-2:checked ~ .filter .tarif__price--2 {
+//   display: block;
+// }
 
 //checked
 @for $i from 0 to 9 {

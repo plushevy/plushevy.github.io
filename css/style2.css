@@ -298,9 +298,24 @@ small, h6
   opacity: 0.7;
   border: 2px solid transparent;
   border-radius: 26px; }
+  .tarif-block__tab--checked {
+    color: #fb5255;
+    border: 2px solid #cacaca;
+    opacity: 1; }
   .tarif-block__tab:hover {
     border: 2px solid #cacaca;
     opacity: 1; }
+    .tarif-block__tab:hover .tarif-block__sale {
+      visibility: visible;
+      color: #fb5255; }
+  .tarif-block__tab:not(:hover) .tarif-block__sale {
+    visibility: hidden; }
+
+.tarif-block__sale {
+  display: block;
+  color: black;
+  font-size: 12px;
+  visibility: hidden; }
 
 @media (min-width: 480px) {
   .tarif-block {
@@ -340,7 +355,10 @@ small, h6
   .tarif-block {
     width: 1140px; }
   .tarif-block__nav {
-    padding: 50px 200px 23px 200px; } }
+    padding: 50px 200px 23px 200px; }
+  .tarif-block__tab {
+    padding: 5px 50px;
+    border-radius: 50px; } }
 
 @media (min-width: 1600px) {
   .tarif-block {
@@ -372,6 +390,8 @@ small, h6
     width: 50%;
     display: none;
     text-align: center; }
+    .tarif__price--1 {
+      display: block; }
   .tarif__value {
     display: none;
     font-weight: bold;
@@ -523,6 +543,13 @@ small, h6
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap; }
+  .filter__hint {
+    position: absolute;
+    display: block;
+    color: red;
+    font-size: 20px;
+    bottom: -50px;
+    left: 50%; }
 
 .filter input {
   display: none; }
@@ -684,18 +711,6 @@ small, h6
       padding-left: 15px; }
     .filter__lable:last-of-type {
       padding-right: 15px; } }
-
-#zdata-0:checked ~ .tarif-block__nav .tarif-block__tab--0,
-#zdata-1:checked ~ .tarif-block__nav .tarif-block__tab--1,
-#zdata-2:checked ~ .tarif-block__nav .tarif-block__tab--2 {
-  color: #fb5255;
-  border: 2px solid #cacaca;
-  opacity: 1; }
-
-#zdata-0:checked ~ .filter .tarif__price--0,
-#zdata-1:checked ~ .filter .tarif__price--1,
-#zdata-2:checked ~ .filter .tarif__price--2 {
-  display: block; }
 
 #pos-0:checked ~ .filter__nav .filter__label--0 {
   background: transparent; }

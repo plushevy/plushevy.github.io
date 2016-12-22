@@ -10,26 +10,12 @@
 
 
 .tarif-block__nav {
-  // display: flex;
-  // justify-content: space-around;
   font-size: 18px;
   line-height: 25px;
   padding: 23px 0;
   margin: 0 auto;
-
 }
 
-// .tarif-block__tab {
-//   display: block;
-//   width: 100%;
-//   text-align: center;
-//   cursor: pointer;
-//   margin-bottom: 20px;
-//
-//   &:last-child {
-//     margin-bottom: 0;
-//   }
-// }
 
 .tarif-block__tab {
   cursor: pointer;
@@ -42,12 +28,35 @@
   border: 2px solid transparent;
   border-radius: 26px;
 
-
-  &:hover {
+  &--checked {
+    color: #fb5255;
     border: 2px solid #cacaca;
     opacity: 1;
   }
 
+
+  &:hover {
+    border: 2px solid #cacaca;
+    opacity: 1;
+
+    .tarif-block__sale {
+    visibility: visible;
+    color: #fb5255;
+    }
+  }
+
+  &:not(:hover) {
+    .tarif-block__sale {
+    visibility: hidden;
+    }
+  }
+}
+
+.tarif-block__sale {
+  display: block;
+  color: black;
+  font-size: 12px;
+  visibility: hidden;
 
 }
 
@@ -126,7 +135,10 @@
     padding: 50px 200px 23px 200px;
   }
 
-  .tarif-block__tab {}
+  .tarif-block__tab {
+    padding: 5px 50px;
+    border-radius: 50px;
+  }
 
 }
 @media (min-width: 1600px) {
