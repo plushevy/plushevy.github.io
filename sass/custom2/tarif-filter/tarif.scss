@@ -36,18 +36,31 @@
       display: none;
       text-align: center;
 
-      &--1 {
-        display: block;
+
+      &--0 {
+        display: block
       }
     }
-
 
     &__value {
       display: none;
       font-weight: bold;
+
+    }
+
+    &__old-price {
+      text-decoration: line-through;
+      font-size: 20px;
+      color: #666;
+      margin-right: 20px;
+    }
+
+    &__new-price {
       font-size: 30px;
       line-height: 35px;
     }
+
+
     &__bottom {
       width: 100%;
       padding: 20px 0px;
@@ -176,7 +189,7 @@
         text-align: right;
       }
       &__value {
-        font-size: 55px;
+        font-size: 26px;
         line-height: 42px;
 
       }

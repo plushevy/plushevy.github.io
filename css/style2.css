@@ -390,11 +390,17 @@ small, h6
     width: 50%;
     display: none;
     text-align: center; }
-    .tarif__price--1 {
+    .tarif__price--0 {
       display: block; }
   .tarif__value {
     display: none;
-    font-weight: bold;
+    font-weight: bold; }
+  .tarif__old-price {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: #666;
+    margin-right: 20px; }
+  .tarif__new-price {
     font-size: 30px;
     line-height: 35px; }
   .tarif__bottom {
@@ -461,7 +467,7 @@ small, h6
   .tarif__price {
     text-align: right; }
   .tarif__value {
-    font-size: 55px;
+    font-size: 26px;
     line-height: 42px; }
   .tarif__btn {
     width: 290px;
