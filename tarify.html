@@ -97,19 +97,19 @@
                       <input class="table-input" type="radio" name="tarif-switch" id="tdata-2">
 
                       <div class="table-nav">
-                        <label class="table-tab table-tab--0" for="tdata-0">Для взрослых</label>
+                        <label class="table-tab table-tab--0" for="tdata-0" data-tab="0">Для взрослых</label>
 
-                        <label class="table-tab table-tab--1" for="tdata-1">Для детей</label>
+                        <label class="table-tab table-tab--1" for="tdata-1" data-tab="1" data-description="Внимание! данные тарифы действуют только для детей от 4-х до 14-ти лет. При бронировании полета сообщите нам о скидке">Для детей</label>
 
-                        <label class="table-tab table-tab--2" for="tdata-2">Для парашютистов</label>
+                        <label class="table-tab table-tab--2" for="tdata-2" data-tab="2">Для парашютистов</label>
                       </div>
 
-                      <p class="table-attention">Внимание! данные тарифы действуют только для детей от 4-х до 14-ти лет. При бронировании полета сообщите нам о скидке</p>
+                      <p class="table-attention" id="table-attention" ></p>
 
 
                       <!-- тарифы для взрослых -->
 
-                    <table class="table-price table-price--1">
+                    <table class="table-price table-price--0">
                         <tbody>
                             <tr class="table-price__line" data-time="2 минуты" data-price="2200">
                                 <td class="one">
@@ -276,7 +276,7 @@
 
                     <!-- тарифы для детей  -->
 
-                    <table class="table-price table-price--2">
+                    <table class="table-price table-price--1">
                         <tbody>
                             <tr class="table-price__line" data-time="2 минуты" data-price="2200">
                                 <td class="one">
@@ -443,7 +443,7 @@
 
                     <!-- тарифы для парашютистов -->
 
-                    <table class="table-price table-price--3">
+                    <table class="table-price table-price--2">
                         <tbody>
                             <tr class="table-price__line" data-time="2 минуты" data-price="2200">
                                 <td class="one">
@@ -889,6 +889,21 @@
             });
         }
         openTarifModal();
+
+
+        // function showTabs() {}
+        // showTabs();
+
+
+
+        $('.table-tab').click(function() {
+          $(".table-price").hide();
+          var elementClass = ".table-price--" + $(this).data('tab');
+          console.log (elementClass);
+          $(elementClass).css({display : "table"});
+
+          $(this).addClass("tabel-tab--checked");
+        });
     });
 
     </script>

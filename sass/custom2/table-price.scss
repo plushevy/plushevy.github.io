@@ -44,6 +44,8 @@
 
 
 .table-attention {
+  display: block;
+  min-height: 21px;
   margin: 25px auto;
   text-align: center;
   font-size: 16px;
@@ -51,26 +53,33 @@
   visibility: hidden;
 }
 
+//убираем переключение инпутов
 
-#tdata-0:checked ~ .table-nav .table-tab--0,
-#tdata-1:checked ~ .table-nav .table-tab--1,
-#tdata-2:checked ~ .table-nav .table-tab--2 {
+// #tdata-0:checked ~ .table-nav .table-tab--0,
+// #tdata-1:checked ~ .table-nav .table-tab--1,
+// #tdata-2:checked ~ .table-nav .table-tab--2 {
+//   color: #fb5255;
+//   opacity: 1;
+//   border: 2px solid #cacaca;
+// }
+
+.table-tab--checked {
   color: #fb5255;
   opacity: 1;
   border: 2px solid #cacaca;
 }
 
 
-#tdata-1:checked ~ .table-attention {
-  visibility: visible;
-}
+// #tdata-1:checked ~ .table-attention {
+//   visibility: visible;
+// }
 
 
-#tdata-0:checked ~ .table-price--1,
-#tdata-1:checked ~ .table-price--2,
-#tdata-2:checked ~ .table-price--3 {
-  display: table;
-}
+// #tdata-0:checked ~ .table-price--1,
+// #tdata-1:checked ~ .table-price--2,
+// #tdata-2:checked ~ .table-price--3 {
+//   display: table;
+// }
 
 
 
@@ -80,6 +89,10 @@
   max-width: 1200px;
   width: 100%;
   vertical-align: middle;
+
+  &--0 {
+    display: table;
+  }
 
 
 
