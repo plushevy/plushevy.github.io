@@ -2,64 +2,71 @@
     height: 500px;
     position: relative;
     overflow: hidden;
-}
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__demo {
+        background-image: url("../images/video_bg/birds-low-qual-small.jpg");
+    }
+    &__src {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: contain;
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        opacity: 0.5;
+        background-repeat: repeat;
+        background-image: url("../images/video_bg/black-medium-checks.png");
+    }
+    &__content {
+        position: absolute;
+        width: 600px;
+        bottom: 10px;
+        left: 5%;
+        // background: rgba(0,0,0,0.5);
+        text-align: left;
+        color: #FFF;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
 
-.videobg__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    //     font-size: 40px;
+    //     font-weight: bold;
+    //     font-family: "Foco Bold";
+    }
+    &__text {
+      color: white;
+    }
 
-.videobg__demo {
-    background-image: url("../images/video_bg/birds-low-qual-small.jpg");
-}
+    &__phone {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      text-align: right;
 
-.videobg__src {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    object-fit: contain;
-}
-
-.videobg__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    pointer-events: none;
-    opacity: 0.5;
-    background-repeat: repeat;
-    background-image: url("../images/video_bg/black-medium-checks.png");
-}
-
-.videobg__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    // background: rgba(0,0,0,0.5);
-    text-align: center;
-    margin-top: 190px;
-    color: #FFF;
-    text-shadow: 0 0 5px rgba(0,0,0,0.4);
-
-//     font-size: 40px;
-//     font-weight: bold;
-//     font-family: "Foco Bold";
-}
-
-.videobg__text {
-  color: white;
+    }
+    &__phone-text {
+      color: white;
+    }
+    &__data {
+      color: white;
+    }
 }

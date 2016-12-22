@@ -220,59 +220,87 @@ small, h6
 .small {
   font-size: 94.11764705882353%; }
 
+@media (min-width: 860px) {
+  .rd-navbar-default .rd-navbar-static .rd-navbar-nav li {
+    font-size: 14px; }
+  .rd-navbar-default .rd-navbar-fullwidth .rd-navbar-nav li {
+    font-size: 18px; } }
+
+@media (min-width: 1200px) {
+  h4.text-primary {
+    font-size: 22px;
+    line-height: 1.2; }
+  .rd-navbar-default .rd-navbar-static .rd-navbar-nav > li + li {
+    margin-left: 21px; }
+  .rd-navbar-default .rd-navbar-static .rd-navbar-inner .rd-navbar-cell {
+    min-width: inherit; } }
+
+@media (min-width: 1400px) {
+  .rd-navbar-default .rd-navbar-static .rd-navbar-nav li {
+    font-size: 18px; }
+  .rd-navbar-default .rd-navbar-fullwidth .rd-navbar-nav li {
+    font-size: 18px; } }
+
+@media (min-width: 1600px) {
+  h4.text-primary {
+    font-size: 22px;
+    line-height: 1.2; } }
+
 .videobg {
   height: 500px;
   position: relative;
   overflow: hidden; }
-
-.videobg__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.videobg__demo {
-  background-image: url("../images/video_bg/birds-low-qual-small.jpg"); }
-
-.videobg__src {
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: contain; }
-
-.videobg__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  pointer-events: none;
-  opacity: 0.5;
-  background-repeat: repeat;
-  background-image: url("../images/video_bg/black-medium-checks.png"); }
-
-.videobg__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin-top: 190px;
-  color: #FFF;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
-
-.videobg__text {
-  color: white; }
+  .videobg__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .videobg__demo {
+    background-image: url("../images/video_bg/birds-low-qual-small.jpg"); }
+  .videobg__src {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain; }
+  .videobg__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-repeat: repeat;
+    background-image: url("../images/video_bg/black-medium-checks.png"); }
+  .videobg__content {
+    position: absolute;
+    width: 600px;
+    bottom: 10px;
+    left: 5%;
+    text-align: left;
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+  .videobg__text {
+    color: white; }
+  .videobg__phone {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    text-align: right; }
+  .videobg__phone-text {
+    color: white; }
+  .videobg__data {
+    color: white; }
 
 .tarif-block {
   width: 100%;

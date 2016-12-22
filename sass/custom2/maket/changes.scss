@@ -1,0 +1,53 @@
+// @media (max-width: 320px) {}
+// @media (max-width: 480px) {}
+// @media (max-width: 768px) {}
+// @media (max-width: 1200px) {}
+// @media (max-width: 1600px) {}
+
+
+@media (min-width: 860px) {
+
+  //шрифт меню
+  .rd-navbar-default .rd-navbar-static .rd-navbar-nav li {
+      font-size: 14px;
+  }
+
+  .rd-navbar-default .rd-navbar-fullwidth .rd-navbar-nav li {
+    font-size: 18px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+    h4.text-primary {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .rd-navbar-default .rd-navbar-static .rd-navbar-nav > li + li {
+        margin-left: 21px;
+    }
+
+    .rd-navbar-default .rd-navbar-static .rd-navbar-inner .rd-navbar-cell {
+        min-width: inherit;
+    }
+}
+
+@media (min-width: 1400px) {
+
+  //шрифт меню на всю ширину
+  .rd-navbar-default .rd-navbar-static .rd-navbar-nav li {
+      font-size: 18px;
+  }
+
+  .rd-navbar-default .rd-navbar-fullwidth .rd-navbar-nav li {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1600px) {
+    h4.text-primary {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+}
