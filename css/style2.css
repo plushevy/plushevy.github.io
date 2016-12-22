@@ -314,7 +314,7 @@ small, h6
 .tarif-block__sale {
   display: block;
   color: black;
-  font-size: 12px;
+  font-size: 18px;
   visibility: hidden; }
 
 @media (min-width: 480px) {
@@ -547,7 +547,7 @@ small, h6
     position: absolute;
     display: block;
     color: red;
-    font-size: 20px;
+    font-size: 16px;
     bottom: -50px;
     left: 50%; }
 
