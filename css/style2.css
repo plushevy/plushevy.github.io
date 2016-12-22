@@ -1627,6 +1627,10 @@ small, h6
   opacity: 0.7;
   border: 2px solid transparent;
   border-radius: 26px; }
+  .table-tab--checked {
+    color: #fb5255;
+    opacity: 1;
+    border: 2px solid #cacaca; }
   .table-tab:hover {
     border: 2px solid #cacaca;
     opacity: 1; }
@@ -1637,13 +1641,7 @@ small, h6
   margin: 25px auto;
   text-align: center;
   font-size: 16px;
-  color: #fa5254;
-  visibility: hidden; }
-
-.table-tab--checked {
-  color: #fb5255;
-  opacity: 1;
-  border: 2px solid #cacaca; }
+  color: #fa5254; }
 
 .table-price {
   display: none;

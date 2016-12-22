@@ -32,6 +32,12 @@
   border: 2px solid transparent;
   border-radius: 26px;
 
+  &--checked {
+    color: #fb5255;
+    opacity: 1;
+    border: 2px solid #cacaca;
+  }
+
   &:hover {
     border: 2px solid #cacaca;
     opacity: 1;
@@ -50,7 +56,7 @@
   text-align: center;
   font-size: 16px;
   color: #fa5254;
-  visibility: hidden;
+
 }
 
 //убираем переключение инпутов
@@ -63,12 +69,6 @@
 //   border: 2px solid #cacaca;
 // }
 
-.table-tab--checked {
-  color: #fb5255;
-  opacity: 1;
-  border: 2px solid #cacaca;
-}
-
 
 // #tdata-1:checked ~ .table-attention {
 //   visibility: visible;
@@ -80,7 +80,6 @@
 // #tdata-2:checked ~ .table-price--3 {
 //   display: table;
 // }
-
 
 
 .table-price {

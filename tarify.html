@@ -97,14 +97,14 @@
                       <input class="table-input" type="radio" name="tarif-switch" id="tdata-2">
 
                       <div class="table-nav">
-                        <label class="table-tab table-tab--0" for="tdata-0" data-tab="0">Для взрослых</label>
+                        <label class="table-tab table-tab--0 table-tab--checked" for="tdata-0" data-tab="0"  data-description="">Для взрослых</label>
 
                         <label class="table-tab table-tab--1" for="tdata-1" data-tab="1" data-description="Внимание! данные тарифы действуют только для детей от 4-х до 14-ти лет. При бронировании полета сообщите нам о скидке">Для детей</label>
 
-                        <label class="table-tab table-tab--2" for="tdata-2" data-tab="2">Для парашютистов</label>
+                        <label class="table-tab table-tab--2" for="tdata-2" data-tab="2"  data-description="">Для парашютистов</label>
                       </div>
 
-                      <p class="table-attention" id="table-attention" ></p>
+                      <p class="table-attention" id="table-attention"></p>
 
 
                       <!-- тарифы для взрослых -->
@@ -847,17 +847,17 @@
     $(document).ready(function() {
         function openTarifModal(){
             var price = 0;
-            var $input = $('.form1__input-maxmin');
-            var modalContent = $('.modal-content');
-            var modalOverlay = $('.modal-overlay');
+            var $input = $(".form1__input-maxmin");
+            var modalContent = $(".modal-content");
+            var modalOverlay = $(".modal-overlay");
 
-            $('.form1__minus').click(function() {
+            $(".form1__minus").click(function() {
                 var count = parseInt($input.val()) - 1;
                 count = count < 1 ? 1 : count;
                 $input.val(count);
                 $(".form1__price").html(price * count);
             });
-            $('.form1__plus').click(function() {
+            $(".form1__plus").click(function() {
 
                 var count = parseInt($input.val()) + 1;
                 console.log(count);
@@ -868,8 +868,8 @@
 
             $(".form1__close").click(function(){
               event.preventDefault();
-              modalContent.removeClass('modal-content--show');
-              modalOverlay.removeClass('modal-overlay--show');
+              modalContent.removeClass("modal-content--show");
+              modalOverlay.removeClass("modal-overlay--show");
 
             });
 
@@ -884,26 +884,25 @@
                 $(".form1__time").html(time);
                 $(".form1__price").html(price);
                 $input.val(1);
-              modalOverlay.addClass('modal-overlay--show');
-              modalContent.addClass('modal-content--show');
+              modalOverlay.addClass("modal-overlay--show");
+              modalContent.addClass("modal-content--show");
             });
         }
         openTarifModal();
 
 
-        // function showTabs() {}
-        // showTabs();
-
-
-
-        $('.table-tab').click(function() {
+        $(".table-tab").click(function() {
+          $(".table-tab").removeClass("table-tab--checked");
           $(".table-price").hide();
-          var elementClass = ".table-price--" + $(this).data('tab');
-          console.log (elementClass);
-          $(elementClass).css({display : "table"});
 
-          $(this).addClass("tabel-tab--checked");
+          var elementClass = ".table-price--" + $(this).data("tab");
+          $(elementClass).css({display : "table"});
+          $(this).addClass("table-tab--checked");
+
+          var elementDesc = $(this).data("description");
+          $(".table-attention").html(elementDesc);
         });
+
     });
 
     </script>
