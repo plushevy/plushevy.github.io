@@ -1,0 +1,13 @@
+.meet {
+  &__title {
+    font-weight: bold;
+  }
+  &__link {
+    color: #fa5254;
+    &:hover {
+      color: darkred;
+
+    }
+  }
+
+}

@@ -1,0 +1,18 @@
+.mynavbar {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: baseline;
+
+  * + .btn {
+    margin-top: 0;
+  }
+
+  &__phone {
+    display: inline-block;
+    text-align: center;
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 40px;
+  }
+}

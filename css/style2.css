@@ -227,12 +227,30 @@ small, h6
 @media (min-width: 1200px) {
   h4.text-primary {
     font-size: 22px;
-    line-height: 1.2; } }
+    line-height: 1.2; }
+  .rd-navbar-default .rd-navbar-static .rd-navbar-nav > li + li {
+    margin-left: 21px; }
+  .rd-navbar-default .rd-navbar-static .rd-navbar-inner .rd-navbar-cell {
+    min-width: inherit; } }
 
 @media (min-width: 1600px) {
   h4.text-primary {
     font-size: 22px;
     line-height: 1.2; } }
+
+.mynavbar {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: baseline; }
+  .mynavbar * + .btn {
+    margin-top: 0; }
+  .mynavbar__phone {
+    display: inline-block;
+    text-align: center;
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 40px; }
 
 .videobg {
   height: 500px;
@@ -1799,3 +1817,11 @@ small, h6
     width: 100px; }
     .table-price .five button {
       width: 100px; } }
+
+.meet__title {
+  font-weight: bold; }
+
+.meet__link {
+  color: #fa5254; }
+  .meet__link:hover {
+    color: darkred; }
