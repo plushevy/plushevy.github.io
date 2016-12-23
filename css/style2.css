@@ -247,7 +247,7 @@ small, h6
   .mynavbar__phone {
     display: inline-block;
     text-align: center;
-    color: red;
+    color: #fb5255;
     font-size: 28px;
     font-weight: bold;
     margin-right: 40px; }
