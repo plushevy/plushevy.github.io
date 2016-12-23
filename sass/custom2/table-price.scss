@@ -45,10 +45,6 @@
 }
 
 
-
-
-
-
 .table-attention {
   display: block;
   min-height: 21px;
@@ -89,11 +85,9 @@
   width: 100%;
   vertical-align: middle;
 
-  &--0 {
+  &:first-child {
     display: table;
   }
-
-
 
   tr {
     border-bottom: 1px solid #eeeeee;

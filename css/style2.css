@@ -220,6 +220,10 @@ small, h6
 .small {
   font-size: 94.11764705882353%; }
 
+.btn-my {
+  padding-left: 80px;
+  padding-right: 80px; }
+
 @media (min-width: 1200px) {
   h4.text-primary {
     font-size: 22px;
@@ -1682,7 +1686,7 @@ small, h6
   max-width: 1200px;
   width: 100%;
   vertical-align: middle; }
-  .table-price--0 {
+  .table-price:first-child {
     display: table; }
   .table-price tr {
     border-bottom: 1px solid #eeeeee;

@@ -137,16 +137,17 @@
                                 </label>
                         </fieldset>
                         <!-- конец inner -->
+
+                        <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
+                        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
+                        <a title="Закрыть" class="form1__close" href="javascript:;"></a>
+                    </form>
                 </div>
-                <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
-                <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
-                <a title="Закрыть" class="form1__close" href="javascript:;"></a>
-                </form>
             </div>
 
             <div class="popup popup--small">
-                    <h6>Ваше сообщение принято.</h6>
-                    <p>В ближайшее время с вами свяжется администратор.</p>
+                <h6>Ваше сообщение принято.</h6>
+                <p>В ближайшее время с вами свяжется администратор.</p>
                 <a title="Закрыть" class="popup__close" href="javascript:;"></a>
             </div>
 
@@ -247,41 +248,37 @@
     </script>
 
     <script type="text/javascript">
+        $(document).ready(function() {
+            function openModal() {
+                var modalContentSmall = $('.popup--small');
+                var modalContentOrder = $('.modal-content--order');
+                var modalOverlay = $('.modal-overlay');
 
 
+                $(".popup__close").click(function() {
+                    event.preventDefault();
+                    modalContentSmall.removeClass('popup--show');
+                    modalOverlay.removeClass('modal-overlay--show');
+                });
 
-    $(document).ready(function() {
-        function openModal(){
-            var modalContentSmall = $('.popup--small');
-            var modalContentOrder = $('.modal-content--order');
-            var modalOverlay = $('.modal-overlay');
+                $(".form1__close").click(function() {
+                    event.preventDefault();
+                    modalContentOrder.removeClass('modal-content--show');
+                    modalOverlay.removeClass('modal-overlay--show');
+                });
 
+                $(".modal-btn--2").click(function() {
+                    modalOverlay.addClass('modal-overlay--show');
+                    modalContentSmall.addClass('popup--show');
+                });
 
-            $(".popup__close").click(function(){
-              event.preventDefault();
-            modalContentSmall.removeClass('popup--show');
-              modalOverlay.removeClass('modal-overlay--show');
-            });
-
-            $(".form1__close").click(function(){
-              event.preventDefault();
-              modalContentOrder.removeClass('modal-content--show');
-              modalOverlay.removeClass('modal-overlay--show');
-            });
-
-            $(".modal-btn--2").click(function(){
-              modalOverlay.addClass('modal-overlay--show');
-              modalContentSmall.addClass('popup--show');
-            });
-
-            $(".modal-btn--1").click(function(){
-              modalOverlay.addClass('modal-overlay--show');
-              modalContentOrder.addClass('modal-content--show');
-            });
-        }
-        openModal();
-    });
-
+                $(".modal-btn--1").click(function() {
+                    modalOverlay.addClass('modal-overlay--show');
+                    modalContentOrder.addClass('modal-content--show');
+                });
+            }
+            openModal();
+        });
     </script>
 
     <!-- <script>
