@@ -234,12 +234,24 @@ small, h6
     font-size: 22px;
     line-height: 1.2; } }
 
+.mynavbar__contacts {
+  display: none; }
+
 .mynavbar__metro {
-  display: none;
+  display: block;
   text-align: center;
   color: #fb5255;
   font-size: 22px;
   font-weight: bold; }
+
+.mynavbar__adress {
+  display: block;
+  width: 160px;
+  color: black;
+  font-weight: normal;
+  font-size: 10px;
+  margin-left: 20px;
+  text-align: center; }
 
 .mynavbar__phone {
   display: inline-block;
@@ -258,8 +270,22 @@ small, h6
     margin-bottom: 5px; }
 
 @media (min-width: 992px) {
-  .mynavbar__metro {
-    display: inline-block; } }
+  .mynavbar__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .mynavbar__phone {
+    font-size: 24px; }
+  .rd-navbar-default .rd-navbar-fullwidth.rd-navbar--is-stuck .rd-navbar-fullwidth-collapse,
+  .rd-navbar-default .rd-navbar-fullwidth.rd-navbar--is-clone .rd-navbar-fullwidth-collapse {
+    display: none !important; } }
+
+@media (min-width: 1024px) {
+  .mynavbar__adress {
+    width: 180px;
+    font-size: 12px; }
+  .mynavbar__phone {
+    font-size: 26px; } }
 
 @media (min-width: 1200px) {
   .mynavbar__inner {
@@ -270,7 +296,12 @@ small, h6
     margin-right: auto; }
   .mynavbar__menu li a {
     padding-top: 20px !important;
-    padding-bottom: 20px !important; } }
+    padding-bottom: 20px !important; }
+  .mynavbar__adress {
+    width: 190px;
+    font-size: 14px; }
+  .mynavbar__phone {
+    font-size: 28px; } }
 
 @media (min-width: 1357px) {
   .mynavbar__nav {
