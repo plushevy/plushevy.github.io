@@ -24,7 +24,7 @@
   margin: 0;
   text-align: center;
   font-weight: bold;
-  opacity: 0.7;
+  opacity: 0.8;
   border: 2px solid transparent;
   border-radius: 26px;
 
@@ -44,12 +44,12 @@
     color: #fb5255;
     }
   }
-
-  &:not(:hover) {
-    .tarif-block__sale {
-    visibility: hidden;
-    }
-  }
+  //
+  // &:not(:hover) {
+  //   .tarif-block__sale {
+  //   visibility: hidden;
+  //   }
+  // }
 }
 
 .tarif-block__sale {
@@ -57,6 +57,10 @@
   color: black;
   font-size: 13px;
   visibility: hidden;
+
+  &--visibility {
+    visibility: visible;
+  }
 }
 
 
