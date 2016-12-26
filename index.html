@@ -41,7 +41,7 @@
           <div class="rd-navbar-wrap rd-navbar-default rd-navbar-variant-2">
             <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-static" class="rd-navbar" data-sm-stick-up-offset="60px" data-md-stick-up-offset="60px" data-lg-stick-up-offset="1px" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fullwidth" data-lg-device-layout="rd-navbar-static">
               <div class="rd-navbar-outer outer-2">
-                <div class="rd-navbar-inner">
+                <div class="rd-navbar-inner mynavbar__inner">
                   <!-- RD Navbar Panel-->
                   <div class="rd-navbar-cell rd-navbar-panel">
                     <!-- RD Navbar Toggle-->
@@ -61,12 +61,18 @@
                     <!-- RD Navbar Toggle-->
                     <button data-rd-navbar-toggle=".rd-navbar-info" class="info-toggle"><span class="toggle-icon"></span></button>
                   </div>
+
+                  <div class=" rd-navbar-fullwidth-collapse mynavbar__contacts">
+                    <span class="mynavbar__metro">м.Курская</span>
+                    <span class="mynavbar__adress">Нижний Сусальный переулок, 5, стр. 19<br> (территория завода «Арма»)</span>
+                  </div>
                   <!-- RD Navbar Nav-->
-                  <div class="rd-navbar-cell rd-navbar-nav-wrap">
-                    <ul class="rd-navbar-nav">
+                  <div class="rd-navbar-cell rd-navbar-nav-wrap mynavbar__nav">
+                    <ul class="rd-navbar-nav mynavbar__menu">
                         <!-- <li class="active"><a href="./">Главная</a></li> -->
                         <li><a href="tarify.html">Тарифы</a></li>
-                        <li><a href="calendar.html">Расписание</a></li>
+                        <li><a href="news.html">Новичкам</a>
+                        <!-- <li><a href="calendar.html">Расписание</a></li> -->
                         <li><a href="sertificate.html">Подарочные сертификаты</a></li>
                         <li><a href="news.html">Галерея</a>
                             <!-- RD Navbar Dropdown-->
@@ -75,11 +81,15 @@
                                 <li><a href="videos-masonry-type.html">Видео</a></li>
                             </ul>
                         </li>
-                        <li><a href="contacts.html">Контакты</a></li>
+                        <!-- <li><a href="contacts.html">Контакты</a></li> -->
                     </ul>
                   </div>
-                  <div class="rd-navbar-cell rd-navbar-info info-3 text-sm-right rd-navbar-fullwidth-collapse"><a href="videos-grid-type.html" class="btn btn-md btn-primary btn-icon-right">
-                      <div class="icon icon-md"></div>Летать</a></div>
+                  <div class="rd-navbar-cell rd-navbar-info info-3 text-sm-right rd-navbar-fullwidth-collapse mynavbar__right">
+                    <div class="mynavbar__phone">+7 499 333-22-22</div>
+                    <a href="videos-grid-type.html" class="btn btn-md btn-primary btn-icon-right mynavbar__btn">
+                      <div class="icon icon-md"></div>Летать
+                    </a>
+                    </div>
                 </div>
               </div>
             </nav>
@@ -100,7 +110,6 @@
               <div class="videobg__content">
                   <h4 class="videobg__text">Полёты в аэротрубе в SITE.RU — для новичков и профессиональных парашютистов</h4>
               </div>
-              <div class="videobg__phone">+7 499 333-22-22</div>
 
           </div>
 
@@ -113,16 +122,16 @@
 
                 <form class="tarif" action="index.html" method="post">
                     <div class="tarif__wrapper">
-                        <input type="radio" name="data-switch" id="zdata-0">
-                        <input type="radio" name="data-switch" id="zdata-1" checked>
+                        <input type="radio" name="data-switch" id="zdata-0" checked>
+                        <input type="radio" name="data-switch" id="zdata-1">
                         <input type="radio" name="data-switch" id="zdata-2">
 
                         <div class="tarif-block__nav">
-                            <label class="tarif-block__tab tarif-block__tab--0" for="zdata-0">Летать будут дети</label>
+                            <label class="tarif-block__tab tarif-block__tab--0 tarif-block__tab--checked" for="zdata-0" data-tab="0">Летать будут дети<span class="tarif-block__sale tarif-block__sale--visibility">Скидка 30%</span></label>
 
-                            <label class="tarif-block__tab tarif-block__tab--1" for="zdata-1">У нас день рождения</label>
+                            <label class="tarif-block__tab tarif-block__tab--1" for="zdata-1" data-tab="1">У нас день рождения<span class="tarif-block__sale">Скидка 20%</span></label>
 
-                            <label class="tarif-block__tab tarif-block__tab--2" for="zdata-2">Летать в будни днем</label>
+                            <label class="tarif-block__tab tarif-block__tab--2" for="zdata-2" data-tab="2">Летать в будни днем<span class="tarif-block__sale">Скидка 50%</span></label>
                         </div>
 
 
@@ -139,62 +148,148 @@
 
 
                             <div class="filter__nav">
+                                <div class="filter__hint">*До 2-х человек по 3 минуты каждый</div>
                                 <div class="filter__bar"></div>
-                                <label class="filter__lable filter__label--0" for="pos-0" data-description="минуты" data-title="2">2 <span>минуты</span></label>
-                                <label class="filter__lable filter__label--1" for="pos-1" data-description="минуты" data-title="4">4 <span>минуты</span></label>
-                                <label class="filter__lable filter__label--2" for="pos-2" data-description="минут" data-title="6">6 <span>минут</span></label>
-                                <label class="filter__lable filter__label--3" for="pos-3" data-description="минут" data-title="8">8 <span>минут</span></label>
-                                <label class="filter__lable filter__label--4" for="pos-4" data-description="минут" data-title="10">10 <span>минут</span></label>
-                                <label class="filter__lable filter__label--5" for="pos-5" data-description="минут" data-title="15">15 <span>минут</span></label>
-                                <label class="filter__lable filter__label--6" for="pos-6" data-description="минут" data-title="30">30 <span>минут</span></label>
-                                <label class="filter__lable filter__label--7" for="pos-7" data-description="минут" data-title="40">40 <span>минут</span></label>
-                                <label class="filter__lable filter__label--8" for="pos-8" data-description="минут" data-title="60">60 <span>минут</span></label>
+                                <label class="filter__lable filter__label--0" for="pos-0" data-description="минуты" data-title="2" data-text="*0До 2-х человек по 3 минуты каждый">2 <span>минуты</span></label>
+                                <label class="filter__lable filter__label--1" for="pos-1" data-description="минуты" data-title="4" data-text="*1До 2-х человек по 3 минуты каждый">4 <span>минуты</span></label>
+                                <label class="filter__lable filter__label--2" for="pos-2" data-description="минут" data-title="6" data-text="*2До 2-х человек по 3 минуты каждый">6 <span>минут</span></label>
+                                <label class="filter__lable filter__label--3" for="pos-3" data-description="минут" data-title="8" data-text="*3До 2-х человек по 3 минуты каждый">8 <span>минут</span></label>
+                                <label class="filter__lable filter__label--4" for="pos-4" data-description="минут" data-title="10" data-text="*4До 2-х человек по 3 минуты каждый">10 <span>минут</span></label>
+                                <label class="filter__lable filter__label--5" for="pos-5" data-description="минут" data-title="15" data-text="*5До 2-х человек по 3 минуты каждый">15 <span>минут</span></label>
+                                <label class="filter__lable filter__label--6" for="pos-6" data-description="минут" data-title="30" data-text="*6До 2-х человек по 3 минуты каждый">30 <span>минут</span></label>
+                                <label class="filter__lable filter__label--7" for="pos-7" data-description="минут" data-title="40" data-text="*7До 2-х человек по 3 минуты каждый">40 <span>минут</span></label>
+                                <label class="filter__lable filter__label--8" for="pos-8" data-description="минут" data-title="60" data-text="*8До 2-х человек по 3 минуты каждый">60 <span>минут</span></label>
                             </div>
 
                             <div class="tarif__links">
                                 <a href="#" class="tarif__link">Все тарифы</a>
-                                <a href="#" class="tarif__link">Парашютистам</a>
+                                <a href="#" class="tarif__link" style="visibility:hidden">Парашютистам</a>
                             </div>
+
                             <div class="tarif__price tarif__price--0">
-                                <b class="tarif__value tarif__value--0">2 200 ₽</b>
-                                <b class="tarif__value tarif__value--1">3 200 ₽</b>
-                                <b class="tarif__value tarif__value--2">4 200 ₽</b>
-                                <b class="tarif__value tarif__value--3">5 200 ₽</b>
-                                <b class="tarif__value tarif__value--4">6 200 ₽</b>
-                                <b class="tarif__value tarif__value--5">7 200 ₽</b>
-                                <b class="tarif__value tarif__value--6">8 200 ₽</b>
-                                <b class="tarif__value tarif__value--7">9 200 ₽</b>
-                                <b class="tarif__value tarif__value--8">9 222 ₽</b>
+                                <b class="tarif__value tarif__value--0">
+                                  <span class="tarif__old-price">22 200 ₽</span>
+                                  <span class="tarif__new-price">20 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--1">
+                                  <span class="tarif__old-price">23 200 ₽</span>
+                                  <span class="tarif__new-price">21 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--2">
+                                  <span class="tarif__old-price">24 200 ₽</span>
+                                  <span class="tarif__new-price">22 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--3">
+                                  <span class="tarif__old-price">25 200 ₽</span>
+                                  <span class="tarif__new-price">23 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--4">
+                                  <span class="tarif__old-price">26 200 ₽</span>
+                                  <span class="tarif__new-price">24 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--5">
+                                  <span class="tarif__old-price">27 200 ₽</span>
+                                  <span class="tarif__new-price">25 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--6">
+                                  <span class="tarif__old-price">28 200 ₽</span>
+                                  <span class="tarif__new-price">26 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--7">
+                                  <span class="tarif__old-price">29 200 ₽</span>
+                                  <span class="tarif__new-price">27 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--8">
+                                  <span class="tarif__old-price">30 200 ₽</span>
+                                  <span class="tarif__new-price">28 200 ₽</span>
+                                </b>
+
                             </div>
 
                             <div class="tarif__price tarif__price--1">
-                                <b class="tarif__value tarif__value--0">12 200 ₽</b>
-                                <b class="tarif__value tarif__value--1">13 200 ₽</b>
-                                <b class="tarif__value tarif__value--2">14 200 ₽</b>
-                                <b class="tarif__value tarif__value--3">15 200 ₽</b>
-                                <b class="tarif__value tarif__value--4">16 200 ₽</b>
-                                <b class="tarif__value tarif__value--5">17 200 ₽</b>
-                                <b class="tarif__value tarif__value--6">18 200 ₽</b>
-                                <b class="tarif__value tarif__value--7">19 200 ₽</b>
-                                <b class="tarif__value tarif__value--8">19 222 ₽</b>
+                                <b class="tarif__value tarif__value--0">
+                                  <span class="tarif__old-price">32 200 ₽</span>
+                                  <span class="tarif__new-price">30 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--1">
+                                  <span class="tarif__old-price">33 200 ₽</span>
+                                  <span class="tarif__new-price">31 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--2">
+                                  <span class="tarif__old-price">34 200 ₽</span>
+                                  <span class="tarif__new-price">32 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--3">
+                                  <span class="tarif__old-price">35 200 ₽</span>
+                                  <span class="tarif__new-price">33 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--4">
+                                  <span class="tarif__old-price">36 200 ₽</span>
+                                  <span class="tarif__new-price">34 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--5">
+                                  <span class="tarif__old-price">37 200 ₽</span>
+                                  <span class="tarif__new-price">35 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--6">
+                                  <span class="tarif__old-price">38 200 ₽</span>
+                                  <span class="tarif__new-price">36 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--7">
+                                  <span class="tarif__old-price">39 200 ₽</span>
+                                  <span class="tarif__new-price">37 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--8">
+                                  <span class="tarif__old-price">30 200 ₽</span>
+                                  <span class="tarif__new-price">38 200 ₽</span>
+                                </b>
+
                             </div>
 
                             <div class="tarif__price tarif__price--2">
-                                <b class="tarif__value tarif__value--0">22 200 ₽</b>
-                                <b class="tarif__value tarif__value--1">23 200 ₽</b>
-                                <b class="tarif__value tarif__value--2">24 200 ₽</b>
-                                <b class="tarif__value tarif__value--3">25 200 ₽</b>
-                                <b class="tarif__value tarif__value--4">26 200 ₽</b>
-                                <b class="tarif__value tarif__value--5">27 200 ₽</b>
-                                <b class="tarif__value tarif__value--6">28 200 ₽</b>
-                                <b class="tarif__value tarif__value--7">29 200 ₽</b>
-                                <b class="tarif__value tarif__value--8">29 222 ₽</b>
+                                <b class="tarif__value tarif__value--0">
+                                  <span class="tarif__old-price">42 200 ₽</span>
+                                  <span class="tarif__new-price">40 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--1">
+                                  <span class="tarif__old-price">43 200 ₽</span>
+                                  <span class="tarif__new-price">41 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--2">
+                                  <span class="tarif__old-price">44 200 ₽</span>
+                                  <span class="tarif__new-price">42 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--3">
+                                  <span class="tarif__old-price">45 200 ₽</span>
+                                  <span class="tarif__new-price">43 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--4">
+                                  <span class="tarif__old-price">46 200 ₽</span>
+                                  <span class="tarif__new-price">44 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--5">
+                                  <span class="tarif__old-price">47 200 ₽</span>
+                                  <span class="tarif__new-price">45 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--6">
+                                  <span class="tarif__old-price">48 200 ₽</span>
+                                  <span class="tarif__new-price">46 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--7">
+                                  <span class="tarif__old-price">49 200 ₽</span>
+                                  <span class="tarif__new-price">47 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--8">
+                                  <span class="tarif__old-price">40 200 ₽</span>
+                                  <span class="tarif__new-price">48 200 ₽</span>
+                                </b>
+
                             </div>
 
                             <div class="tarif__bottom">
                                 <div class="tarif__btn-block">
-                                    <button class="tarif__btn btn tarif__btn--1" type="submit" name="tarif__btn--1">Подарить близким</button>
-                                    <span class="tarif__span">или</span>
+                                    <button class="tarif__btn btn tarif__btn--1" type="submit" name="tarif__btn--1" style="visibility:hidden">Подарить близким</button>
+                                    <span class="tarif__span" style="visibility:hidden">или</span>
                                     <button class="tarif__btn btn tarif__btn--2" type="submit" name="tarif__btn--2">Улететь самому</button>
                                 </div>
                             </div>
@@ -207,6 +302,7 @@
 
                 </form>
             </section>
+
 
             <section class="responsive-tabs responsive-tabs-variant-2 section-50 section-mac-103 add-z">
                 <ul class="resp-tabs-list section-50 section-lg-61 section-lg-top-70">
