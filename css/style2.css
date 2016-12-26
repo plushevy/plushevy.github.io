@@ -401,7 +401,7 @@ small, h6
       color: #fb5255; }
 
 .tarif-block__sale {
-  display: block;
+  display: none;
   color: black;
   font-size: 13px;
   visibility: hidden; }
@@ -436,7 +436,9 @@ small, h6
   .tarif-block__tab {
     padding: 13px 10px;
     font-weight: bold;
-    opacity: 0.7; } }
+    opacity: 0.7; }
+  .tarif-block__sale {
+    display: block; } }
 
 @media (min-width: 992px) {
   .tarif-block {
@@ -446,14 +448,16 @@ small, h6
   .tarif-block {
     width: 1140px; }
   .tarif-block__nav {
-    padding: 50px 200px 23px 200px; }
+    padding: 50px 100px 23px 100px; }
   .tarif-block__tab {
     padding: 5px 50px;
     border-radius: 50px; } }
 
 @media (min-width: 1600px) {
   .tarif-block {
-    width: 1400px; } }
+    width: 1400px; }
+  .tarif-block__nav {
+    padding: 50px 200px 23px 200px; } }
 
 .tarif {
   padding: 0;
@@ -488,11 +492,11 @@ small, h6
     font-weight: bold; }
   .tarif__old-price {
     text-decoration: line-through;
-    font-size: 20px;
+    font-size: 18px;
     color: #666;
-    margin-right: 20px; }
+    margin-right: 15px; }
   .tarif__new-price {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 35px; }
   .tarif__bottom {
     width: 100%;
@@ -560,6 +564,11 @@ small, h6
   .tarif__value {
     font-size: 26px;
     line-height: 42px; }
+  .tarif__old-price {
+    font-size: 20px;
+    margin-right: 20px; }
+  .tarif__new-price {
+    font-size: 30px; }
   .tarif__btn {
     width: 290px;
     font-size: 18px; }
