@@ -716,6 +716,35 @@
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            //вкладки в фильтре
+            $(".tarif-block__tab").click(function() {
+                $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
+                $(".tarif-block__sale").removeClass("tarif-block__sale--visibility");
+                $(".tarif__price").hide();
+
+                var elementClass = ".tarif__price--" + $(this).data("tab");
+                $(elementClass).css({
+                    display: "block"
+                });
+
+                $(this).addClass("tarif-block__tab--checked");
+
+                var elementTab = ".tarif-block__tab--" + $(this).data("tab");
+                var sale = $(elementTab).find(".tarif-block__sale");
+                sale.addClass("tarif-block__sale--visibility");
+
+
+                // var elementDesc = $(this).data("description");
+                // $(".table-attention").html(elementDesc);
+            });
+
+        });
+    </script>
+
+
 </body>
 
 </html>
