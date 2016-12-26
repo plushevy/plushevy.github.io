@@ -33,7 +33,6 @@
 
 @media (max-width: 900px) {
   .promo {
-    flex-direction: column;
 
     input {
       width: 50%;
@@ -49,14 +48,13 @@
   }
 }
 @media (max-width: 767px) {}
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .promo {
+    flex-direction: column;
     font-size: 20px;
     margin-top: 40px;
 
-    input {
-      width: 50%;
-    }
+    input { }
 
     &__line {
 

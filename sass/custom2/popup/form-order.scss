@@ -35,27 +35,27 @@
 }
 
 
-#select1-1:checked ~ .form-order__inner .form-group--noadress {
+#select1-1:checked ~ .form-order__inner .form-block--noadress {
    display: block;
 }
 
-#select1-2:checked ~ .form-order__inner .form-group--adress,
+#select1-2:checked ~ .form-order__inner .form-block--adress,
 #select1-2:checked ~ .selection.selection--shipping {
    display: block;
 }
 
 
-#select2-2:checked ~ .form-order__inner .form-group--gift {
+#select2-2:checked ~ .form-order__inner .form-block--gift {
    display: block;
 }
 
-#select3-1:checked ~ .form-order__inner .form-group--gift {
+#select3-1:checked ~ .form-order__inner .form-block--gift {
    display: none;
 }
 
-#select3-2:checked ~ .form-order__inner .form-group--adress {
+#select3-2:checked ~ .form-order__inner .form-block--adress {
    display: none;
 }
-#select3-2:checked ~ .form-order__inner .form-group--noadress {
+#select3-2:checked ~ .form-order__inner .form-block--noadress {
    display: block;
 }

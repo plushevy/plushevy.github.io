@@ -1,10 +1,10 @@
-.form-group {
+.form-block {
   padding: 50px 140px;
   border: 2px solid #cacaca;
   margin-top: 40px;
   display: none;
 
-  & + .form-group {
+  & + .form-block {
     margin-top: 40px;
   }
 
@@ -73,10 +73,10 @@
 }
 
 @media (max-width: 992px) {
-  .form-group {
+  .form-block {
     padding: 40px 50px;
 
-    & + .form-group {
+    & + .form-block {
       margin-top: 40px;
     }
 
@@ -102,24 +102,24 @@
   }
 }
 @media (max-width: 767px) {
-  .form-group {
+  .form-block {
     padding: 30px 40px;
 
-    & + .form-group {}
+    & + .form-block {}
     &__title {}
   }
 }
 @media (max-width: 480px) {
-  .form-group {
+  .form-block {
     padding: 30px 20px;
   }
 }
 @media (max-width: 360px) {
-  .form-group {
+  .form-block {
     padding: 0px 0px;
     border: none;
 
-    & + .form-group {
+    & + .form-block {
       margin-top: 30px;
     }
 
