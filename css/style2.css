@@ -478,7 +478,9 @@ small, h6
     display: none;
     text-align: center;
     align-self: baseline; }
-    .tarif__price--0 {
+    .tarif__price--default {
+      display: block; }
+    .tarif__price--display {
       display: block; }
   .tarif__value {
     display: none;

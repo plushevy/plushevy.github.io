@@ -41,8 +41,12 @@
       align-self: baseline;
 
 
-      &--0 {
+      &--default {
         display: block
+      }
+
+      &--display {
+        display: block;
       }
     }
 
