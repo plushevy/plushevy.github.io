@@ -424,7 +424,7 @@
 
               var elementTab = ".tarif-block__tab--" + $(this).data("tab");
               var elemTabClass = $(elementTab);
-              var sale = elemTabClass.find(".tarif-block__sale");
+
               var elemPriceAll = $(".tarif__price");
               var elementPrice = ".tarif__price--" + $(this).data("tab");
               var elementPriceClass = $(elementPrice);
@@ -434,7 +434,6 @@
                   if (elemTabClass.hasClass("tarif-block__tab--checked")) {
                       //убраем чек с нашего элемента
                       elemTabClass.removeClass("tarif-block__tab--checked");
-                      sale.removeClass("tarif-block__sale--visibility");
                       elemPriceAll.removeClass("tarif__price--display");
                       //вывобим дефолтные значения
                       $(".tarif__price--default").css({
@@ -452,7 +451,6 @@
                       $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
                       //активируем нужные
                       elemTabClass.addClass("tarif-block__tab--checked");
-                      sale.addClass("tarif-block__sale--visibility");
                       elementPriceClass.addClass("tarif__price--display");
                   }
                 }

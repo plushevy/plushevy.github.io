@@ -28,10 +28,19 @@
   border: 2px solid transparent;
   border-radius: 26px;
 
+  &--2 {
+    display: none;
+  }
+
   &--checked {
     color: #fb5255;
     border: 2px solid #cacaca;
     opacity: 1;
+
+    .tarif-block__sale {
+    // visibility: visible;
+    color: #fb5255;
+    }
   }
 
 
@@ -39,10 +48,10 @@
     border: 2px solid #cacaca;
     opacity: 1;
 
-    .tarif-block__sale {
-    visibility: visible;
-    color: #fb5255;
-    }
+    // .tarif-block__sale {
+    // // visibility: visible;
+    // color: #fb5255;
+    // }
   }
   //
   // &:not(:hover) {
@@ -53,14 +62,14 @@
 }
 
 .tarif-block__sale {
-  display: none;
+  display: block;
   color: black;
   font-size: 13px;
-  visibility: hidden;
+  // visibility: hidden;
 
-  &--visibility {
-    visibility: visible;
-  }
+  // &--visibility {
+  //   visibility: visible;
+  // }
 }
 
 
