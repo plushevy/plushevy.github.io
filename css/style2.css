@@ -381,8 +381,6 @@ small, h6
   opacity: 0.8;
   border: 2px solid transparent;
   border-radius: 26px; }
-  .tarif-block__tab--2 {
-    display: none; }
   .tarif-block__tab--checked {
     color: #fb5255;
     border: 2px solid #cacaca;
@@ -1935,3 +1933,13 @@ small, h6
   color: #fa5254; }
   .meet__link:hover {
     color: darkred; }
+
+.dontfind {
+  display: block;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fb5255; }

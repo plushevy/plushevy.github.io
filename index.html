@@ -111,16 +111,16 @@
 
                 <form class="tarif" action="index.html" method="post">
                     <div class="tarif__wrapper">
-                        <input type="radio" name="data-switch" id="zdata-0" checked>
-                        <input type="radio" name="data-switch" id="zdata-1">
-                        <input type="radio" name="data-switch" id="zdata-2">
+                        <input type="check" name="data-switch" id="zdata-0">
+                        <input type="check" name="data-switch" id="zdata-1">
+                        <input type="check" name="data-switch" id="zdata-2">
 
                         <div class="tarif-block__nav">
-                            <label class="tarif-block__tab tarif-block__tab--0 tarif-block__tab--checked" for="zdata-0" data-tab="0">Летать будут дети<span class="tarif-block__sale tarif-block__sale--visibility">Скидка 30%</span></label>
+                            <label class="tarif-block__tab tarif-block__tab--0" for="zdata-0" data-tab="0">Летать будут дети<span class="tarif-block__sale">Скидка 30%</span></label>
 
                             <label class="tarif-block__tab tarif-block__tab--1" for="zdata-1" data-tab="1">У нас день рождения<span class="tarif-block__sale">Скидка 20%</span></label>
 
-                            <label class="tarif-block__tab tarif-block__tab--2" for="zdata-2" data-tab="2">Летать в будни днем<span class="tarif-block__sale">Скидка 50%</span></label>
+                            <label class="tarif-block__tab tarif-block__tab--2" for="zdata-2" data-tab="2" style="display: none">Летать в будни днем<span class="tarif-block__sale">Скидка 50%</span></label>
                         </div>
 
 
@@ -152,7 +152,46 @@
 
                             <div class="tarif__links">
                                 <a href="#" class="tarif__link">Все тарифы</a>
-                                <a href="#" class="tarif__link" style="visibility:hidden">Парашютистам</a>
+                                <a href="#" class="tarif__link" style="display: none">Парашютистам</a>
+                            </div>
+
+                            <div class="tarif__price tarif__price--default">
+                                <b class="tarif__value tarif__value--0">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 100 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--1">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 200 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--2">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 300 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--3">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 400 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--4">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 500 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--5">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 600 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--6">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 700 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--7">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 800 ₽</span>
+                                </b>
+                                <b class="tarif__value tarif__value--8">
+                                  <span class="tarif__old-price"></span>
+                                  <span class="tarif__new-price">1 900 ₽</span>
+                                </b>
                             </div>
 
                             <div class="tarif__price tarif__price--0">
@@ -192,7 +231,6 @@
                                   <span class="tarif__old-price">30 200 ₽</span>
                                   <span class="tarif__new-price">28 200 ₽</span>
                                 </b>
-
                             </div>
 
                             <div class="tarif__price tarif__price--1">
@@ -274,6 +312,7 @@
                                 </b>
 
                             </div>
+
 
                             <div class="tarif__bottom">
                                 <div class="tarif__btn-block">
@@ -708,27 +747,51 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            //вкладки в фильтре
+            // $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
+            //чек анчек
+
             $(".tarif-block__tab").click(function() {
-                $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
-                $(".tarif-block__sale").removeClass("tarif-block__sale--visibility");
-                $(".tarif__price").hide();
 
-                var elementClass = ".tarif__price--" + $(this).data("tab");
-                $(elementClass).css({
-                    display: "block"
-                });
+              var elementTab = ".tarif-block__tab--" + $(this).data("tab");
+              var elemTabClass = $(elementTab);
 
-                $(this).addClass("tarif-block__tab--checked");
+              var elemPriceAll = $(".tarif__price");
+              var elementPrice = ".tarif__price--" + $(this).data("tab");
+              var elementPriceClass = $(elementPrice);
 
-                var elementTab = ".tarif-block__tab--" + $(this).data("tab");
-                var sale = $(elementTab).find(".tarif-block__sale");
-                sale.addClass("tarif-block__sale--visibility");
+                function ToogleClick() {
 
+                  if (elemTabClass.hasClass("tarif-block__tab--checked")) {
+                      //убраем чек с нашего элемента
+                      elemTabClass.removeClass("tarif-block__tab--checked");
+                      elemPriceAll.removeClass("tarif__price--display");
+                      //вывобим дефолтные значения
+                      $(".tarif__price--default").css({
+                            display: "block"
+                         });
+
+                  } else {
+                      //убираем дефолтные значения
+                      $(".tarif__price--default").css({
+                            display: "none"
+                        });
+                        //очищаем все таблицы
+                      elemPriceAll.removeClass("tarif__price--display");
+                      //очищаем все табы
+                      $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
+                      //активируем нужные
+                      elemTabClass.addClass("tarif-block__tab--checked");
+                      elementPriceClass.addClass("tarif__price--display");
+                  }
+                }
+
+                ToogleClick();
+
+            });
 
                 // var elementDesc = $(this).data("description");
                 // $(".table-attention").html(elementDesc);
-            });
+
 
         });
     </script>
