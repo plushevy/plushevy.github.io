@@ -93,6 +93,8 @@
 
             <button class="btn modal-btn modal-btn--2" type="button" name="button">Модальное окно2</button>
 
+            <button class="btn modal-btn modal-btn--3" type="button" name="button">Быстрый заказ</button>
+
             <br>
             <br>
             <br>
@@ -140,10 +142,12 @@
 
                         <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
                         <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
-                        <a title="Закрыть" class="form1__close" href="javascript:;"></a>
+                        <a title="Закрыть" class="form1__close form1__close--order" href="javascript:;"></a>
                     </form>
                 </div>
             </div>
+
+             <!-- маленький попап -->
 
             <div class="popup popup--small">
                 <h6>Ваше сообщение принято.</h6>
@@ -152,8 +156,51 @@
             </div>
 
 
+         <!-- модальное окно быстрый заказ -->
 
-            <div class="modal-overlay"></div>
+            <div class="modal-content modal-content--quick">
+                <div class="modal-content__wrapper">
+                    <form method="post" class="form1" id="quick-order" novalidate="novalidate">
+                        <div class="form1__top">
+                            <h4 class="form1__title">ПРЕДВАРИТЕЛЬНАЯ ЗАЯВКА</h4>
+                        </div>
+                        <b class="form1__text-top">ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ<br>С ВАМИ СВЯЖЕТСЯ АДМИНИСТРАТОР</b>
+
+                        <fieldset class="form1__inner">
+                            <label class="form1__timer" for="form1__select">Выберите тариф
+                                      <select class="form1__select" id="form1__select">
+                                        <option value="1" selected>2 минуты</option>
+                                        <option value="2">4 минуты</option>
+                                        <option value="3">6 минут</option>
+                                        <option value="4">10 минут</option>
+                                        <option value="5">15 минут</option>
+                                        <option value="6">20 минут</option>
+                                        <option value="7">30 минут</option>
+                                        <option value="8">60 минут</option>
+                                      </select>
+                            </label>
+                            <label class="form1__phone-label">
+                                  <span>Ваше имя</span>
+                                  <input id="form1__name" type="text" name="name" placeholder="" required>
+                                </label>
+                            <label class="form1__name-label">
+                                  <span>Ваш телефон</span>
+                                  <div class="form1__phone-container">
+                                    <input id="form1__phone" class="form1__phone" type="text" name="tel" placeholder="__________" required>
+                                  </div>
+                                  <!-- <p class="hint error">Номер телефона должен быть из 10 цифр</p> -->
+                                </label>
+                        </fieldset>
+                        <!-- конец inner -->
+
+                        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
+                        <a title="Закрыть" class="form1__close form1__close--quick" href="javascript:;"></a>
+                    </form>
+                </div>
+            </div>
+
+            <!-- оверлей -->
+              <div class="modal-overlay"></div>
 
 
 
@@ -248,38 +295,52 @@
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            function openModal() {
-                var modalContentSmall = $('.popup--small');
-                var modalContentOrder = $('.modal-content--order');
-                var modalOverlay = $('.modal-overlay');
+            $(document).ready(function() {
+                function openModal() {
+                    var modalContentSmall = $('.popup--small');
+                    var modalContentOrder = $('.modal-content--order');
+                    var modalContentQuick = $('.modal-content--quick');
+                    var modalOverlay = $('.modal-overlay');
 
 
-                $(".popup__close").click(function() {
-                    event.preventDefault();
-                    modalContentSmall.removeClass('popup--show');
-                    modalOverlay.removeClass('modal-overlay--show');
-                });
+                    $(".popup__close").click(function() {
+                        event.preventDefault();
+                        modalContentSmall.removeClass('popup--show');
+                        modalOverlay.removeClass('modal-overlay--show');
+                    });
 
-                $(".form1__close").click(function() {
-                    event.preventDefault();
-                    modalContentOrder.removeClass('modal-content--show');
-                    modalOverlay.removeClass('modal-overlay--show');
-                });
+                    $(".form1__close--order").click(function() {
+                        event.preventDefault();
+                        modalContentOrder.removeClass('modal-content--show');
+                        modalOverlay.removeClass('modal-overlay--show');
+                    });
 
-                $(".modal-btn--2").click(function() {
-                    modalOverlay.addClass('modal-overlay--show');
-                    modalContentSmall.addClass('popup--show');
-                });
+                    $(".form1__close--quick").click(function() {
+                        event.preventDefault();
+                        modalContentQuick.removeClass('modal-content--show');
+                        modalOverlay.removeClass('modal-overlay--show');
+                    });
 
-                $(".modal-btn--1").click(function() {
-                    modalOverlay.addClass('modal-overlay--show');
-                    modalContentOrder.addClass('modal-content--show');
-                });
-            }
-            openModal();
-        });
-    </script>
+                    $(".modal-btn--2").click(function() {
+                        modalOverlay.addClass('modal-overlay--show');
+                        modalContentSmall.addClass('popup--show');
+                    });
+
+                    $(".modal-btn--1").click(function() {
+                        modalOverlay.addClass('modal-overlay--show');
+                        modalContentOrder.addClass('modal-content--show');
+                    });
+
+                    $(".modal-btn--3").click(function() {
+                        modalOverlay.addClass('modal-overlay--show');
+                        modalContentQuick.addClass('modal-content--show');
+                    });
+
+
+                }
+                openModal();
+            });
+        </script>
 
     <!-- <script>
         var modalButton = document.querySelector(".modal-btn");

@@ -1017,6 +1017,9 @@ small, h6
   .modal-content--order {
     width: 50%;
     max-width: 660px; }
+  .modal-content--quick {
+    width: 50%;
+    max-width: 660px; }
   .modal-content--show {
     display: block;
     animation: bounce 0.6s; }
