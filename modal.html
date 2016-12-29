@@ -106,46 +106,48 @@
 
             <div class="modal-content modal-content--order">
                 <div class="modal-content__wrapper">
-                    <form method="post" class="form1 custom-scroll-bar" id="order1" novalidate="novalidate">
+                    <form method="post" class="form1" id="order1" novalidate="novalidate">
                         <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
                         <div class="form1__top">
                             <h4 class="form1__title">ПРЕДВАРИТЕЛЬНАЯ ЗАЯВКА</h4>
                             <p class="form1__part-time" id="part-time">четверг,15:00 8 дек 2016</p>
                         </div>
-                        <b class="form1__text-top">ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ<br>С ВАМИ СВЯЖЕТСЯ АДМИНИСТРАТОР</b>
+
                         <!-- scroll -->
+                        <div class="form1__overflow custom-scroll-bar">
+                            <b class="form1__text-top">ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ<br>С ВАМИ СВЯЖЕТСЯ АДМИНИСТРАТОР</b>
+                            <fieldset class="form1__inner">
+                                <label class="form1__timer" for="form1__select">Выберите тариф
+                                        <select class="form1__select" id="form1__select">
+                                          <option value="1" selected>2 минуты</option>
+                                          <option value="2">4 минуты</option>
+                                          <option value="3">6 минут</option>
+                                          <option value="4">10 минут</option>
+                                          <option value="5">15 минут</option>
+                                          <option value="6">20 минут</option>
+                                          <option value="7">30 минут</option>
+                                          <option value="8">60 минут</option>
+                                        </select>
+                              </label>
+                                <label class="form1__phone-label">
+                                    <span>Ваше имя</span>
+                                    <input id="form1__name" type="text" name="name" placeholder="" required>
+                                  </label>
+                                <label class="form1__name-label">
+                                    <span>Ваш телефон</span>
+                                    <div class="form1__phone-container">
+                                      <input id="form1__phone" class="form1__phone" type="text" name="tel" placeholder="__________" required>
+                                    </div>
+                                    <!-- <p class="hint error">Номер телефона должен быть из 10 цифр</p> -->
+                                  </label>
+                            </fieldset>
+                            <!-- конец inner -->
 
+                            <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
+                            <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
 
+                        </div>
 
-                        <fieldset class="form1__inner">
-                            <label class="form1__timer" for="form1__select">Выберите тариф
-                                      <select class="form1__select" id="form1__select">
-                                        <option value="1" selected>2 минуты</option>
-                                        <option value="2">4 минуты</option>
-                                        <option value="3">6 минут</option>
-                                        <option value="4">10 минут</option>
-                                        <option value="5">15 минут</option>
-                                        <option value="6">20 минут</option>
-                                        <option value="7">30 минут</option>
-                                        <option value="8">60 минут</option>
-                                      </select>
-                            </label>
-                            <label class="form1__phone-label">
-                                  <span>Ваше имя</span>
-                                  <input id="form1__name" type="text" name="name" placeholder="" required>
-                                </label>
-                            <label class="form1__name-label">
-                                  <span>Ваш телефон</span>
-                                  <div class="form1__phone-container">
-                                    <input id="form1__phone" class="form1__phone" type="text" name="tel" placeholder="__________" required>
-                                  </div>
-                                  <!-- <p class="hint error">Номер телефона должен быть из 10 цифр</p> -->
-                                </label>
-                        </fieldset>
-                        <!-- конец inner -->
-
-                        <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
-                        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
                         <a title="Закрыть" class="form1__close form1__close--order" href="javascript:;"></a>
 
                     </form>
@@ -305,9 +307,9 @@
         //scroll
         (function($) {
             $(window).on("load", function() {
-              $.mCustomScrollbar.defaults.scrollButtons.enable=false;
+                $.mCustomScrollbar.defaults.scrollButtons.enable = false;
                 $(".custom-scroll-bar").mCustomScrollbar({
-                  theme: "minimal-dark"
+                    theme: "minimal-dark"
                 });
             });
         })(jQuery);

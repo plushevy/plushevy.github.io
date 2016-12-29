@@ -126,40 +126,32 @@
             </section>
 
             <!-- RD Parallax-->
-            <section class="rd-parallax">
-                <div data-speed="0.2" data-type="media" data-url="images/parallax-01-2050x2000.jpg" class="rd-parallax-layer"></div>
-                <div data-speed="0" data-type="html" class="rd-parallax-layer">
-                    <div class="bg-dark section-50 md-50">
-                        <div class="shell">
-
-                            <div class="range">
-                                <div class="cell-md-4">
-                                    <div class="i one"></div>
-                                    <span class="fw900">ОЗНАКОМЬТЕСЬ</span>
-                                    <p>
-                                        Ознакомьтесь с ближайшими датами бронирования в <a href="/raspisanie/" class="fw700">календаре</a> Предварительно прочитайте <br><a href="/media/catalog/pravila_poletov.pdf" target="_blank" class="fw700">Правила полетов</a>.
-                                    </p>
-                                </div>
-                                <div class="cell-md-4">
-                                    <div class="i two"></div>
-                                    <span class="fw900">ПОКУПАЙТЕ</span>
-                                    <p>
-                                        <a href="#" class="fw700">Покупайте</a> и записывайтесь на полет <strong>8 499 501 77 37</strong>, купленное время нужно отлетать в течение 1 дня
-                                    </p>
-                                </div>
-                                <div class="cell-md-4">
-                                    <div class="i three"></div>
-                                    <span class="fw900">ПРИЕЗЖАЙТЕ</span>
-
-                                    <p>Мы находимся рядом с тремя станциями метро. Схему проезда можно посмотреть <a href="/kontak/" class="fw700">здесь</a></p>
-                                </div>
-
+            <section class="parallax-bg">
+                <div class="bg-dark section-50 section-lg-80">
+                    <div class="shell">
+                        <div class="range">
+                            <div class="cell-md-4">
+                                <span class="meet__title">ОЗНАКОМЬТЕСЬ</span>
+                                <p>
+                                    Ознакомьтесь с ближайшими датами бронирования в <a href="#" class="fw700">календаре</a> Предварительно прочитайте <br><a href="/media/catalog/pravila_poletov.pdf" target="_blank" class="fw700">Правила полетов</a>.
+                                </p>
                             </div>
+                            <div class="cell-md-4">
+                                <span class="meet__title">ПОКУПАЙТЕ</span>
+                                <p>
+                                    <a href="#" class="fw700">Покупайте</a> и записывайтесь на полет <strong>8 499 501 77 37</strong>, купленное время нужно отлетать в течение 1 дня
+                                </p>
+                            </div>
+                            <div class="cell-md-4">
+                                <span class="meet__title">ПРИЕЗЖАЙТЕ</span>
 
+                                <p>Мы находимся рядом с тремя станциями метро. Схему проезда можно посмотреть <a href="#" class="fw700">здесь</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
 
             <section class="section-50 section-lg-80">
                 <div class="shell">
@@ -183,43 +175,7 @@
 
                 </div>
             </section>
-            <!-- <section id="comments" class="section-50 section-lg-47">
-        <div class="shell">
-          <h4 class="text-center text-uppercase">2 responses</h4>
-          <div class="range range-xs-right">
-            <div class="cell-md-12">
-              <div class="comment">
-                <div class="unit unit-vertical unit-sm-horizontal">
-                  <div class="unit-left"><span class="icon icon-xl icon-primary material-design-round58"></span></div>
-                  <div class="unit-body">
-                    <p>That’s awesome! Future belongs to youngsters, so businessmen can’t ignore their needs in any case.</p>
-                    <h4><a href="#">Bernard Show</a><a href="#" class="reply-btn">reply</a></h4>
-                    <div class="meta">
-                      <div class="meta-block"><span class="fa-clock-o"></span> 30 Oct 2015
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cell-md-11 offset-top-30 offset-md-top-50">
-              <div class="comment">
-                <div class="unit unit-vertical unit-sm-horizontal">
-                  <div class="unit-left"><span class="icon icon-xl icon-primary material-design-round58"></span></div>
-                  <div class="unit-body">
-                    <p>The author did a great job with all these research work. Really valuable information, thank you!</p>
-                    <h4><a href="#"> Sarah Cole</a><a href="#" class="reply-btn">reply</a></h4>
-                    <div class="meta">
-                      <div class="meta-block"><span class="fa-clock-o"></span> 30 Oct 2015
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+
             <section class="section-50 section-lg-47 section-mac-bottom-124">
                 <div class="shell">
                     <h4 class="text-center text-uppercase">Оставить заявку на праздник</h4>
@@ -228,7 +184,7 @@
                         <div class="range">
                             <div class="cell-sm-6">
                                 <div class="form-group">
-                                    <label for="contact-name" class="form-label">ФИО</label>
+                                    <label for="contact-name" class="form-label">Ваше имя</label>
                                     <input id="contact-name" type="text" name="name" data-constraints="@Required" class="form-control">
                                 </div>
                                 <div class="form-group">
@@ -236,13 +192,17 @@
                                     <input id="contact-email" type="email" name="email" data-constraints="@Email @Required" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="contact-phone" class="form-label">Телефон</label>
-                                    <input id="contact-phone" type="text" name="phone" data-constraints="@Numeric @Required" class="form-control">
+
+
+                                    <label for="contact-phone" class="form-label allforms__phone-label">Телефон</label>
+                                    <div class="allforms__phone-container">
+                                        <input id="contact-phone" type="text" name="phone" data-constraints="@Required" class="form-control allforms__phone">
+                                    </div>
                                 </div>
                             </div>
                             <div class="cell-sm-6 offset-top-8 offset-sm-top-0">
                                 <div class="form-group">
-                                    <label for="contact-message" class="form-label">Напишите сообщение</label>
+                                    <label for="contact-message" class="form-label">Ваше сообщение</label>
                                     <textarea id="contact-message" name="message" data-constraints="@Required" class="form-control"></textarea>
                                 </div>
                             </div>
@@ -261,7 +221,7 @@
 
                 <div class="shell">
                     <div class="range small">
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
                             <ul class="list">
                                 <li><a href="#">Публичное соглашение</a></li>
                                 <li><a href="#">О нас</a></li>
@@ -269,26 +229,25 @@
 
                             </ul>
                         </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
                             <ul class="list">
                                 <li><a href="#">Ссылка1</a></li>
                                 <li><a href="#">Ссылка1</a></li>
                                 <li><a href="#">Ссылка1</a></li>
                             </ul>
                         </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
 
                         </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                              <div class="shell text-left">
-                                  <p>Полетомания <span id="copyright-year"></span>
-                                  </p>
-                              </div>
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
+                            <p>Полетомания <span id="copyright-year"></span></p>
                         </div>
+
                     </div>
                 </div>
             </section>
         </footer>
+
     </div>
     <!-- Global Mailform Output-->
     <div id="form-output-global" class="snackbars"></div>

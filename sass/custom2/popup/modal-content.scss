@@ -4,13 +4,16 @@
     // max-height: 100vh;
     // overflow: hidden;
     min-width: 320px;
-    top: 60px;
+    // top: 60px;
+    top: 50%;
     left: 0;
     right: 0;
+    transform: translateY(-50%);
     margin: 0 auto;
+
     border: 1px solid #c7c7c7;
     background-color: #ffffff;
-    z-index: 1000;
+    z-index: 1005;
     text-align: center;
     box-shadow: 0 5px 9px 0 #cdcdcd;
 
@@ -30,14 +33,14 @@
 
     &--show {
         display: block;
-        animation: bounce 0.6s;
+        transition: all 0.6s;
+        // animation: bounce 0.6s;
     }
 }
 
 .form1 {
     position: relative;
-    max-height: 100vh;
-    overflow: hidden;
+
 
     &__top {
         background-color: #fa5254;
@@ -58,6 +61,11 @@
     &__text-top {
         display: block;
         margin-top: 20px;
+    }
+
+    &__overflow {
+      max-height: 100vh;
+      overflow: hidden;
     }
 
     &__inner {
