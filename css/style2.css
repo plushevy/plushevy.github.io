@@ -241,6 +241,17 @@ small, h6
     font-size: 22px;
     line-height: 1.2; } }
 
+.rd-navbar-default .rd-navbar-fixed .rd-navbar-brand img {
+  height: 100%;
+  width: 160px; }
+
+.rd-navbar-default .rd-navbar-fullwidth .rd-navbar-brand img {
+  height: 100%;
+  width: 210px; }
+
+.site-logo:not(:root) {
+  overflow: hidden; }
+
 .mynavbar__contacts {
   display: none; }
 
