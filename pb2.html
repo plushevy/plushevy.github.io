@@ -473,13 +473,13 @@
 
     <script src="libs/scroll/jquery.mCustomScrollbar.css"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         jQuery(function($) {
             $(".allforms__phone").mask("9999999999", {
                 placeholder: "_"
             });
         });
-    </script>
+    </script> -->
 
 
 
@@ -490,6 +490,8 @@
 
             // $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
             //чек анчек
+
+
 
             $(".tarif-block__tab").click(function() {
 
@@ -527,6 +529,16 @@
                 }
 
                 ToogleClick();
+
+                //маска телефона с задержкой 
+
+                function maskTimeOut() {
+                  $(".allforms__phone").mask("9999999999", {
+                      placeholder: "_"
+                  });
+                }
+
+                setTimeout(maskTimeOut, 4000);
 
             });
 
