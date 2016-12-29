@@ -1,5 +1,5 @@
 @mixin pop-up {
-    position: absolute;
+    position: fixed;
     min-width: 320px;
     top: 60px;
     left: 0;
@@ -15,6 +15,13 @@
 .popup {
     @include pop-up;
     display: none;
+
+    &--small {
+      width: 360px;
+      min-height: 300px;
+      padding: 60px 30px;
+      text-align: center;
+    }
 
     &--big {
       width: 990px;
@@ -112,4 +119,12 @@
       }
   }
 }
-@media (max-width: 360px) {}
+@media (max-width: 360px) {
+  .popup {
+
+      &--small {
+        width: 100%;
+
+      }
+  }
+}

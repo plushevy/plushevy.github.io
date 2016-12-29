@@ -1396,20 +1396,22 @@ $document.ready(function () {
   }
 
   /**
+  Илья отключил - disabled
    * JQuery mousewheel plugin
    * @description  Enables jquery mousewheel plugin
    */
-  if (plugins.scroller.length) {
-    var i;
-    for (i = 0; i < plugins.scroller.length; i++) {
-      var scrollerItem = $(plugins.scroller[i]);
 
-      scrollerItem.mCustomScrollbar({
-        scrollInertia: 200,
-        scrollButtons: {enable: true}
-      });
-    }
-  }
+  // if (plugins.scroller.length) {
+  //   var i;
+  //   for (i = 0; i < plugins.scroller.length; i++) {
+  //     var scrollerItem = $(plugins.scroller[i]);
+  //
+  //     scrollerItem.mCustomScrollbar({
+  //       scrollInertia: 200,
+  //       scrollButtons: {enable: true}
+  //     });
+  //   }
+  // }
 
   /**
    * Socialite v2

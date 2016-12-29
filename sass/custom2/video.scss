@@ -1,5 +1,5 @@
 .videobg {
-    height: 500px;
+    height: 200px;
     position: relative;
     overflow: hidden;
     &__bg {
@@ -14,9 +14,12 @@
         background-size: cover;
     }
     &__demo {
-        background-image: url("../images/video_bg/birds-low-qual-small.jpg");
+        background-image: url("../images/video_bg/video-bg_800x450.png");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     &__src {
+       display: none;
         position: absolute;
         min-width: 100%;
         min-height: 100%;
@@ -28,6 +31,7 @@
         object-fit: contain;
     }
     &__overlay {
+      display: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -44,6 +48,7 @@
         left: 0;
         right: 0;
         margin: 0 auto;
+
         // background: rgba(0,0,0,0.5);
         text-align: center;
         color: #FFF;
@@ -54,7 +59,9 @@
     //     font-family: "Foco Bold";
     }
     &__text {
+      padding: 0 5%;
       color: white;
+      font-size: 20px;
     }
 
     // &__phone {
@@ -66,6 +73,24 @@
     //   font-size: 40px;
     //   font-weight: bold;
     // }
+}
 
 
+@media (min-width: 768px) {
+  .videobg {
+    height: 500px;
+    &__src {
+      display: block;
+    }
+
+    &__overlay {
+      display: block;
+    }
+
+    &__text {
+      padding: 0 10%;
+      color: white;
+      font-size: 36px;
+    }
+  }
 }

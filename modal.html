@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.min.css" />
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -106,7 +106,7 @@
 
             <div class="modal-content modal-content--order">
                 <div class="modal-content__wrapper">
-                    <form method="post" class="form1" id="order1" novalidate="novalidate">
+                    <form method="post" class="form1 custom-scroll-bar" id="order1" novalidate="novalidate">
                         <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
                         <div class="form1__top">
                             <h4 class="form1__title">ПРЕДВАРИТЕЛЬНАЯ ЗАЯВКА</h4>
@@ -114,12 +114,11 @@
                         </div>
                         <b class="form1__text-top">ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ<br>С ВАМИ СВЯЖЕТСЯ АДМИНИСТРАТОР</b>
                         <!-- scroll -->
-                        <div class="mCustomScrollbar" data-mcs-theme="dark">
 
 
 
-                            <fieldset class="form1__inner">
-                                <label class="form1__timer" for="form1__select">Выберите тариф
+                        <fieldset class="form1__inner">
+                            <label class="form1__timer" for="form1__select">Выберите тариф
                                       <select class="form1__select" id="form1__select">
                                         <option value="1" selected>2 минуты</option>
                                         <option value="2">4 минуты</option>
@@ -131,25 +130,24 @@
                                         <option value="8">60 минут</option>
                                       </select>
                             </label>
-                                <label class="form1__phone-label">
+                            <label class="form1__phone-label">
                                   <span>Ваше имя</span>
                                   <input id="form1__name" type="text" name="name" placeholder="" required>
                                 </label>
-                                <label class="form1__name-label">
+                            <label class="form1__name-label">
                                   <span>Ваш телефон</span>
                                   <div class="form1__phone-container">
                                     <input id="form1__phone" class="form1__phone" type="text" name="tel" placeholder="__________" required>
                                   </div>
                                   <!-- <p class="hint error">Номер телефона должен быть из 10 цифр</p> -->
                                 </label>
-                            </fieldset>
-                            <!-- конец inner -->
+                        </fieldset>
+                        <!-- конец inner -->
 
-                            <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
-                            <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
-                            <a title="Закрыть" class="form1__close form1__close--order" href="javascript:;"></a>
-                            <!-- scroll end-->
-                        </div>
+                        <p class="form1__small-text">* В указанное время полеты по спортивным тарифам возможны<br>только в текущую дату по согласованию с Администрацией</p>
+                        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Заявка">
+                        <a title="Закрыть" class="form1__close form1__close--order" href="javascript:;"></a>
+
                     </form>
                 </div>
             </div>
@@ -291,19 +289,9 @@
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+
     <script src="js/jquery.maskedinput.js"></script>
-    <script src="libs/scroll/jquery.mCustomScrollbar.concat.min.js">
-    </script>
-    <script>
-        //scroll
-        (function($) {
-            $(window).on("load", function() {
-                $(".content").mCustomScrollbar();
-                axis:"y"; // vertical and horizontal scrollbar
-                setTop: "-100px";
-            });
-        })(jQuery);
-    </script>
+    <script src="libs/scroll/jquery.mCustomScrollbar.css"></script>
 
     <script type="text/javascript">
         jQuery(function($) {
@@ -314,6 +302,17 @@
     </script>
 
     <script type="text/javascript">
+        //scroll
+        (function($) {
+            $(window).on("load", function() {
+              $.mCustomScrollbar.defaults.scrollButtons.enable=false;
+                $(".custom-scroll-bar").mCustomScrollbar({
+                  theme: "minimal-dark"
+                });
+            });
+        })(jQuery);
+
+
         $(document).ready(function() {
             function openModal() {
                 var modalContentSmall = $('.popup--small');
@@ -358,6 +357,8 @@
 
             }
             openModal();
+
+
         });
     </script>
 
