@@ -41,15 +41,7 @@
   }
 
 
-  &:hover {
-    border: 2px solid #cacaca;
-    opacity: 1;
 
-    // .tarif-block__sale {
-    // // visibility: visible;
-    // color: #fb5255;
-    // }
-  }
   //
   // &:not(:hover) {
   //   .tarif-block__sale {
@@ -151,6 +143,16 @@
   .tarif-block__tab {
     padding: 5px 50px;
     border-radius: 50px;
+    
+    &:hover {
+      border: 2px solid #cacaca;
+      opacity: 1;
+
+      // .tarif-block__sale {
+      // // visibility: visible;
+      // color: #fb5255;
+      // }
+    }
   }
 
 }

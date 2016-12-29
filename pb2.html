@@ -36,7 +36,7 @@
                                 <button data-rd-navbar-toggle=".rd-navbar" class="rd-navbar-toggle"><span class="toggle-icon"></span></button>
                                 <!-- RD Navbar Brand-->
                                 <a href="./" class="rd-navbar-brand rd-navbar-fullwidth-collapse">
-                                  <img class="site-logo" src="images/logo-site1.png" alt="Лого" width="347px" height="83px">
+                                    <img class="site-logo" src="images/logo-site1.png" alt="Лого" width="347px" height="83px">
                                 </a>
                                 <!-- RD Navbar Toggle-->
                                 <button data-rd-navbar-toggle=".rd-navbar-info" class="info-toggle"><span class="toggle-icon"></span></button>
@@ -314,6 +314,44 @@
                 </form>
             </section>
 
+            <section class="section-50 section-mac-89 section-mac-bottom-47">
+                <div class="shell">
+                    <h4 class="text-center text-uppercase">Напишите нам</h4>
+                    <!-- RD Mailform-->
+                    <form data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" class="rd-mailform text-left">
+                        <div class="range">
+                            <div class="cell-sm-6">
+                                <div class="form-group">
+                                    <label for="contact-name" class="form-label">Ваше имя</label>
+                                    <input id="contact-name" type="text" name="name" data-constraints="@Required" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email" class="form-label">Email</label>
+                                    <input id="contact-email" type="email" name="email" data-constraints="@Email @Required" class="form-control">
+                                </div>
+                                <div class="form-group">
+
+
+                                    <label for="contact-phone" class="form-label allforms__phone-label">Телефон</label>
+                                    <div class="allforms__phone-container">
+                                        <input id="contact-phone" type="text" name="phone" data-constraints="@Required" class="form-control allforms__phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell-sm-6 offset-top-8 offset-sm-top-0">
+                                <div class="form-group">
+                                    <label for="contact-message" class="form-label">Ваше сообщение</label>
+                                    <textarea id="contact-message" name="message" data-constraints="@Required" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="cell-md-12 offset-top-10 offset-sm-top-20 offset-md-top-30">
+                                <button type="submit" class="btn btn-sm btn-primary fullwidth">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
 
             <br>
             <br>
@@ -349,7 +387,7 @@
 
                         </div>
                         <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
-                          <p>Полетомания <span id="copyright-year"></span></p>
+                            <p>Полетомания <span id="copyright-year"></span></p>
                         </div>
 
                     </div>
@@ -399,7 +437,19 @@
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/my.js"></script>
+    <!-- <script src="js/my.js"></script> -->
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="libs/scroll/jquery.mCustomScrollbar.css"></script>
+
+    <script type="text/javascript">
+        jQuery(function($) {
+            $(".allforms__phone").mask("9999999999", {
+                placeholder: " "
+            });
+        });
+    </script>
+
+
 
 
 
@@ -411,45 +461,45 @@
 
             $(".tarif-block__tab").click(function() {
 
-              var elementTab = ".tarif-block__tab--" + $(this).data("tab");
-              var elemTabClass = $(elementTab);
+                var elementTab = ".tarif-block__tab--" + $(this).data("tab");
+                var elemTabClass = $(elementTab);
 
-              var elemPriceAll = $(".tarif__price");
-              var elementPrice = ".tarif__price--" + $(this).data("tab");
-              var elementPriceClass = $(elementPrice);
+                var elemPriceAll = $(".tarif__price");
+                var elementPrice = ".tarif__price--" + $(this).data("tab");
+                var elementPriceClass = $(elementPrice);
 
                 function ToogleClick() {
 
-                  if (elemTabClass.hasClass("tarif-block__tab--checked")) {
-                      //убраем чек с нашего элемента
-                      elemTabClass.removeClass("tarif-block__tab--checked");
-                      elemPriceAll.removeClass("tarif__price--display");
-                      //вывобим дефолтные значения
-                      $(".tarif__price--default").css({
+                    if (elemTabClass.hasClass("tarif-block__tab--checked")) {
+                        //убраем чек с нашего элемента
+                        elemTabClass.removeClass("tarif-block__tab--checked");
+                        elemPriceAll.removeClass("tarif__price--display");
+                        //вывобим дефолтные значения
+                        $(".tarif__price--default").css({
                             display: "block"
-                         });
+                        });
 
-                  } else {
-                      //убираем дефолтные значения
-                      $(".tarif__price--default").css({
+                    } else {
+                        //убираем дефолтные значения
+                        $(".tarif__price--default").css({
                             display: "none"
                         });
                         //очищаем все таблицы
-                      elemPriceAll.removeClass("tarif__price--display");
-                      //очищаем все табы
-                      $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
-                      //активируем нужные
-                      elemTabClass.addClass("tarif-block__tab--checked");
-                      elementPriceClass.addClass("tarif__price--display");
-                  }
+                        elemPriceAll.removeClass("tarif__price--display");
+                        //очищаем все табы
+                        $(".tarif-block__tab").removeClass("tarif-block__tab--checked");
+                        //активируем нужные
+                        elemTabClass.addClass("tarif-block__tab--checked");
+                        elementPriceClass.addClass("tarif__price--display");
+                    }
                 }
 
                 ToogleClick();
 
             });
 
-                // var elementDesc = $(this).data("description");
-                // $(".table-attention").html(elementDesc);
+            // var elementDesc = $(this).data("description");
+            // $(".table-attention").html(elementDesc);
 
 
         });

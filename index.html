@@ -601,6 +601,7 @@
                     </li>
                 </ul>
             </section>
+
             <section class="section-50 section-mac-89 section-mac-bottom-47">
                 <div class="shell">
                     <h4 class="text-center text-uppercase">Напишите нам</h4>
@@ -617,8 +618,12 @@
                                     <input id="contact-email" type="email" name="email" data-constraints="@Email @Required" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="contact-phone" class="form-label">Телефон</label>
-                                    <input id="contact-phone" type="text" name="phone" data-constraints="@Numeric @Required" class="form-control">
+
+
+                                    <label for="contact-phone" class="form-label allforms__phone-label">Телефон</label>
+                                    <div class="allforms__phone-container">
+                                        <input id="contact-phone" type="text" name="phone" data-constraints="@Required" class="form-control allforms__phone">
+                                    </div>
                                 </div>
                             </div>
                             <div class="cell-sm-6 offset-top-8 offset-sm-top-0">
@@ -634,6 +639,7 @@
                     </form>
                 </div>
             </section>
+
             <section class="section-50 section-lg-47 meet">
                 <div class="shell">
                     <h4 class="text-center text-uppercase">Нижний блок ссылок</h4>
@@ -696,7 +702,7 @@
                         <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
                           <p>Полетомания <span id="copyright-year"></span></p>
                         </div>
-    
+
                     </div>
                 </div>
             </section>
@@ -744,6 +750,16 @@
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+
+    <script type="text/javascript">
+        jQuery(function($) {
+            $(".allforms__phone").mask("9999999999", {
+                placeholder: " "
+            });
+        });
+    </script>
+
     <script type="text/javascript">
         $(document).ready(function() {
 
