@@ -1720,6 +1720,7 @@ small, h6
   .form-block__title {
     margin-bottom: 45px; }
   .form-block__label {
+    position: relative;
     display: block;
     width: 100%;
     margin-top: 15px; }
@@ -1730,9 +1731,16 @@ small, h6
     width: 100%;
     border: 1px solid #cacaca;
     border-radius: 5px;
-    padding: 20px; }
+    padding: 20px;
+    font-size: 20px !important;
+    line-height: 20px !important;
+    height: auto !important; }
     .form-block input:focus {
       border: 1px solid grey; }
+  .form-block span.form-validation {
+    top: 28px; }
+  .form-block__phone-container span.form-validation {
+    top: 2px; }
   .form-block__textarea {
     width: 100%;
     border: 1px solid #cacaca;
@@ -1779,7 +1787,7 @@ small, h6
     .form-block__title {
       margin-bottom: 30px; }
     .form-block input {
-      padding: 10px 15px; }
+      padding: 12px 15px; }
     .form-block__textarea {
       padding: 10px 15px; }
     .form-block__phone-container::before {

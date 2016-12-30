@@ -12,6 +12,8 @@
     margin-bottom: 45px;
   }
   &__label {
+    //релатив
+    position: relative;
     display: block;
     width: 100%;
     margin-top: 15px;
@@ -21,15 +23,34 @@
     text-align: left;
   }
   input {
+
     width: 100%;
     border: 1px solid #cacaca;
     border-radius: 5px;
     padding: 20px;
+    font-size: 20px !important;
+    line-height: 20px !important;
+    height: auto !important;
 
     &:focus {
         border: 1px solid grey;
     }
   }
+
+// поле обязательно для заполнения - на почте - иначе
+  span.form-validation {
+    top: 28px;
+  }
+
+  &__phone-container {
+    span.form-validation {
+      top: 2px;
+    }
+  }
+
+  // конец поля
+
+
   &__textarea {
     width: 100%;
     border: 1px solid #cacaca;
@@ -110,7 +131,7 @@
     }
 
     input {
-      padding: 10px 15px;
+      padding: 12px 15px;
     }
 
     &__textarea {

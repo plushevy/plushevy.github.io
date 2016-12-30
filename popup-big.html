@@ -204,25 +204,25 @@
 
                               <label class="form-block__label">
                                     <p class="form-block__name">Получатель</p>
-                                    <input type="text" name="guest-name" value="" data-constraints="@Required">
+                                    <input class="form-control" type="text" name="guest-name" value="" data-constraints="@Required">
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Телефон</p>
                                     <div class="form-block__phone-container">
-                                      <input class="form-block__phone" type="text" name="guest-tel" value="" placeholder="__________" data-constraints="@Required">
+                                      <input class="form-control form-block__phone" type="text" name="guest-tel" value="" placeholder="__________" data-constraints="@Required">
                                     </div>
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Эл.почта</p>
-                                    <input type="email" name="guest-email" value="" data-constraints="@Email @Required">
+                                    <input class="form-control" type="email" name="guest-email" value="" data-constraints="@Email @Required">
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Поздравительный текст</p>
-                                    <textarea class="form-block__textarea" name="gift-text" value="" rows="8" cols="80" data-constraints="@Required"></textarea>
+                                    <textarea class="form-control form-block__textarea" name="gift-text" value="" rows="8" cols="80" data-constraints="@Required"></textarea>
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">От кого подарок</p>
-                                    <input type="text" name="signature" value="" data-constraints="@Required">
+                                    <input class="form-control" type="text" name="signature" value="" data-constraints="@Required">
                               </label>
                           </fieldset>
 
@@ -231,22 +231,22 @@
 
                               <label class="form-block__label">
                                     <p class="form-block__name">Адрес доставки</p>
-                                    <textarea class="form-block__textarea" name="customer-adress" rows="2" cols="80" placeholder="Город, улица, дом, корпус, квартира"></textarea>
+                                    <textarea class="form-control" class="form-block__textarea" name="customer-adress" rows="2" cols="80" placeholder="Город, улица, дом, корпус, квартира" data-constraints="@Required"></textarea>
                               </label>
 
                               <label class="form-block__label">
                                     <p class="form-block__name">Ваше имя</p>
-                                    <input type="text" name="customer-name" value="" required>
+                                    <input class="form-control" type="text" name="customer-name" value="" data-constraints="@Required">
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Эл.почта</p>
-                                    <input type="email" name="customer-email" value="" required>
+                                    <input class="form-control" type="email" name="customer-email" value="" data-constraints="@Required">
                               </label>
 
                               <label class="form-block__label">
                                     <p class="form-block__name">Телефон</p>
                                     <div class="form-block__phone-container">
-                                      <input class="form-block__phone" type="text" name="customer-tel" value="" placeholder="__________" required>
+                                      <input class="form-control form-block__phone" type="text" name="customer-tel" value="" placeholder="__________" data-constraints="@Email @Required">
                                     </div>
                               </label>
 
@@ -258,16 +258,16 @@
 
                               <label class="form-block__label">
                                     <p class="form-block__name">Ваше имя</p>
-                                    <input type="text" name="name" value="" required>
+                                    <input class="form-control" type="text" name="name" value="" data-constraints="@Required">
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Эл.почта</p>
-                                    <input type="email" name="email" value="" required>
+                                    <input class="form-control" type="email" name="email" value="" data-constraints="@Email @Required">
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Телефон</p>
                                     <div class="form-block__phone-container">
-                                      <input class="form-block__phone" type="text" name="tel" value="" placeholder="__________" required>
+                                      <input class="form-control form-block__phone" type="text" name="tel" value="" placeholder="__________" data-constraints="@Required">
                                     </div>
                               </label>
                           </fieldset>
@@ -308,7 +308,7 @@
 
         </main>
 
-        
+
         <!-- Page Footer-->
         <footer class="page-foot">
             <section class="bg-primary section-30 section-lg-31 section-lg-bottom-30">
