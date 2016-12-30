@@ -204,25 +204,25 @@
 
                               <label class="form-block__label">
                                     <p class="form-block__name">Получатель</p>
-                                    <input type="text" name="guest-name" value="" required>
+                                    <input type="text" name="guest-name" value="" data-constraints="@Required">
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Телефон</p>
                                     <div class="form-block__phone-container">
-                                      <input class="form-block__phone" type="text" name="guest-tel" value="" placeholder="__________" required>
+                                      <input class="form-block__phone" type="text" name="guest-tel" value="" placeholder="__________" data-constraints="@Required">
                                     </div>
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Эл.почта</p>
-                                    <input type="email" name="guest-email" value="" required>
+                                    <input type="email" name="guest-email" value="" data-constraints="@Email @Required">
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">Поздравительный текст</p>
-                                    <textarea class="form-block__textarea" name="gift-text" value="" rows="8" cols="80"></textarea>
+                                    <textarea class="form-block__textarea" name="gift-text" value="" rows="8" cols="80" data-constraints="@Required"></textarea>
                               </label>
                               <label class="form-block__label">
                                     <p class="form-block__name">От кого подарок</p>
-                                    <input type="text" name="signature" value="" required>
+                                    <input type="text" name="signature" value="" data-constraints="@Required">
                               </label>
                           </fieldset>
 
@@ -306,13 +306,9 @@
 
             <div class="modal-overlay"></div>
 
-
-
-
-
-
-
         </main>
+
+        
         <!-- Page Footer-->
         <footer class="page-foot">
             <section class="bg-primary section-30 section-lg-31 section-lg-bottom-30">
@@ -320,29 +316,28 @@
 
                 <div class="shell">
                     <div class="range small">
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
                             <ul class="list">
                                 <li><a href="#">Публичное соглашение</a></li>
                                 <li><a href="#">О нас</a></li>
                                 <li><a href="#">Правила полетов</a></li>
+
                             </ul>
                         </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
                             <ul class="list">
                                 <li><a href="#">Ссылка1</a></li>
                                 <li><a href="#">Ссылка1</a></li>
                                 <li><a href="#">Ссылка1</a></li>
                             </ul>
                         </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0">
 
                         </div>
-                        <div class="cell-sm-6 cell-md-3 offset-top-12 offset-md-top-0">
-                            <div class="shell text-left">
-                                <p>Полетомания <span id="copyright-year"></span>
-                                </p>
-                            </div>
+                        <div class="cell-sm-3 cell-md-3 offset-top-12 offset-md-top-0 footer-cell4">
+                            <p>Полетомания <span id="copyright-year"></span></p>
                         </div>
+
                     </div>
                 </div>
             </section>
@@ -394,7 +389,7 @@
 
     <script type="text/javascript">
         jQuery(function($) {
-            $("#form1__phone").mask("9999999999", {
+            $(".form-block__phone").mask("9999999999", {
                 placeholder: " "
             });
         });

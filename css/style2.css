@@ -223,6 +223,9 @@ small, h6
 .btn-my {
   padding-left: 80px;
   padding-right: 80px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
   text-transform: capitalize; }
 
 .select2-search--dropdown {
@@ -268,32 +271,6 @@ small, h6
     font-size: 22px;
     line-height: 1.2; } }
 
-.rd-navbar-default .rd-navbar-fixed .rd-navbar-brand img {
-  height: 100%;
-  width: 160px; }
-
-.rd-navbar-default .rd-navbar-fullwidth .rd-navbar-brand img {
-  height: 100%;
-  width: 210px; }
-
-.site-logo:not(:root) {
-  overflow: hidden; }
-
-.rd-navbar-default .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-brand img,
-.rd-navbar-default .rd-navbar-static.rd-navbar--is-clone .rd-navbar-brand img {
-  width: 210px; }
-
-.rd-navbar-default .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-brand svg, .rd-navbar-default .rd-navbar-static.rd-navbar--is-clone .rd-navbar-brand svg {
-  width: 210px; }
-
-@media (min-width: 1600px) {
-  .rd-navbar-default .rd-navbar-static .rd-navbar-brand img {
-    width: 347px; } }
-
-@media (min-width: 1400px) {
-  .rd-navbar-default .rd-navbar-static .rd-navbar-brand img {
-    width: 315px; } }
-
 .mynavbar__contacts {
   display: none; }
 
@@ -317,9 +294,9 @@ small, h6
   display: inline-block;
   text-align: center;
   color: #fb5255;
-  font-size: 28px;
+  font-size: 16px;
   font-weight: bold;
-  margin-right: 25px; }
+  margin-right: 10px; }
 
 .mynavbar__right {
   display: flex !important;
@@ -329,16 +306,21 @@ small, h6
     margin-top: 5px;
     margin-bottom: 5px; }
 
+@media (min-width: 768px) {
+  .mynavbar__phone {
+    font-size: 22px;
+    margin-right: 25px; }
+  .rd-navbar-default .rd-navbar-fullwidth.rd-navbar--is-stuck .rd-navbar-fullwidth-collapse,
+  .rd-navbar-default .rd-navbar-fullwidth.rd-navbar--is-clone .rd-navbar-fullwidth-collapse {
+    display: none !important; } }
+
 @media (min-width: 992px) {
   .mynavbar__contacts {
     display: flex;
     justify-content: center;
     align-items: center; }
   .mynavbar__phone {
-    font-size: 24px; }
-  .rd-navbar-default .rd-navbar-fullwidth.rd-navbar--is-stuck .rd-navbar-fullwidth-collapse,
-  .rd-navbar-default .rd-navbar-fullwidth.rd-navbar--is-clone .rd-navbar-fullwidth-collapse {
-    display: none !important; } }
+    font-size: 24px; } }
 
 @media (min-width: 1024px) {
   .mynavbar__adress {
@@ -1557,6 +1539,8 @@ small, h6
     border-radius: 5px;
     font-weight: normal;
     padding: 0 10px; }
+    .promo input:focus {
+      border: 1px solid grey; }
   .promo__line {
     display: flex;
     justify-content: flex-end; }
@@ -1759,6 +1743,14 @@ small, h6
       border: 1px solid grey; }
   .form-block__phone {
     padding-left: 70px !important; }
+    .form-block__phone::-webkit-input-placeholder {
+      letter-spacing: 2px; }
+    .form-block__phone::-moz-placeholder {
+      letter-spacing: 2px; }
+    .form-block__phone:-moz-placeholder {
+      letter-spacing: 2px; }
+    .form-block__phone:-ms-input-placeholder {
+      letter-spacing: 2px; }
   .form-block__phone-container {
     position: relative; }
     .form-block__phone-container::before {
@@ -1989,3 +1981,10 @@ small, h6
   background-image: url("../images/parallax-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
+
+.footer-cell4 {
+  text-align: left; }
+
+@media (min-width: 768px) {
+  .footer-cell4 {
+    text-align: right; } }

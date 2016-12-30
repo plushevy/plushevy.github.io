@@ -44,6 +44,31 @@
 
   &__phone {
     padding-left: 70px !important;
+
+    &::-webkit-input-placeholder {
+        // font-size: 20px;
+        // color: black;
+        letter-spacing: 2px;
+    }
+
+    &::-moz-placeholder {
+        // font-size: 20px;
+        // color: black;
+        letter-spacing: 2px;
+    }
+
+    &:-moz-placeholder {
+        // font-size: 20px;
+        // color: black;
+        letter-spacing: 2px;
+    }
+
+    &:-ms-input-placeholder {
+        // font-weight: bold;
+        // font-size: 20px;
+        // color: black;
+        letter-spacing: 2px;
+    }
   }
 
   &__phone-container {

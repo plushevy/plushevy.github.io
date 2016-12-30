@@ -10,6 +10,10 @@
     border-radius: 5px;
     font-weight: normal;
     padding: 0 10px;
+
+    &:focus {
+        border: 1px solid grey;
+    }
   }
   &__block {}
 
