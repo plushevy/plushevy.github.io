@@ -202,10 +202,38 @@
             <div class="modal-overlay"></div>
 
 
+            <!-- модальное из тарифов первое -->
+            <!-- <div class="modal-content modal-content--order">
+                <div class="modal-content__wrapper">
+                    <form method="post" class="form1 form1--tariff" id="order2" novalidate="novalidate">
+                        <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
+                        <div class="form1__top">
+                            <h4 class="form1__title">Покупка полета</h4>
+
+                        </div>
+                        <div class="form1__data">
+                            <div class="form1__line1"><span class="form1__time">2 минуты</span> полета в Открытой Аэротрубе</div>
+                            <div class="form1__number">
+                                <span class="form1__minus">-</span>
+                                <input class="form1__input-maxmin" type="text" value="1" />
+                                <span class="form1__plus">+</span>
+                            </div>
+                            <div class="form1__line2">Стоимость: <span class="form1__price"> </span>₽</div>
+                        </div>
+
+                        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Далее">
+                        <p class="form1__small-text">* Сертификат действует 1 год со дня покупки</p>
+                        <a title="Закрыть" class="form1__close" href="javascript:;"></a>
+                    </form>
+                </div>
+            </div> -->
+
+
+
 
         </main>
 
-        
+
         <!-- Page Footer-->
         <footer class="page-foot">
             <section class="bg-primary section-30 section-lg-31 section-lg-bottom-30">
@@ -355,36 +383,73 @@
         });
     </script>
 
-    <!-- <script>
-        var modalButton = document.querySelector(".modal-btn");
-        var modalPopup = document.querySelector(".modal-content");
-        var modalOverlay = document.querySelector(".modal-overlay");
-        var modalForm = modalPopup.querySelector(".form1");
-        var close = modalPopup.querySelector(".form1__close");
+
+<!-- Скрипт из 4модального окна из тарифов -->
+    <!-- <script type="text/javascript">
+        $(document).ready(function() {
+            function openTarifModal() {
+                var price = 0;
+                var $input = $(".form1__input-maxmin");
+                var modalContent = $(".modal-content");
+                var modalOverlay = $(".modal-overlay");
+
+                $(".form1__minus").click(function() {
+                    var count = parseInt($input.val()) - 1;
+                    count = count < 1 ? 1 : count;
+                    $input.val(count);
+                    $(".form1__price").html(price * count);
+                });
+                $(".form1__plus").click(function() {
+
+                    var count = parseInt($input.val()) + 1;
+                    console.log(count);
+                    console.log($input.val());
+                    $input.val(count);
+                    $(".form1__price").html(price * count);
+                });
+
+                $(".form1__close").click(function() {
+                    event.preventDefault();
+                    modalContent.removeClass("modal-content--show");
+                    modalOverlay.removeClass("modal-overlay--show");
+
+                });
+
+                $(".table-price__line .btn").click(function() {
+                    var parent = $(this).parents(".table-price__line");
+                    var time = parent.data("time");
+                    price = parent.data("price");
 
 
-        modalButton.addEventListener("click", function(event) {
-            event.preventDefault(); //отменяем действие по умолчанию у ссылки href, чтобы успел сработать скрипт
-            modalPopup.classList.add("modal-content--show");
-            modalOverlay.classList.add("modal-overlay--show");
-        });
-
-        close.addEventListener("click", function(event) {
-            event.preventDefault();
-            modalPopup.classList.remove("modal-content--show");
-            modalOverlay.classList.remove("modal-overlay--show");
-        });
 
 
-        window.addEventListener("keydown", function(event) { // нажатие на ESC
-            if (event.keyCode === 27) {
-                if (modalPopup.classList.contains("modal-content--show")) {
-                    modalPopup.classList.remove("modal-content--show");
-                    modalOverlay.classList.remove("modal-overlay--show");
-                }
+                    $(".form1__time").html(time);
+                    $(".form1__price").html(price);
+                    $input.val(1);
+                    modalOverlay.addClass("modal-overlay--show");
+                    modalContent.addClass("modal-content--show");
+                });
             }
+            openTarifModal();
+
+            //вкладки в таблице
+            $(".table-tab").click(function() {
+                $(".table-tab").removeClass("table-tab--checked");
+                $(".table-price").hide();
+
+                var elementClass = ".table-price--" + $(this).data("tab");
+                $(elementClass).css({
+                    display: "table"
+                });
+                $(this).addClass("table-tab--checked");
+
+                var elementDesc = $(this).data("description");
+                $(".table-attention").html(elementDesc);
+            });
+
         });
     </script> -->
+
 
 </body>
 

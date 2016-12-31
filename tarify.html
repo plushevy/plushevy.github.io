@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.min.css" />
 
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -445,7 +446,7 @@
 
                     <table class="table-price table-price--2">
                         <tbody>
-                            <tr class="table-price__line" data-time="2 минуты" data-price="2200">
+                            <tr class="table-price__line" data-time="2 минуты" data-price="2205">
                                 <td class="one">
                                     <span>2 минуты</span>
                                 </td>
@@ -455,7 +456,7 @@
                                 <td class="three">
                                     <p>Действует для<br>1-го человека</p>
                                 </td>
-                                <td class="four"><span>2 200 ₽</span></td>
+                                <td class="four"><span>2 205 ₽</span></td>
                                 <td class="five">
                                     <button class="btn btn-xs btn-primary" type="button" name="button">Записаться</button>
                                 </td>
@@ -792,39 +793,207 @@
 
 
 
-    <div class="modal-content modal-content--order">
-        <div class="modal-content__wrapper">
-            <form method="post" class="form1 form1--tariff" id="order2" novalidate="novalidate">
-                <input type="hidden" name="date" value="четверг, 8 дек 2016 15:00">
-                <div class="form1__top">
-                    <h4 class="form1__title">Покупка полета</h4>
+    <div class="popup popup--big custom-scroll-bar">
+        <a title="Закрыть" class="popup__close popup__close--white" href="javascript:;"></a>
 
-                </div>
+        <div class="popup__top">
+            <h3 class="popup__title">Оформление заказа</h3>
+        </div>
 
-                <div class="form1__data">
-                    <div class="form1__line1"><span class="form1__time">2 минуты</span> полета в Открытой Аэротрубе</div>
+        <div class="popup__wrapper">
 
-                    <div class="form1__number">
-                        <span class="form1__minus">-</span>
-                        <input class="form1__input-maxmin" type="text" value="1" />
-                        <span class="form1__plus">+</span>
+            <form method="post" class="form-order" id="order-big" novalidate="novalidate">
+
+                <div class="data">
+                    <div class="data__line1">
+                        <span class="data__time">2 минуты</span> полета в Открытой Аэротрубе
                     </div>
 
-                    <div class="form1__line2">Стоимость: <span class="form1__price"> </span>₽</div>
+
+                    <div class="count-block">
+                        <span class="count-block__minus">-</span>
+                        <input class="count-block__input" type="text" value="1" />
+                        <span class="count-block__plus">+</span>
+                    </div>
+
+
+                    <div class="data__line2"><span class="data__price">2200</span> ₽</div>
+                </div>
+
+                <input class="selection__input" type="radio" name="select1" id="select1-1" value="select1-1" checked>
+                <input class="selection__input" type="radio" name="select1" id="select1-2" value="select1-2">
+                <input class="selection__input" type="radio" name="select2" id="select2-1" value="select2-1" checked>
+                <input class="selection__input" type="radio" name="select2" id="select2-2" value="select2-2">
+                <input class="selection__input" type="radio" name="select3" id="select3-1" value="select3-1">
+                <input class="selection__input" type="radio" name="select3" id="select3-2" value="select3-2">
+                <input class="selection__input" type="radio" name="select4" id="select4-1" value="select4-1">
+                <input class="selection__input" type="radio" name="select4" id="select4-2" value="select4-2" checked>
+                <input class="selection__input" type="radio" name="select4" id="select4-3" value="select4-3">
+
+                <div class="promo">
+                    <div class="promo__block">
+                        <label class="promo__name" for="promo">Промокод:</label>
+                        <input type="text" name="promo-code" id="promo-code" value="">
+                    </div>
+                    <div class="promo__block">
+                        <div class="promo__line">
+                            <div class="promo__price">Скидка:</div>
+                            <span class="promo__discount">0р.</span>
+                        </div>
+                        <div class="promo__line">
+                            <div class="promo__price">Итого:</div>
+                            <span class="promo__total">5000р.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="selection">
+                    <h4 class="selection__title">Что вы хотите купить?</h4>
+                    <div class="selection__tabs">
+                        <label class="selection__tab selection__tab--1" for="select1-1">
+                      <h6 class="selection__name">Электронный сертификат</h6>
+                      <p class="selection__text">Дойдет за 5 минут по электронной почте</p>
+                    </label>
+                        <label class="selection__tab selection__tab--2" for="select1-2">
+                      <h6 class="selection__name">Сертификат в конверте</h6>
+                      <p class="selection__text">Конверт из дизайнерской бумаги</p>
+                    </label>
+                    </div>
+                </div>
+
+                <div class="selection">
+                    <h4 class="selection__title">Для себя или в подарок?</h4>
+                    <div class="selection__tabs">
+                        <label class="selection__tab selection__tab--3" for="select2-1">
+                      <h6 class="selection__name">Для себя</h6>
+                      <p class="selection__text">Доставим заказ лично вам</p>
+                    </label>
+                        <label class="selection__tab selection__tab--4" for="select2-2">
+                      <h6 class="selection__name">В подарок</h6>
+                      <p class="selection__text">Доставим получателю с поздравлением от вашего имени</p>
+                    </label>
+                    </div>
+                </div>
+
+                <div class="selection selection--shipping">
+                    <h4 class="selection__title">Доставка</h4>
+                    <div class="selection__tabs">
+                        <label class="selection__tab selection__tab--ship1" for="select3-1">
+                      <h6 class="selection__name">Курьером</h6>
+                      <p class="selection__text">Доставим завтра бесплатно или сегодня за 200 рублей
+    (при наличии свободных курьеров)</p>
+                    </label>
+                        <label class="selection__tab selection__tab--ship2" for="select3-2">
+                      <h6 class="selection__name">Самовывоз</h6>
+                      <p class="selection__text">Заберите бесплатно по адресу: м. Курская, Нижний Сусальный переулок, 5, строение 10 (территория завода «Арма»)</p>
+                    </label>
+                    </div>
+                </div>
+
+                <div class="form-order__inner">
+                    <fieldset class="form-block form-block--gift">
+                        <h4 class="form-block__title">Получатель и поздравлениe</h4>
+
+                        <label class="form-block__label">
+                            <p class="form-block__name">Получатель</p>
+                            <input class="form-control" type="text" name="guest-name" value="" data-constraints="@Required">
+                      </label>
+                        <label class="form-block__label">
+                            <p class="form-block__name">Телефон</p>
+                            <div class="form-block__phone-container">
+                              <input class="form-control form-block__phone" type="text" name="guest-tel" value="" placeholder="__________" data-constraints="@Required">
+                            </div>
+                      </label>
+                        <label class="form-block__label">
+                            <p class="form-block__name">Эл.почта</p>
+                            <input class="form-control" type="email" name="guest-email" value="" data-constraints="@Email @Required">
+                      </label>
+                        <label class="form-block__label">
+                            <p class="form-block__name">Поздравительный текст</p>
+                            <textarea class="form-control form-block__textarea" name="gift-text" value="" rows="8" cols="80" data-constraints="@Required"></textarea>
+                      </label>
+                        <label class="form-block__label">
+                            <p class="form-block__name">От кого подарок</p>
+                            <input class="form-control" type="text" name="signature" value="" data-constraints="@Required">
+                      </label>
+                    </fieldset>
+
+                    <fieldset class="form-block form-block--adress">
+                        <h4 class="form-block__title">Адрес доставки и контакты</h4>
+
+                        <label class="form-block__label">
+                            <p class="form-block__name">Адрес доставки</p>
+                            <textarea class="form-control" class="form-block__textarea" name="customer-adress" rows="2" cols="80" placeholder="Город, улица, дом, корпус, квартира" data-constraints="@Required"></textarea>
+                      </label>
+
+                        <label class="form-block__label">
+                            <p class="form-block__name">Ваше имя</p>
+                            <input class="form-control" type="text" name="customer-name" value="" data-constraints="@Required">
+                      </label>
+                        <label class="form-block__label">
+                            <p class="form-block__name">Эл.почта</p>
+                            <input class="form-control" type="email" name="customer-email" value="" data-constraints="@Required">
+                      </label>
+
+                        <label class="form-block__label">
+                            <p class="form-block__name">Телефон</p>
+                            <div class="form-block__phone-container">
+                              <input class="form-control form-block__phone" type="text" name="customer-tel" value="" placeholder="__________" data-constraints="@Email @Required">
+                            </div>
+                      </label>
+
+                    </fieldset>
+
+
+                    <fieldset class="form-block form-block--noadress">
+                        <h4 class="form-block__title">Адрес доставки и ваши контакты</h4>
+
+                        <label class="form-block__label">
+                            <p class="form-block__name">Ваше имя</p>
+                            <input class="form-control" type="text" name="name" value="" data-constraints="@Required">
+                      </label>
+                        <label class="form-block__label">
+                            <p class="form-block__name">Эл.почта</p>
+                            <input class="form-control" type="email" name="email" value="" data-constraints="@Email @Required">
+                      </label>
+                        <label class="form-block__label">
+                            <p class="form-block__name">Телефон</p>
+                            <div class="form-block__phone-container">
+                              <input class="form-control form-block__phone" type="text" name="tel" value="" placeholder="__________" data-constraints="@Required">
+                            </div>
+                      </label>
+                    </fieldset>
 
                 </div>
 
+
+
+                <div class="selection">
+                    <h4 class="selection__title">Способ оплаты</h4>
+
+                    <div class="selection__tabs">
+                        <label class="selection__tab selection__tab--pay1" for="select4-1">
+                      <h6 class="selection__name">Наличными <span class="selection__hide">курьеру</span></h6>
+                      <p class="selection__text">При получении заказа</p>
+                    </label>
+                        <label class="selection__tab selection__tab--pay2" for="select4-2">
+                      <h6 class="selection__name">Оплата на сайте по карте</h6>
+                      <p class="selection__text">Visa, Maestro, Mastercard</p>
+                    </label>
+                        <label class="selection__tab selection__tab--pay3" for="select4-3">
+                  <h6 class="selection__name">Электронными деньгами</h6>
+                  <p class="selection__text">Webmoney, Yandex money, Qiwi</p>
+                </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-xs btn-primary form-order__btn" type="submit" name="button">Завершить заказ</button>
+                <!-- <button class="btn btn-xs btn-primary form-order__btn" type="submit" id="xxx" name="xxx" value="Завершить заказ"> -->
+
+            </form>
         </div>
-        <!-- конец inner -->
-
-        <input class="btn btn-xs btn-primary form1__btn" type="submit" id="submit_order" name="submit1" value="Далее">
-
-        <p class="form1__small-text">* Сертификат действует 1 год со дня покупки</p>
-
-        <a title="Закрыть" class="form1__close" href="javascript:;"></a>
-
-        </form>
-
     </div>
 
 
@@ -834,53 +1003,50 @@
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+
 
     <script type="text/javascript">
+        jQuery(function($) {
+            $(".form-block__phone").mask("9999999999", {
+                placeholder: " "
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //scroll
+        (function($) {
+            $(window).on("load", function() {
+                $.mCustomScrollbar.defaults.scrollButtons.enable = false;
+                $(".custom-scroll-bar").mCustomScrollbar({
+                    theme: "minimal-dark"
+                });
+            });
+        })(jQuery);
+
+
         $(document).ready(function() {
-            function openTarifModal() {
-                var price = 0;
-                var $input = $(".form1__input-maxmin");
-                var modalContent = $(".modal-content");
-                var modalOverlay = $(".modal-overlay");
-
-                $(".form1__minus").click(function() {
-                    var count = parseInt($input.val()) - 1;
-                    count = count < 1 ? 1 : count;
-                    $input.val(count);
-                    $(".form1__price").html(price * count);
-                });
-                $(".form1__plus").click(function() {
-
-                    var count = parseInt($input.val()) + 1;
-                    console.log(count);
-                    console.log($input.val());
-                    $input.val(count);
-                    $(".form1__price").html(price * count);
-                });
-
-                $(".form1__close").click(function() {
-                    event.preventDefault();
-                    modalContent.removeClass("modal-content--show");
-                    modalOverlay.removeClass("modal-overlay--show");
-
-                });
-
-                $(".table-price__line .btn").click(function() {
-                    var parent = $(this).parents(".table-price__line");
-                    var time = parent.data("time");
-                    price = parent.data("price");
+            // function openModal() {
+            //     var modalContentBig = $('.popup--big');
+            //     var modalOverlay = $('.modal-overlay');
+            //
+            //
+            //     $(".popup__close").click(function() {
+            //         event.preventDefault();
+            //         modalContentBig.removeClass('popup--show');
+            //         modalOverlay.removeClass('modal-overlay--show');
+            //     });
+            //
+            //     $(".modal-btn--3").click(function() {
+            //         modalOverlay.addClass('modal-overlay--show');
+            //         modalContentBig.addClass('popup--show');
+            //     });
+            // }
+            // openModal();
 
 
 
-
-                    $(".form1__time").html(time);
-                    $(".form1__price").html(price);
-                    $input.val(1);
-                    modalOverlay.addClass("modal-overlay--show");
-                    modalContent.addClass("modal-content--show");
-                });
-            }
-            openTarifModal();
 
             //вкладки в таблице
             $(".table-tab").click(function() {
@@ -897,8 +1063,124 @@
                 $(".table-attention").html(elementDesc);
             });
 
+            //большое модальное окно
+            // плюс и минус + открытие окна
+
+            function openTarifModal() {
+                var price = 0;
+                var $input = $(".count-block__input");
+                // var modalContent = $(".modal-content");
+                var modalContentBig = $('.popup--big');
+                var modalOverlay = $(".modal-overlay");
+
+                $(".count-block__minus").click(function() {
+                    var count = parseInt($input.val()) - 1;
+                    count = count < 1 ? 1 : count;
+                    $input.val(count);
+                    $(".data__price").html(price * count);
+                });
+                $(".count-block__plus").click(function() {
+
+                    var count = parseInt($input.val()) + 1;
+                    console.log(count);
+                    console.log($input.val());
+                    $input.val(count);
+                    $(".data__price").html(price * count);
+                });
+
+                $(".popup__close").click(function() {
+                    event.preventDefault();
+                    modalContentBig.removeClass("popup--show");
+                    modalOverlay.removeClass("modal-overlay--show");
+
+                });
+
+                $(".table-price__line .btn").click(function() {
+                    var parent = $(this).parents(".table-price__line");
+                    var time = parent.data("time");
+                    price = parent.data("price");
+
+
+
+
+                    $(".data__time").html(time);
+                    $(".data__price").html(price);
+                    $input.val(1);
+                    modalOverlay.addClass("modal-overlay--show");
+                    modalContentBig.addClass("popup--show");
+                });
+            }
+            openTarifModal();
+
+
+
+            // логика отключения блоков оплаты и доставки
+            cashDisable();
+
+            function cashDisable() {
+
+                var electroSertificat = $('#select1-1');
+                var cash = $('#select4-1');
+                var cashLabel = $('.selection__tab--pay1');
+                var ship1 = $('#select3-1');
+
+                if (electroSertificat.prop('checked')) {
+                    cash.prop('disabled', true);
+                    ship1.prop('disabled', true);
+                    ship1.prop('checked', false);
+                    cashLabel.addClass('selection__tab--disabled');
+                } else {
+                    cash.prop('disabled', false);
+                    ship1.prop('disabled', false);
+                    ship1.prop('checked', true);
+                    cashLabel.removeClass('selection__tab--disabled');
+                }
+            };
+
+            function shipDisable() {
+
+                var vPodarok = $('#select2-2');
+                var samovyvoz = $('#select3-2');
+                var samovyvozLabel = $('.selection__tab--ship2');
+
+                if (vPodarok.prop('checked')) {
+                    samovyvoz.prop('disabled', true);
+                    samovyvozLabel.addClass('selection__tab--disabled');
+                } else {
+                    samovyvoz.prop('disabled', false);
+                    samovyvozLabel.removeClass('selection__tab--disabled');
+                }
+            };
+
+            // function CurierDisable() {
+            //
+            //     var courier = $('.selection__tab--ship2');
+            //     var hide = $(".selection__hide");
+            //     console.log (hide);
+            //
+            //     if (courier.hasClass("sizeable")) {
+            //         $(hide).css({
+            //             display: "none"
+            //         });
+            //     } else {
+            //         $(hide).css({
+            //             display: "inline-block"
+            //         });
+            //     }
+            // };
+
+            $('[name="select1"]').change(function() {
+                cashDisable();
+            });
+
+            $('[name="select2"]').change(function() {
+                shipDisable();
+            });
+
+
         });
     </script>
+
 
 </body>
 

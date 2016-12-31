@@ -93,6 +93,7 @@
     &:hover {
       border-color: white;
       box-shadow: inset 0 0 0 5px grey;
+      cursor: pointer;
     }
 
     &--disabled {
@@ -100,6 +101,7 @@
       opacity: 0.3;
 
       &:hover {
+        cursor: default;
         box-shadow: none;
         border: 1px solid #cacaca;
       }
@@ -109,6 +111,10 @@
   &__name {}
   &__text {
     margin-top: 5px;
+  }
+
+  &__hide {
+    display: none;
   }
 
 }

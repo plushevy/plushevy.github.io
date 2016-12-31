@@ -295,8 +295,8 @@
                             </div>
                         </div>
 
-
-                        <input class="btn btn-xs btn-primary form-order__btn" type="submit" id="xxx" name="xxx" value="Завершить заказ">
+                        <button class="btn btn-xs btn-primary form-order__btn" type="submit" name="button">Завершить заказ</button>
+                        <!-- <button class="btn btn-xs btn-primary form-order__btn" type="submit" id="xxx" name="xxx" value="Завершить заказ"> -->
 
                     </form>
                 </div>
@@ -397,23 +397,71 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            function openModal() {
-                var modalContentBig = $('.popup--big');
-                var modalOverlay = $('.modal-overlay');
+            // function openModal() {
+            //     var modalContentBig = $('.popup--big');
+            //     var modalOverlay = $('.modal-overlay');
+            //
+            //
+            //     $(".popup__close").click(function() {
+            //         event.preventDefault();
+            //         modalContentBig.removeClass('popup--show');
+            //         modalOverlay.removeClass('modal-overlay--show');
+            //     });
+            //
+            //     $(".modal-btn--3").click(function() {
+            //         modalOverlay.addClass('modal-overlay--show');
+            //         modalContentBig.addClass('popup--show');
+            //     });
+            // }
+            // openModal();
 
+            // плюс и минус + открытие окна
+
+            function openTarifModal() {
+                var price = 0;
+                var $input = $(".count-block__input");
+                // var modalContent = $(".modal-content");
+                var modalContentBig = $('.popup--big');
+                var modalOverlay = $(".modal-overlay");
+
+                $(".count-block__minus").click(function() {
+                    var count = parseInt($input.val()) - 1;
+                    count = count < 1 ? 1 : count;
+                    $input.val(count);
+                    $(".data__price").html(price * count);
+                });
+                $(".count-block__plus").click(function() {
+
+                    var count = parseInt($input.val()) + 1;
+                    console.log(count);
+                    console.log($input.val());
+                    $input.val(count);
+                    $(".data__price").html(price * count);
+                });
 
                 $(".popup__close").click(function() {
                     event.preventDefault();
-                    modalContentBig.removeClass('popup--show');
-                    modalOverlay.removeClass('modal-overlay--show');
+                    modalContentBig.removeClass("popup--show");
+                    modalOverlay.removeClass("modal-overlay--show");
+
                 });
 
-                $(".modal-btn--3").click(function() {
-                    modalOverlay.addClass('modal-overlay--show');
-                    modalContentBig.addClass('popup--show');
+                $(".table-price__line .btn").click(function() {
+                    var parent = $(this).parents(".table-price__line");
+                    var time = parent.data("time");
+                    price = parent.data("price");
+
+
+
+
+                    $(".data__time").html(time);
+                    $(".data__price").html(price);
+                    $input.val(1);
+                    modalOverlay.addClass("modal-overlay--show");
+                    modalContentBig.addClass("popup--show");
                 });
             }
-            openModal();
+            openTarifModal();
 
 
 

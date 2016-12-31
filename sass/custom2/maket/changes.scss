@@ -1,10 +1,19 @@
 .btn-my {
-  padding-left: 80px;
-  padding-right: 80px;
+  // padding-left: 80px;
+  // padding-right: 80px;
+  width: 90%;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   text-transform: capitalize;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .btn-my {
+    width: 70%;
+
+  }
 }
 
 .select2-search--dropdown {
@@ -49,19 +58,10 @@
 
 // форма закончилась
 
-
-
-
-
-
-
-.content1 {
-
-  width: 500px;
-  padding: 40px;
-  margin: 0 auto;
-  height: 200px;
-  // overflow: auto;
+@media (max-width: 768px) {
+  .section-my {
+    margin-bottom: 10px;
+  }
 }
 
 // @media (max-width: 320px) {}
@@ -69,6 +69,7 @@
 // @media (max-width: 768px) {}
 // @media (max-width: 1200px) {}
 // @media (max-width: 1600px) {}
+
 
 
 @media (min-width: 860px) {
