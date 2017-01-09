@@ -273,6 +273,32 @@ small, h6
     font-size: 22px;
     line-height: 1.2; } }
 
+.rd-navbar-default .rd-navbar-fixed .rd-navbar-brand img {
+  height: 100%;
+  width: 160px; }
+
+.rd-navbar-default .rd-navbar-fullwidth .rd-navbar-brand img {
+  height: 100%;
+  width: 210px; }
+
+.site-logo:not(:root) {
+  overflow: hidden; }
+
+.rd-navbar-default .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-brand img,
+.rd-navbar-default .rd-navbar-static.rd-navbar--is-clone .rd-navbar-brand img {
+  width: 210px; }
+
+.rd-navbar-default .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-brand svg, .rd-navbar-default .rd-navbar-static.rd-navbar--is-clone .rd-navbar-brand svg {
+  width: 210px; }
+
+@media (min-width: 1600px) {
+  .rd-navbar-default .rd-navbar-static .rd-navbar-brand img {
+    width: 347px; } }
+
+@media (min-width: 1400px) {
+  .rd-navbar-default .rd-navbar-static .rd-navbar-brand img {
+    width: 315px; } }
+
 .mynavbar__contacts {
   display: none; }
 
