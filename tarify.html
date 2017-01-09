@@ -838,11 +838,11 @@
                     <div class="promo__block">
                         <div class="promo__line">
                             <div class="promo__price">Скидка:</div>
-                            <span class="promo__discount">0р.</span>
+                            <span class="promo__discount">0₽</span>
                         </div>
                         <div class="promo__line">
                             <div class="promo__price">Итого:</div>
-                            <span class="promo__total">5000р.</span>
+                            <span class="promo__total">5000₽</span>
                         </div>
                     </div>
                 </div>
@@ -1027,26 +1027,6 @@
 
 
         $(document).ready(function() {
-            // function openModal() {
-            //     var modalContentBig = $('.popup--big');
-            //     var modalOverlay = $('.modal-overlay');
-            //
-            //
-            //     $(".popup__close").click(function() {
-            //         event.preventDefault();
-            //         modalContentBig.removeClass('popup--show');
-            //         modalOverlay.removeClass('modal-overlay--show');
-            //     });
-            //
-            //     $(".modal-btn--3").click(function() {
-            //         modalOverlay.addClass('modal-overlay--show');
-            //         modalContentBig.addClass('popup--show');
-            //     });
-            // }
-            // openModal();
-
-
-
 
             //вкладки в таблице
             $(".table-tab").click(function() {
@@ -1077,15 +1057,23 @@
                     var count = parseInt($input.val()) - 1;
                     count = count < 1 ? 1 : count;
                     $input.val(count);
-                    $(".data__price").html(price * count);
+
+                    var priceAll = price * count;
+                    //форматируем цену с пробелом minus
+                    $(".data__price").html(formatPriceStr(priceAll));
+                     promoTotalPrice();
                 });
+
                 $(".count-block__plus").click(function() {
 
                     var count = parseInt($input.val()) + 1;
                     console.log(count);
                     console.log($input.val());
                     $input.val(count);
-                    $(".data__price").html(price * count);
+                      //форматируем цену с пробелом plus
+                    var priceAll = price * count;
+                    $(".data__price").html(formatPriceStr(priceAll));
+                     promoTotalPrice();
                 });
 
                 $(".popup__close").click(function() {
@@ -1099,18 +1087,34 @@
                     var parent = $(this).parents(".table-price__line");
                     var time = parent.data("time");
                     price = parent.data("price");
+                    //форматируем цену с пробелом при загрузке
+                     promoTotalPrice();
+                    // $(".data__price").html(formatPriceStr(price));
+                    // $(".data__time").html(time);
 
 
 
-
-                    $(".data__time").html(time);
-                    $(".data__price").html(price);
                     $input.val(1);
                     modalOverlay.addClass("modal-overlay--show");
                     modalContentBig.addClass("popup--show");
                 });
             }
             openTarifModal();
+
+            //функиця форматирования цены с пробелом
+            function formatPriceStr(n) {
+              var str = n + "";
+              var priceFormatted = str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+              return priceFormatted;
+            };
+
+
+            //промо цена
+            function promoTotalPrice() {
+               promoPrice = $(".data__price").text();
+               $(".promo__total").html(promoPrice + " " + "₽");
+            };
+
 
 
 
