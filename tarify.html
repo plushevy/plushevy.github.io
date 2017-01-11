@@ -925,7 +925,7 @@
 
                         <label class="form-block__label">
                             <p class="form-block__name">Адрес доставки</p>
-                            <textarea class="form-control" class="form-block__textarea" name="customer-adress" rows="2" cols="80" placeholder="Город, улица, дом, корпус, квартира" data-constraints="@Required"></textarea>
+                            <textarea class="form-control form-block__textarea" name="customer-adress" rows="2" cols="80" placeholder="Город, улица, дом, корпус, квартира" data-constraints="@Required"></textarea>
                       </label>
 
                         <label class="form-block__label">
@@ -1050,7 +1050,7 @@
                 var price = 0;
                 var $input = $(".count-block__input");
                 // var modalContent = $(".modal-content");
-                var modalContentBig = $('.popup--big');
+                var modalContentBig = $(".popup--big");
                 var modalOverlay = $(".modal-overlay");
 
                 $(".count-block__minus").click(function() {
@@ -1061,7 +1061,7 @@
                     var priceAll = price * count;
                     //форматируем цену с пробелом minus
                     $(".data__price").html(formatPriceStr(priceAll));
-                     promoTotalPrice();
+                    promoTotalPrice();
                 });
 
                 $(".count-block__plus").click(function() {
@@ -1070,10 +1070,10 @@
                     console.log(count);
                     console.log($input.val());
                     $input.val(count);
-                      //форматируем цену с пробелом plus
+                    //форматируем цену с пробелом plus
                     var priceAll = price * count;
                     $(".data__price").html(formatPriceStr(priceAll));
-                     promoTotalPrice();
+                    promoTotalPrice();
                 });
 
                 $(".popup__close").click(function() {
@@ -1088,7 +1088,7 @@
                     var time = parent.data("time");
                     price = parent.data("price");
                     //форматируем цену с пробелом при загрузке
-                     promoTotalPrice();
+                    promoTotalPrice();
                     // $(".data__price").html(formatPriceStr(price));
                     // $(".data__time").html(time);
 
@@ -1103,16 +1103,16 @@
 
             //функиця форматирования цены с пробелом
             function formatPriceStr(n) {
-              var str = n + "";
-              var priceFormatted = str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-              return priceFormatted;
+                var str = n + "";
+                var priceFormatted = str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+                return priceFormatted;
             };
 
 
             //промо цена
             function promoTotalPrice() {
-               promoPrice = $(".data__price").text();
-               $(".promo__total").html(promoPrice + " " + "₽");
+                promoPrice = $(".data__price").text();
+                $(".promo__total").html(promoPrice + " " + "₽");
             };
 
 
@@ -1123,42 +1123,42 @@
 
             function cashDisable() {
 
-                var electroSertificat = $('#select1-1');
-                var cash = $('#select4-1');
-                var cashLabel = $('.selection__tab--pay1');
-                var ship1 = $('#select3-1');
+                var electroSertificat = $("#select1-1");
+                var cash = $("#select4-1");
+                var cashLabel = $(".selection__tab--pay1");
+                var ship1 = $("#select3-1");
 
-                if (electroSertificat.prop('checked')) {
-                    cash.prop('disabled', true);
-                    ship1.prop('disabled', true);
-                    ship1.prop('checked', false);
-                    cashLabel.addClass('selection__tab--disabled');
+                if (electroSertificat.prop("checked")) {
+                    cash.prop("disabled", true);
+                    ship1.prop("disabled", true);
+                    ship1.prop("checked", false);
+                    cashLabel.addClass("selection__tab--disabled");
                 } else {
-                    cash.prop('disabled', false);
-                    ship1.prop('disabled', false);
-                    ship1.prop('checked', true);
-                    cashLabel.removeClass('selection__tab--disabled');
+                    cash.prop("disabled", false);
+                    ship1.prop("disabled", false);
+                    ship1.prop("checked", true);
+                    cashLabel.removeClass("selection__tab--disabled");
                 }
             };
 
             function shipDisable() {
 
-                var vPodarok = $('#select2-2');
-                var samovyvoz = $('#select3-2');
-                var samovyvozLabel = $('.selection__tab--ship2');
+                var vPodarok = $("#select2-2");
+                var samovyvoz = $("#select3-2");
+                var samovyvozLabel = $(".selection__tab--ship2");
 
-                if (vPodarok.prop('checked')) {
-                    samovyvoz.prop('disabled', true);
-                    samovyvozLabel.addClass('selection__tab--disabled');
+                if (vPodarok.prop("checked")) {
+                    samovyvoz.prop("disabled", true);
+                    samovyvozLabel.addClass("selection__tab--disabled");
                 } else {
-                    samovyvoz.prop('disabled', false);
-                    samovyvozLabel.removeClass('selection__tab--disabled');
+                    samovyvoz.prop("disabled", false);
+                    samovyvozLabel.removeClass("selection__tab--disabled");
                 }
             };
 
             // function CurierDisable() {
             //
-            //     var courier = $('.selection__tab--ship2');
+            //     var courier = $(".selection__tab--ship2");
             //     var hide = $(".selection__hide");
             //     console.log (hide);
             //
@@ -1173,14 +1173,66 @@
             //     }
             // };
 
-            $('[name="select1"]').change(function() {
+            $([name = "select1"]).change(function() {
                 cashDisable();
             });
 
-            $('[name="select2"]').change(function() {
+            $([name = "select2"]).change(function() {
                 shipDisable();
             });
 
+
+
+
+
+
+
+
+
+            //валидация формы , проверка на пустоту
+            $("#order-big").submit(function(event) {
+                var form = $(this);
+                //все инпуты только в видимых блоках
+                var inputAll = $('.form-block:visible .form-control');
+
+                // Добавляем каждому проверяемому полю, указание что поле пустое
+                inputAll.addClass('empty_field');
+
+                // console.log (visibleBlock);
+                // console.log (inputAlls);
+                // console.log (inputAll);
+
+
+                // Функция проверки полей формы
+                function checkInput() {
+                    inputAll.each(function() {
+                        if ($(this).val() != '') {
+                            // Если поле не пустое удаляем класс-указание
+                            $(this).removeClass('empty_field');
+                        } else {
+                            // Если поле пустое добавляем класс-указание
+                            $(this).addClass('empty_field');
+                        }
+                    });
+                }
+
+                // Запускаем функцию проверки полей на заполненность
+                checkInput();
+
+                // Считаем к-во незаполненных полей
+                var sizeEmpty = form.find('.empty_field').size();
+                console.log(sizeEmpty);
+
+                // Вешаем условие-тригер на отправку формы
+                if (sizeEmpty > 0) {
+                    event.preventDefault();
+                    alert("Не все поля заполнены");
+
+                } else {
+                    alert("форма отправлена");
+                }
+
+            });
 
         });
     </script>
