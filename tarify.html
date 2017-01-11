@@ -1119,42 +1119,50 @@
 
 
             // логика отключения блоков оплаты и доставки
-            cashDisable();
-
-            function cashDisable() {
-
-                var electroSertificat = $("#select1-1");
-                var cash = $("#select4-1");
-                var cashLabel = $(".selection__tab--pay1");
-                var ship1 = $("#select3-1");
-
-                if (electroSertificat.prop("checked")) {
-                    cash.prop("disabled", true);
-                    ship1.prop("disabled", true);
-                    ship1.prop("checked", false);
-                    cashLabel.addClass("selection__tab--disabled");
-                } else {
-                    cash.prop("disabled", false);
-                    ship1.prop("disabled", false);
-                    ship1.prop("checked", true);
-                    cashLabel.removeClass("selection__tab--disabled");
-                }
-            };
-
-            function shipDisable() {
-
-                var vPodarok = $("#select2-2");
-                var samovyvoz = $("#select3-2");
-                var samovyvozLabel = $(".selection__tab--ship2");
-
-                if (vPodarok.prop("checked")) {
-                    samovyvoz.prop("disabled", true);
-                    samovyvozLabel.addClass("selection__tab--disabled");
-                } else {
-                    samovyvoz.prop("disabled", false);
-                    samovyvozLabel.removeClass("selection__tab--disabled");
-                }
-            };
+            // cashDisable();
+            //
+            // function cashDisable() {
+            //
+            //     var electroSertificat = $("#select1-1");
+            //     var cash = $("#select4-1");
+            //     var cashLabel = $(".selection__tab--pay1");
+            //     var ship1 = $("#select3-1");
+            //
+            //     if (electroSertificat.prop("checked")) {
+            //         cash.prop("disabled", true);
+            //         ship1.prop("disabled", true);
+            //         ship1.prop("checked", false);
+            //         cashLabel.addClass("selection__tab--disabled");
+            //     } else {
+            //         cash.prop("disabled", false);
+            //         ship1.prop("disabled", false);
+            //         ship1.prop("checked", true);
+            //         cashLabel.removeClass("selection__tab--disabled");
+            //     }
+            // };
+            //
+            // function shipDisable() {
+            //
+            //     var vPodarok = $("#select2-2");
+            //     var samovyvoz = $("#select3-2");
+            //     var samovyvozLabel = $(".selection__tab--ship2");
+            //
+            //     if (vPodarok.prop("checked")) {
+            //         samovyvoz.prop("disabled", true);
+            //         samovyvozLabel.addClass("selection__tab--disabled");
+            //     } else {
+            //         samovyvoz.prop("disabled", false);
+            //         samovyvozLabel.removeClass("selection__tab--disabled");
+            //     }
+            // };
+            //
+            // $([name = "select1"]).change(function() {
+            //     cashDisable();
+            // });
+            //
+            // $([name = "select2"]).change(function() {
+            //     shipDisable();
+            // });
 
             // function CurierDisable() {
             //
@@ -1173,13 +1181,75 @@
             //     }
             // };
 
-            $([name = "select1"]).change(function() {
-                cashDisable();
+
+
+
+
+            // логика отключения блоков оплаты и доставки
+            cashDisable();
+
+            function cashDisable() {
+
+              var electroSertificat = $('#select1-1');
+              var cash = $('#select4-1');
+              var cashLabel = $('.selection__tab--pay1');
+              var ship1 = $('#select3-1');
+
+              if (electroSertificat.prop('checked')) {
+                cash.prop('disabled', true);
+                ship1.prop('disabled', true);
+                ship1.prop('checked', false);
+                cashLabel.addClass('selection__tab--disabled');
+              } else {
+                cash.prop('disabled', false);
+                ship1.prop('disabled', false);
+                ship1.prop('checked', true);
+                cashLabel.removeClass('selection__tab--disabled');
+              }
+            };
+
+            function shipDisable() {
+
+              var vPodarok = $('#select2-2');
+              var samovyvoz = $('#select3-2');
+              var samovyvozLabel = $('.selection__tab--ship2');
+
+              if (vPodarok.prop('checked')) {
+                samovyvoz.prop('disabled', true);
+                samovyvozLabel.addClass('selection__tab--disabled');
+              } else {
+                samovyvoz.prop('disabled', false);
+                samovyvozLabel.removeClass('selection__tab--disabled');
+              }
+            };
+
+            $('[name="select1"]').change(function(){
+              cashDisable();
             });
 
-            $([name = "select2"]).change(function() {
-                shipDisable();
+            $('[name="select2"]').change(function(){
+              shipDisable();
             });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             //валидация формы , проверка на пустоту
             $("#order-big").submit(function(event) {
